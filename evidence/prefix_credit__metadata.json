@@ -1,0 +1,265 @@
+{
+  "classification": "EXPLORATORY work-matched prefix-credit pilot",
+  "started": "2026-10-13T12:44:16.798338+08:00",
+  "commit": "1dbbc01a06c557ce790afd3cd812f26bde6fdd40",
+  "hashes": {
+    "experiments/prefix_credit/train.py": "206b6e62eef4817623e4907614b62e24efa286fe8f646c4cf5f2e49575f1609a",
+    "experiments/prefix_credit/server.py": "5865442a8fcf03f7e03e25a4b7b65039f93486c82e76bdff14e66823de851a50",
+    "experiments/prefix_credit/protocol.md": "e57d2345b17dc1d90461ecafa5ea7781c948e467062749889f47ff7f2b8056bb",
+    "src/prefix_credit.py": "47c05f48764d524d18ee9cffe2b2b5e9685f645d58f1c5659e7918e49d6ef974",
+    "src/metric_data_rpc.py": "5eb384d69d0db55768eba7cbc74204b830e6bc5350ad62809736eb4e2ed668b1",
+    "src/cached_budget_decoder.py": "2694e0d3561e3798e1a882ac7a66f3083f576b42eb2d985f4d258e0196d5e38b",
+    "src/budget_feedback_actor.py": "040b26e76c7f3ca7c380f1057f79178ffc252af06065b04780372aa856c03cf7",
+    "experiments/large_dag_next/train.py": "a351d2ff32b0ffe27b8df65aa1f54c82c4752eedc5439701fd945c007cdbd68e",
+    "experiments/large_dag_next/results/run001/dataset.jsonl.gz": "c0c37ad8aaf9778e2e4d8fca3a8932f8fa873bff836db336c4e6cddc6d77bba3",
+    "experiments/large_dag_next/results/run001/bc_seed11.pt": "bc28e105705f53a9535614da8e065de7bbdb9d691edacd4aa2ef747d876cf277",
+    "experiments/large_dag_next/results/run001/bc_seed22.pt": "37579de8682df71bc271ce38a3f6f88b67bf33105f96c32d3d1b06a1f843c579",
+    "experiments/large_dag_next/results/run001/bc_seed33.pt": "34faec3a8f0c76f49ae4a8a1824d8fb6a3075c6717d2efe95bc5d74f9d6beeba",
+    "experiments/large_dag_next/results/run001/local_seed11.pt": "e3adef7c7e30a0260000155c05b9adaf0b7b42654659ba1de4e1f4ba6bd20e16",
+    "experiments/large_dag_next/results/run001/local_seed22.pt": "83395c45836bc521d9d6efaa3bd2281c6355ec38843e74da924cd664337c40ec",
+    "experiments/large_dag_next/results/run001/local_seed33.pt": "e77e14bf9aa884864824bbf078c531cab31cb47ffb92c108d1d3e9f912301013"
+  },
+  "arms": [
+    "global",
+    "prefix"
+  ],
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "graph_batch": 4,
+  "samples_per_graph": 1,
+  "updates_max": 100,
+  "arm_wall_cap_seconds": 120,
+  "device": "cpu",
+  "threads": 1,
+  "torch": "2.11.0",
+  "status": "completed",
+  "latent_counts": {
+    "train": 800,
+    "val": 24,
+    "test": 48
+  },
+  "completed_models": [
+    {
+      "seed": 11,
+      "stage": "Credit-global",
+      "mode": "local",
+      "arm": "global",
+      "selected_step": 100,
+      "val_ratio": 0.8460002506083653,
+      "updates_done": 100,
+      "training_seconds": 14.182013167010155,
+      "suffix_placements": 577800,
+      "prefix_replay_placements": 18800
+    },
+    {
+      "seed": 11,
+      "stage": "Credit-prefix",
+      "mode": "local",
+      "arm": "prefix",
+      "selected_step": 0,
+      "val_ratio": 0.8492220272018138,
+      "updates_done": 100,
+      "training_seconds": 15.016466290981043,
+      "suffix_placements": 577800,
+      "prefix_replay_placements": 18800
+    },
+    {
+      "seed": 22,
+      "stage": "Credit-global",
+      "mode": "local",
+      "arm": "global",
+      "selected_step": 75,
+      "val_ratio": 0.8431647046156585,
+      "updates_done": 100,
+      "training_seconds": 14.293230333016254,
+      "suffix_placements": 522690,
+      "prefix_replay_placements": 17780
+    },
+    {
+      "seed": 22,
+      "stage": "Credit-prefix",
+      "mode": "local",
+      "arm": "prefix",
+      "selected_step": 100,
+      "val_ratio": 0.8404767036000121,
+      "updates_done": 100,
+      "training_seconds": 13.807890916999895,
+      "suffix_placements": 522690,
+      "prefix_replay_placements": 17780
+    },
+    {
+      "seed": 33,
+      "stage": "Credit-global",
+      "mode": "local",
+      "arm": "global",
+      "selected_step": 75,
+      "val_ratio": 0.8496367085723603,
+      "updates_done": 100,
+      "training_seconds": 13.805828917014878,
+      "suffix_placements": 535950,
+      "prefix_replay_placements": 17900
+    },
+    {
+      "seed": 33,
+      "stage": "Credit-prefix",
+      "mode": "local",
+      "arm": "prefix",
+      "selected_step": 25,
+      "val_ratio": 0.8517545926721958,
+      "updates_done": 100,
+      "training_seconds": 13.82510179199744,
+      "suffix_placements": 535950,
+      "prefix_replay_placements": 17900
+    }
+  ],
+  "deployment_selection": {
+    "seed": 11,
+    "stage": "P4-local-frozen",
+    "mode": "local",
+    "selected_step": 250,
+    "val_ratio": 0.834175944701551,
+    "updates_done": 300,
+    "training_seconds": 24.866559665999375,
+    "bc_anchor": 0.02
+  },
+  "selection_completed": "2026-10-13T12:48:18.997508+08:00",
+  "models": [
+    {
+      "seed": 11,
+      "stage": "Credit-global",
+      "mode": "local",
+      "arm": "global",
+      "selected_step": 100,
+      "val_ratio": 0.8460002506083653,
+      "updates_done": 100,
+      "training_seconds": 14.182013167010155,
+      "suffix_placements": 577800,
+      "prefix_replay_placements": 18800
+    },
+    {
+      "seed": 11,
+      "stage": "Credit-prefix",
+      "mode": "local",
+      "arm": "prefix",
+      "selected_step": 0,
+      "val_ratio": 0.8492220272018138,
+      "updates_done": 100,
+      "training_seconds": 15.016466290981043,
+      "suffix_placements": 577800,
+      "prefix_replay_placements": 18800
+    },
+    {
+      "seed": 22,
+      "stage": "Credit-global",
+      "mode": "local",
+      "arm": "global",
+      "selected_step": 75,
+      "val_ratio": 0.8431647046156585,
+      "updates_done": 100,
+      "training_seconds": 14.293230333016254,
+      "suffix_placements": 522690,
+      "prefix_replay_placements": 17780
+    },
+    {
+      "seed": 22,
+      "stage": "Credit-prefix",
+      "mode": "local",
+      "arm": "prefix",
+      "selected_step": 100,
+      "val_ratio": 0.8404767036000121,
+      "updates_done": 100,
+      "training_seconds": 13.807890916999895,
+      "suffix_placements": 522690,
+      "prefix_replay_placements": 17780
+    },
+    {
+      "seed": 33,
+      "stage": "Credit-global",
+      "mode": "local",
+      "arm": "global",
+      "selected_step": 75,
+      "val_ratio": 0.8496367085723603,
+      "updates_done": 100,
+      "training_seconds": 13.805828917014878,
+      "suffix_placements": 535950,
+      "prefix_replay_placements": 17900
+    },
+    {
+      "seed": 33,
+      "stage": "Credit-prefix",
+      "mode": "local",
+      "arm": "prefix",
+      "selected_step": 25,
+      "val_ratio": 0.8517545926721958,
+      "updates_done": 100,
+      "training_seconds": 13.82510179199744,
+      "suffix_placements": 535950,
+      "prefix_replay_placements": 17900
+    },
+    {
+      "seed": 11,
+      "stage": "BC-large",
+      "mode": "local",
+      "selected_step": 200,
+      "val_ratio": 0.8492220272018138,
+      "updates_done": 200,
+      "training_seconds": 5.813342958979774
+    },
+    {
+      "seed": 11,
+      "stage": "P4-local-frozen",
+      "mode": "local",
+      "selected_step": 250,
+      "val_ratio": 0.834175944701551,
+      "updates_done": 300,
+      "training_seconds": 24.866559665999375,
+      "bc_anchor": 0.02
+    },
+    {
+      "seed": 22,
+      "stage": "BC-large",
+      "mode": "local",
+      "selected_step": 50,
+      "val_ratio": 0.8589791970590627,
+      "updates_done": 200,
+      "training_seconds": 5.717831875022966
+    },
+    {
+      "seed": 22,
+      "stage": "P4-local-frozen",
+      "mode": "local",
+      "selected_step": 300,
+      "val_ratio": 0.8409025768526049,
+      "updates_done": 300,
+      "training_seconds": 24.254995625000447,
+      "bc_anchor": 0.02
+    },
+    {
+      "seed": 33,
+      "stage": "BC-large",
+      "mode": "local",
+      "selected_step": 100,
+      "val_ratio": 0.8534410931721342,
+      "updates_done": 200,
+      "training_seconds": 5.772160042019095
+    },
+    {
+      "seed": 33,
+      "stage": "P4-local-frozen",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.8534410931721342,
+      "updates_done": 300,
+      "training_seconds": 24.532657499948982,
+      "bc_anchor": 0.02
+    }
+  ],
+  "wall_seconds": 174.17933920799987,
+  "finished": "2026-10-13T12:48:37.300289+08:00",
+  "sampled_trajectories": 2400,
+  "suffix_placements": 3272880,
+  "parameters": 14946
+}

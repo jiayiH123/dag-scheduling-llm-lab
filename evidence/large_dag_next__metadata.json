@@ -1,0 +1,256 @@
+{
+  "classification": "EXPLORATORY larger-DAG controlled pilot",
+  "started": "2026-10-13T11:53:12.113539+08:00",
+  "commit": "2e514b945a030a9659f7b31cfe29de6d7e417dd0",
+  "hashes": {
+    "experiments/large_dag_next/train.py": "a351d2ff32b0ffe27b8df65aa1f54c82c4752eedc5439701fd945c007cdbd68e",
+    "experiments/large_dag_next/server.py": "7e5dc256ca8a8d8cb7d724a5cee76641c07394262c36d2793ca1c05d6e327e50",
+    "experiments/large_dag_next/protocol.md": "1b9fd97190340749744a24dddcc7e4a34857fb99f5b3c822686f5edf24f1676c",
+    "src/cached_budget_decoder.py": "2694e0d3561e3798e1a882ac7a66f3083f576b42eb2d985f4d258e0196d5e38b",
+    "src/budget_feedback_actor.py": "040b26e76c7f3ca7c380f1057f79178ffc252af06065b04780372aa856c03cf7",
+    "src/single_forward_actor.py": "9fc9976de15345d6b6f4fdf4913bb11467844cf0e2dba4d5edaa2f07d3d64340",
+    "src/budget_core.py": "638a033a3b9ff2a36037a0a00d4491b1ca29bd61be55f9cd401debe7d5556467",
+    "src/prepared_sgs.py": "1212bd0b45fbccc825b064a377c512a0ab0bc86d6250323722a08733ee3c8f58",
+    "experiments/gnn_metric_pilot/results/run001/bc_seed11.pt": "e7e44c4ca5b1533948d1db2c4439a1a73a69285f2ce6e610395fd565f4c4ddd6",
+    "experiments/gnn_metric_pilot/results/run001/bc_seed22.pt": "d2ec242866702c798e87ba22a18a35157ec118959e7879ae5138867a54bb257e",
+    "experiments/gnn_metric_pilot/results/run001/bc_seed33.pt": "3a21fe4e24ec2078cc97b739e9ef365c0f67f7a8c8543e317faa3f6b108be166"
+  },
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "arms": [
+    "initial",
+    "local"
+  ],
+  "bc_updates": 200,
+  "ppo_updates_max": 300,
+  "ppo_epochs_max": 4,
+  "batch_size": 8,
+  "ppo_arm_wall_cap_seconds": 180,
+  "device": "cpu",
+  "threads": 1,
+  "torch": "2.11.0",
+  "status": "completed",
+  "latent_counts": {
+    "train": 800,
+    "val": 24,
+    "test": 48
+  },
+  "completed_models": [
+    {
+      "seed": 11,
+      "stage": "BC-large",
+      "mode": "initial",
+      "selected_step": 200,
+      "val_ratio": 0.8492220272018138,
+      "updates_done": 200,
+      "training_seconds": 5.813342958979774
+    },
+    {
+      "seed": 11,
+      "stage": "PPO-initial",
+      "mode": "initial",
+      "selected_step": 250,
+      "val_ratio": 0.8486364944593576,
+      "updates_done": 300,
+      "training_seconds": 25.586243457975797,
+      "bc_anchor": 0.02
+    },
+    {
+      "seed": 11,
+      "stage": "PPO-local",
+      "mode": "local",
+      "selected_step": 250,
+      "val_ratio": 0.834175944701551,
+      "updates_done": 300,
+      "training_seconds": 24.866559665999375,
+      "bc_anchor": 0.02
+    },
+    {
+      "seed": 22,
+      "stage": "BC-large",
+      "mode": "initial",
+      "selected_step": 50,
+      "val_ratio": 0.8589791970590627,
+      "updates_done": 200,
+      "training_seconds": 5.717831875022966
+    },
+    {
+      "seed": 22,
+      "stage": "PPO-initial",
+      "mode": "initial",
+      "selected_step": 300,
+      "val_ratio": 0.8455303961971437,
+      "updates_done": 300,
+      "training_seconds": 24.940265125012957,
+      "bc_anchor": 0.02
+    },
+    {
+      "seed": 22,
+      "stage": "PPO-local",
+      "mode": "local",
+      "selected_step": 300,
+      "val_ratio": 0.8409025768526049,
+      "updates_done": 300,
+      "training_seconds": 24.254995625000447,
+      "bc_anchor": 0.02
+    },
+    {
+      "seed": 33,
+      "stage": "BC-large",
+      "mode": "initial",
+      "selected_step": 100,
+      "val_ratio": 0.8534410931721342,
+      "updates_done": 200,
+      "training_seconds": 5.772160042019095
+    },
+    {
+      "seed": 33,
+      "stage": "PPO-initial",
+      "mode": "initial",
+      "selected_step": 300,
+      "val_ratio": 0.8458230649445594,
+      "updates_done": 300,
+      "training_seconds": 25.31643654202344,
+      "bc_anchor": 0.02
+    },
+    {
+      "seed": 33,
+      "stage": "PPO-local",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.8534410931721342,
+      "updates_done": 300,
+      "training_seconds": 24.532657499948982,
+      "bc_anchor": 0.02
+    }
+  ],
+  "deployment_selection": {
+    "seed": 11,
+    "stage": "PPO-local",
+    "mode": "local",
+    "selected_step": 250,
+    "val_ratio": 0.834175944701551,
+    "updates_done": 300,
+    "training_seconds": 24.866559665999375,
+    "bc_anchor": 0.02
+  },
+  "selection_completed": "2026-10-13T11:58:22.645313+08:00",
+  "models": [
+    {
+      "seed": 11,
+      "stage": "BC-large",
+      "mode": "initial",
+      "selected_step": 200,
+      "val_ratio": 0.8492220272018138,
+      "updates_done": 200,
+      "training_seconds": 5.813342958979774
+    },
+    {
+      "seed": 11,
+      "stage": "PPO-initial",
+      "mode": "initial",
+      "selected_step": 250,
+      "val_ratio": 0.8486364944593576,
+      "updates_done": 300,
+      "training_seconds": 25.586243457975797,
+      "bc_anchor": 0.02
+    },
+    {
+      "seed": 11,
+      "stage": "PPO-local",
+      "mode": "local",
+      "selected_step": 250,
+      "val_ratio": 0.834175944701551,
+      "updates_done": 300,
+      "training_seconds": 24.866559665999375,
+      "bc_anchor": 0.02
+    },
+    {
+      "seed": 22,
+      "stage": "BC-large",
+      "mode": "initial",
+      "selected_step": 50,
+      "val_ratio": 0.8589791970590627,
+      "updates_done": 200,
+      "training_seconds": 5.717831875022966
+    },
+    {
+      "seed": 22,
+      "stage": "PPO-initial",
+      "mode": "initial",
+      "selected_step": 300,
+      "val_ratio": 0.8455303961971437,
+      "updates_done": 300,
+      "training_seconds": 24.940265125012957,
+      "bc_anchor": 0.02
+    },
+    {
+      "seed": 22,
+      "stage": "PPO-local",
+      "mode": "local",
+      "selected_step": 300,
+      "val_ratio": 0.8409025768526049,
+      "updates_done": 300,
+      "training_seconds": 24.254995625000447,
+      "bc_anchor": 0.02
+    },
+    {
+      "seed": 33,
+      "stage": "BC-large",
+      "mode": "initial",
+      "selected_step": 100,
+      "val_ratio": 0.8534410931721342,
+      "updates_done": 200,
+      "training_seconds": 5.772160042019095
+    },
+    {
+      "seed": 33,
+      "stage": "PPO-initial",
+      "mode": "initial",
+      "selected_step": 300,
+      "val_ratio": 0.8458230649445594,
+      "updates_done": 300,
+      "training_seconds": 25.31643654202344,
+      "bc_anchor": 0.02
+    },
+    {
+      "seed": 33,
+      "stage": "PPO-local",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.8534410931721342,
+      "updates_done": 300,
+      "training_seconds": 24.532657499948982,
+      "bc_anchor": 0.02
+    },
+    {
+      "seed": 11,
+      "stage": "Frozen-micro-PPO",
+      "mode": "initial",
+      "selected_step": 400,
+      "val_ratio": null
+    },
+    {
+      "seed": 22,
+      "stage": "Frozen-micro-PPO",
+      "mode": "initial",
+      "selected_step": 100,
+      "val_ratio": null
+    },
+    {
+      "seed": 33,
+      "stage": "Frozen-micro-PPO",
+      "mode": "initial",
+      "selected_step": 400,
+      "val_ratio": null
+    }
+  ],
+  "wall_seconds": 329.2329897500458,
+  "finished": "2026-10-13T11:58:41.369962+08:00",
+  "parameters": 14946,
+  "sampled_trajectories": 14400,
+  "greedy_baseline_trajectories": 14400
+}

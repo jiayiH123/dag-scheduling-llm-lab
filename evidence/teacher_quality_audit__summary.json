@@ -1,0 +1,99 @@
+{
+  "classification": "EXPLORATORY existing-teacher audit on inspected fold",
+  "configs": 432,
+  "latent_graphs": 48,
+  "student_compared_with_teacher": [
+    {
+      "seed": 11,
+      "configs": 432,
+      "latent_graphs": 48,
+      "neural_mean_paired_gain_percent": -12.625171208612517,
+      "neural_wins": 87,
+      "ties": 25,
+      "neural_losses": 320,
+      "worst_neural_gain_percent": -187.72635814889335,
+      "ratio_of_total_makespans_gain_percent": -8.801742582822891,
+      "latent_cluster_bootstrap_ci95": [
+        -15.521633342176495,
+        -9.71383271653577
+      ]
+    },
+    {
+      "seed": 22,
+      "configs": 432,
+      "latent_graphs": 48,
+      "neural_mean_paired_gain_percent": -12.214624360399668,
+      "neural_wins": 90,
+      "ties": 28,
+      "neural_losses": 314,
+      "worst_neural_gain_percent": -187.72635814889335,
+      "ratio_of_total_makespans_gain_percent": -8.560618349129356,
+      "latent_cluster_bootstrap_ci95": [
+        -15.074570637024774,
+        -9.335081686680747
+      ]
+    },
+    {
+      "seed": 33,
+      "configs": 432,
+      "latent_graphs": 48,
+      "neural_mean_paired_gain_percent": -15.146936570739392,
+      "neural_wins": 90,
+      "ties": 39,
+      "neural_losses": 303,
+      "worst_neural_gain_percent": -187.72635814889335,
+      "ratio_of_total_makespans_gain_percent": -11.113857498538838,
+      "latent_cluster_bootstrap_ci95": [
+        -18.11118568762363,
+        -12.14109849374671
+      ]
+    }
+  ],
+  "teacher_recipe_comparisons": [
+    {
+      "teacher_compared_with": "MSLBL_C",
+      "configs": 432,
+      "latent_graphs": 48,
+      "neural_mean_paired_gain_percent": 7.26284828811039,
+      "neural_wins": 326,
+      "ties": 106,
+      "neural_losses": 0,
+      "worst_neural_gain_percent": 0.0,
+      "ratio_of_total_makespans_gain_percent": 6.709806196383338,
+      "latent_cluster_bootstrap_ci95": [
+        5.978112401143709,
+        8.612161772114618
+      ]
+    },
+    {
+      "teacher_compared_with": "native_portfolio_C",
+      "configs": 432,
+      "latent_graphs": 48,
+      "neural_mean_paired_gain_percent": 2.2044969109393198,
+      "neural_wins": 241,
+      "ties": 162,
+      "neural_losses": 29,
+      "worst_neural_gain_percent": -9.44055944055944,
+      "ratio_of_total_makespans_gain_percent": 2.1857717066094517,
+      "latent_cluster_bootstrap_ci95": [
+        1.8408676416097287,
+        2.6043379986039032
+      ]
+    }
+  ],
+  "training_archive": {
+    "configs": 800,
+    "decisions": 36540,
+    "all_attempts64": true,
+    "marked_converged": 0,
+    "mean_teacher_gain_over_HEFT_percent": 22.533459838329087
+  },
+  "teacher_proposals_attempted": 27648,
+  "teacher_proposals_budget_eligible": 23464,
+  "teacher_schedules_independently_validated": 432,
+  "new_neural_calls": 0,
+  "new_training_runs": 0,
+  "solver_calls": 0,
+  "new_test_teacher_labels_permitted_for_training": false,
+  "wall_seconds": 23.975256124977022
+}

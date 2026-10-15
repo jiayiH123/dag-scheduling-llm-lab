@@ -1,0 +1,28 @@
+{
+  "classification": "EXPLORATORY retrospective inspected-fold diagnostic",
+  "started": "2026-10-14T22:59:46.197895+08:00",
+  "status": "completed",
+  "protocol_commit": "4a5dd7d690e4b5be902a3955e86a44bf3e158473",
+  "source_hashes": {
+    "experiments/retrospective_baselines/run.py": "b0cc602486175efe94a0414525db1c6205439f7f2c9ca5ebc965c6935fa38dfa",
+    "experiments/retrospective_baselines/protocol.md": "a1d6ad001d2ab70226e5742a97f96172a08d50b432a7c86dbc06468b75a02d83",
+    "src/search_controls.py": "e187c07924dea0687af4095070cb6249410aef4ec63766f7d904bbe247d9e5a0",
+    "src/budget_controls.py": "93755d2459d19c3c76df4b6ec4b204c0ce72caa7b4d7956d0c24dd26e22fd4e5",
+    "src/budget_core.py": "638a033a3b9ff2a36037a0a00d4491b1ca29bd61be55f9cd401debe7d5556467",
+    "src/legacy_comm_core.py": "8f11736d32401b8bb552717ca56a54c6c10e6395a99af5ad9a2fc7a0f9cc5955",
+    "experiments/score_range/results/run001/new_test.jsonl.gz": "70ae33ffdb94975f1ecbb6138fd41f563bb5c73f4fa87c185a5a578731ba58d6",
+    "experiments/score_range/results/run001/evaluation.jsonl.gz": "c106cef44b6c1befee1fac128b33f65d8f13fcace79d667b030acd645acd0c76",
+    "experiments/large_dag_next/results/run001/local_seed11.pt": "e3adef7c7e30a0260000155c05b9adaf0b7b42654659ba1de4e1f4ba6bd20e16"
+  },
+  "new_neural_calls": 0,
+  "new_training_runs": 0,
+  "solver_calls": 0,
+  "primary_seed": 11,
+  "secondary_seeds": [
+    22,
+    33
+  ],
+  "finished": "2026-10-14T23:00:10.561281+08:00",
+  "records_sha256": "b6f44804f3db4d8e82bcc541a38256f7f5f3a85451394710036ca97ab969b26d",
+  "wall_seconds": 24.2908245419967
+}

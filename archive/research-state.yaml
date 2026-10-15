@@ -1,0 +1,236 @@
+---
+project:
+  title: Single-forward RL for networked heterogeneous DAG scheduling
+  question: Can a single neural forward pass reduce global makespan under communication,
+    cumulative capacity and hard budget constraints?
+  status: active
+  started: '2026-10-12'
+  target_venue: IWQoS
+  success_criteria:
+    provenance: user
+    date: '2026-10-15'
+    criteria:
+    - Surpass the frozen imitation teacher on makespan
+    - Demonstrate stable incremental RL gain over matched BC
+    - Outperform relevant model-adapted baseline methods
+    architectural_flexibility: GNN,additional components,or LLM base model may be
+      explored; remote LLM execution would use user-provided server; not executed
+    discussion_note:
+      provenance: ai-suggested
+      date: '2026-10-15'
+      note: Later discussion proposes treating teacher superiority as aspirational
+        if an explicit quality/runtime tradeoff is demonstrated; stable BC+RL vs BC
+        and adapted controls remain important. User has not explicitly accepted this
+        re-ranking, so original user targets remain recorded.
+continuity:
+  mode: foreground_research_and_checkpoint_files
+  scheduler_available: false
+  note: No Claude /loop or OpenClaw cron tool in this session; no persistent background
+    agent was created.
+hypotheses:
+- id: H1
+  status: weak_evidence_on_nonbinding_micro_instances
+  priority: medium
+  statement: Joint assignment informed by successor synchronization improves on priority
+    plus EFT.
+- id: H1b
+  status: frozen_joint_short_and_long_pilots_failed_superiority_signal
+  priority: high
+  statement: Budget-communication coupled joint allocation can improve under the one-forward
+    constraint.
+- id: H2
+  status: cached_EFT_pilots_positive_dynamic_budget_module_gate_failed
+  statement: One-pass compiled analytic state feedback improves the quality/latency
+    tradeoff.
+- id: H3
+  status: grouped_and_prefix_baseline_gates_failed_current_settings
+  statement: Action-independent counterfactual baselines improve makespan credit assignment.
+- id: C1
+  status: synthetic_mechanism_supported_practical_and_novelty_unconfirmed
+  priority: high
+  statement: Budget and communication can create coordinated mapping barriers; investigate
+    whether a one-forward learned policy can handle relevant cases under bounded decoding
+    work.
+experiments:
+  current: I2_D4_completed_strong_control_teacher_OPT_headroom
+  proxy_metric: mean_paired_global_makespan_gain_with_hard_feasibility_and_one_forward
+  unique_diagnostic_configs: 1080
+  latest_discovery_fold_seed_offset: 7000
+  latest_significant_coordination_references: 19
+  after_one_pass_regions_still_five_percent_gap: 17
+  latest_all_config_mean_opt_gap_percent: 0.9689920758859923
+  complete_trace_screen_configs: 8
+  complete_trace_neighborhood_gate: all_8_converged_current_donor_mechanism_no_substantial_signal
+  rl_test_configs: 4824
+  rl_test_schedules: 60912
+  rl_training_trajectories: 330720
+  new_session_greedy_baseline_trajectories: 108000
+  metric_pilot_primary_signal_seeds: 3
+  budget_state_signal_seeds: 0
+  stronger_anchor_signal_seeds: 0
+  trajectory:
+  - experiment: H1_D1
+    note: CCR1 nonbinding gap0.451%; mixed-budget gate was not communication-specific
+      support.
+  - experiment: H1_D2
+    note: 'Same-seed tight CCR1 group: Portfolio15.837% -> Exchange4.853% OPT gap.'
+  - experiment: H1b_P1
+    note: Frozen joint short training fails superiority signal.
+  - experiment: H1b_P2
+    note: 'Fresh test: joint short53.825% -> long54.276% seed-mean OPT gap; signal0/3.'
+  - experiment: C1_D1
+    note: Discovery/fresh significant3+ certificates29/32 after pair convergence and
+      exact timing.
+  - experiment: C1_D2
+    note: MSLBL+neutral controls narrow significant references to19; selected-case
+      interventions3/4/0.
+  - experiment: C1_D3
+    note: Simple regions improve3/19;17 remain>=5%gap; total gap0.969%, practical
+      relevance still unconfirmed.
+  - experiment: C1_D4
+    note: Eight full-trace screens inconclusive; six references improved within radius2;
+      prioritize simple-neighborhood closure.
+  prefix_credit_signal_seeds: 0
+  edge_encoding_signal_seeds: 0
+  mean_allowance_signal_seeds: 0
+  output_range_whole_signal_seeds: 0
+  output_range_tight25_signal_seeds: 2
+  newest_session_sampled_trajectories: 14400
+  newest_session_greedy_trajectories_excluding_prefix: 14400
+  newest_session_prefix_suffix_placements: 0
+  latest_mechanism_diagnostic:
+    direct_unlock_cases: 0
+    slower_cheaper_positive_selected_cases: 187
+    joint_budget_communication_selected_cases: 51
+    cheap_portfolio_residual_cases: 1
+    residual_key: train510
+    source_fold: TRAIN only, exploratory/adaptive
+    reduced_witness_tasks: 19
+    reduced_witness_known_optimum: 458
+    fresh_discovery_configs: 288
+    fresh_discovery_latent_instances: 48
+    fresh_slower_cheaper_HEFT_ge5: 237
+    fresh_portfolio_residual_ge5: 48
+    fresh_joint_residual: 9
+    fresh_three_residual: 2
+  counterfactual_target_signal_seeds: 0
+  latest_budget_gap_audit:
+    configs: 36
+    latent_instances: 12
+    certified_optima: 14
+    all_same_physics_per_budget_triplet: true
+    HEFT_tight25_reducible_percent_interval:
+    - 38.283588583721965
+    - 52.880535162034775
+    matched_tight25_vs_nonbinding_reducible_increase_pp_interval:
+    - 5.148575834912707
+    - 39.78090844699323
+    scope: CCR1/pool/4families/20,40,80/rep0, reused discovery slice, not population
+      frequency
+  latest_budgetaware_policy_audit:
+    configs_reused: 432
+    latent_instances_reused: 48
+    new_training_runs: 0
+    new_neural_calls: 0
+    seed11_neural_gain_over_MSLBL_percent: -3.5033575447345267
+    seed11_neural_gain_over_tenrule_percent: -10.091473761759824
+    scope: post hoc known cycle24 fold; same physics; not fresh confirmation
+    raw_result: experiments/retrospective_baselines/results/run001/summary.json
+  latest_teacher_quality_audit:
+    configs_reused: 432
+    teacher_proposals: 27648
+    teacher_gain_over_MSLBL_percent: 7.26284828811039
+    student_seed11_gain_over_teacher_percent: -12.625171208612517
+    TEST_teacher_labels_allowed_for_training: false
+    raw_result: experiments/teacher_quality_audit/results/run001/summary.json
+  latest_strong_headroom_audit:
+    small_source_configs: 720
+    larger_source_configs: 36
+    larger_source_proven_optima: 14
+    new_solver_calls: 0
+    new_neural_calls: 0
+    new_training_runs: 0
+    teacher_tight60_reducible_interval_percent:
+    - 12.280285276017551
+    - 27.0484815481383
+    teacher_tight25_reducible_interval_percent:
+    - 10.890653644894218
+    - 31.96926872857567
+    teacher_configs_certified_ge5_tight60: 10
+    teacher_configs_certified_ge5_tight25: 9
+    scope: reused discovery slice12poolCCR1physicalgraphs,notfinalheldout
+    raw_result: experiments/strong_headroom/results/run001/summary.json
+  latest_literature_gain_audit:
+    date: '2026-10-15'
+    new_training_runs: 0
+    new_neural_calls: 0
+    new_solver_calls: 0
+    sources:
+    - WeCAN arXiv2603.23249v2
+    - GiPH MLSys2023
+    - AOM-SO FGCS175(2026)108118
+    note: Published algorithm-relative gains, not baseline-to-OPT headroom; keep greedy
+      versus S256 distinct.
+    record: literature/improvement_scale_teacher_20261015.md
+    teacher_type: offline heuristic ensemble plus capped mapping search; hard action
+      pseudo-labels
+    teacher_parameter_transfer: false
+    retained_PPO_teacher_anchor: 0.02
+  latest_LLM_role_design:
+    date: '2026-10-15'
+    status: AI-suggested draft, not executed or locked for a specific model/server
+    roles:
+    - offline heuristic/neighborhood code designer
+    - one-forward structured policy encoder
+    - soft budget/communication controller
+    one_forward_contract: one model forward with parallel heads plus one physical
+      decode; no autoregressive text generation
+    existing_labels_reusable: 800TRAINconfigs/36540task-pool actions; new order targets
+      not present
+    new_training_runs: 0
+    new_neural_calls: 0
+    new_LLM_calls: 0
+    remote_connections: 0
+    record: literature/llm_roles_20261015.md
+    draft_protocol: experiments/llm_role_pilot/protocol.md
+outer_loop:
+  cycle: 36
+  last_direction: assess_LLM_roles_without_relaxing_single_forward_or_claiming_unmeasured_gains
+  last_reflection: Current numerical DAGs do not establish an LLM advantage. Retain
+    original model; offline heuristic-code design and parallel structured policy heads
+    are proposed roles. Ordinary autoregressive schedule generation violates strict
+    one-forward accounting. Keep fixed-decoder representation and learned-order changes
+    separate, include GNN/Transformer controls, and obtain new order labels if training
+    priorities. No LLM/server execution.
+workspace:
+  protocol: experiments/strong_headroom/protocol.md
+  findings: findings.md
+  log: research-log.md
+  literature_dir: literature
+  to_human_dir: to_human
+  ara_manifest: ara/PAPER.md
+  original_code_modified: false
+  progress_report: to_human/progress-017.md
+  running_experiment_process: false
+default_policy:
+  checkpoint: experiments/large_dag_next/results/run001/local_seed11.pt
+  architecture: BudgetFeedbackActor
+  parameter_count: 14946
+  budget_feature: local_upgrade_cost_fraction_with_global_eta_input
+  teacher_anchor: 0.02
+  selection: P4_validation_selected_retained_after_P5_P6_P7_P8_P9; repeated exact
+    controls are not improvements
+  validation_ratio: 0.834175944701551
+  one_full_forward_per_DAG: true
+  status: retained_neural_reference_not_best_known_overall_method_on_retrospective_audit
+latest_completed_learning_loop:
+  experiment: G1_P10
+  core_baseline_signal_seeds: 3
+  counterfactual_target_signal_seeds: 0
+  RL_vs_own_supervised_signal_seeds:
+    teacher: 0
+    counterfactual: 0
+  selected_policy_fresh_HEFT_gain_percent: 16.517868846310765
+  selected_policy_HEFT_losses: 70
+  selected_policy_worst_HEFT_regression_percent: 30.004342162396867
+  raw_result: experiments/counterfactual_targets/results/run001/summary.json

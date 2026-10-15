@@ -1,0 +1,368 @@
+{
+  "classification": "Exploratory matched training-only counterfactual target pilot",
+  "commit": "1f01d79c7760f61465953b485c070e1096aa80be",
+  "hashes": {
+    "experiments/counterfactual_targets/train.py": "70da74cae62b37c31f1c3bf41ee8f85e67b8f4064daf136db24cf88992059b80",
+    "experiments/counterfactual_targets/server.py": "d634320d7313cc0cf82f830c690a07729ff259342fc85774b3956dc51d8aa51f",
+    "experiments/counterfactual_targets/labels.py": "bbcd6cfea318e0539fa5865d143a4f94ac1c6aa7990e2f6b2756c43174c5ebb4",
+    "experiments/counterfactual_targets/protocol.md": "48d26b65155fab384b7c727e67cc554685a39c07f6f26256fd2d29daa579b111",
+    "experiments/counterfactual_targets/results/run001/labels.jsonl.gz": "4a38eb971ca305ab344b606867495d0f2254eb3cf88e55c79afc3b0345014eca",
+    "experiments/large_dag_next/train.py": "a351d2ff32b0ffe27b8df65aa1f54c82c4752eedc5439701fd945c007cdbd68e",
+    "src/cached_budget_decoder.py": "2694e0d3561e3798e1a882ac7a66f3083f576b42eb2d985f4d258e0196d5e38b",
+    "src/budget_feedback_actor.py": "040b26e76c7f3ca7c380f1057f79178ffc252af06065b04780372aa856c03cf7",
+    "experiments/large_dag_next/results/run001/local_seed11.pt": "e3adef7c7e30a0260000155c05b9adaf0b7b42654659ba1de4e1f4ba6bd20e16",
+    "experiments/large_dag_next/results/run001/local_seed22.pt": "83395c45836bc521d9d6efaa3bd2281c6355ec38843e74da924cd664337c40ec",
+    "experiments/large_dag_next/results/run001/local_seed33.pt": "e77e14bf9aa884864824bbf078c531cab31cb47ffb92c108d1d3e9f912301013"
+  },
+  "status": "completed",
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "arms": [
+    "teacher",
+    "counterfactual"
+  ],
+  "parameters": 14946,
+  "device": "cpu",
+  "torch": "2.11.0",
+  "latent_counts": {
+    "train": 800,
+    "val": 24,
+    "test": 48
+  },
+  "sanity": {
+    "discarded_clone_single_graph": "train8",
+    "CF_CE_before": 1.810659646987915,
+    "CF_CE_after": 1.1454203128814697,
+    "finite_gradient_steps": 40
+  },
+  "completed_models": [
+    {
+      "seed": 11,
+      "stage": "SUP-teacher",
+      "arm": "teacher",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.834175944701551,
+      "updates_done": 200,
+      "training_seconds": 7.9719894580193795,
+      "parameters": 14946
+    },
+    {
+      "seed": 11,
+      "stage": "PPO-teacher",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.834175944701551,
+      "updates_done": 300,
+      "training_seconds": 24.455500416981522,
+      "bc_anchor": 0.02,
+      "arm": "teacher",
+      "parameters": 14946
+    },
+    {
+      "seed": 11,
+      "stage": "SUP-counterfactual",
+      "arm": "counterfactual",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.834175944701551,
+      "updates_done": 200,
+      "training_seconds": 8.197091416979674,
+      "parameters": 14946
+    },
+    {
+      "seed": 11,
+      "stage": "PPO-counterfactual",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.834175944701551,
+      "updates_done": 300,
+      "training_seconds": 23.538429417007137,
+      "bc_anchor": 0.02,
+      "arm": "counterfactual",
+      "parameters": 14946
+    },
+    {
+      "seed": 22,
+      "stage": "SUP-teacher",
+      "arm": "teacher",
+      "mode": "local",
+      "selected_step": 100,
+      "val_ratio": 0.8400578570885452,
+      "updates_done": 200,
+      "training_seconds": 8.652763209014665,
+      "parameters": 14946
+    },
+    {
+      "seed": 22,
+      "stage": "PPO-teacher",
+      "mode": "local",
+      "selected_step": 250,
+      "val_ratio": 0.8369617470230997,
+      "updates_done": 300,
+      "training_seconds": 23.226626290997956,
+      "bc_anchor": 0.02,
+      "arm": "teacher",
+      "parameters": 14946
+    },
+    {
+      "seed": 22,
+      "stage": "SUP-counterfactual",
+      "arm": "counterfactual",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.8409025768526049,
+      "updates_done": 200,
+      "training_seconds": 8.06972416600911,
+      "parameters": 14946
+    },
+    {
+      "seed": 22,
+      "stage": "PPO-counterfactual",
+      "mode": "local",
+      "selected_step": 300,
+      "val_ratio": 0.8395795373021305,
+      "updates_done": 300,
+      "training_seconds": 23.221701250004116,
+      "bc_anchor": 0.02,
+      "arm": "counterfactual",
+      "parameters": 14946
+    },
+    {
+      "seed": 33,
+      "stage": "SUP-teacher",
+      "arm": "teacher",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.8534410931721342,
+      "updates_done": 200,
+      "training_seconds": 9.07331950002117,
+      "parameters": 14946
+    },
+    {
+      "seed": 33,
+      "stage": "PPO-teacher",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.8534410931721342,
+      "updates_done": 300,
+      "training_seconds": 23.332398208032828,
+      "bc_anchor": 0.02,
+      "arm": "teacher",
+      "parameters": 14946
+    },
+    {
+      "seed": 33,
+      "stage": "SUP-counterfactual",
+      "arm": "counterfactual",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.8534410931721342,
+      "updates_done": 200,
+      "training_seconds": 8.274101875023916,
+      "parameters": 14946
+    },
+    {
+      "seed": 33,
+      "stage": "PPO-counterfactual",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.8534410931721342,
+      "updates_done": 300,
+      "training_seconds": 23.94694970798446,
+      "bc_anchor": 0.02,
+      "arm": "counterfactual",
+      "parameters": 14946
+    }
+  ],
+  "deployment_selection": {
+    "seed": 11,
+    "stage": "P4-local-frozen",
+    "mode": "local",
+    "selected_step": 250,
+    "val_ratio": 0.834175944701551,
+    "updates_done": 300,
+    "training_seconds": 24.866559665999375,
+    "bc_anchor": 0.02
+  },
+  "selection_before_test": true,
+  "models": [
+    {
+      "seed": 11,
+      "stage": "SUP-teacher",
+      "arm": "teacher",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.834175944701551,
+      "updates_done": 200,
+      "training_seconds": 7.9719894580193795,
+      "parameters": 14946
+    },
+    {
+      "seed": 11,
+      "stage": "PPO-teacher",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.834175944701551,
+      "updates_done": 300,
+      "training_seconds": 24.455500416981522,
+      "bc_anchor": 0.02,
+      "arm": "teacher",
+      "parameters": 14946
+    },
+    {
+      "seed": 11,
+      "stage": "SUP-counterfactual",
+      "arm": "counterfactual",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.834175944701551,
+      "updates_done": 200,
+      "training_seconds": 8.197091416979674,
+      "parameters": 14946
+    },
+    {
+      "seed": 11,
+      "stage": "PPO-counterfactual",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.834175944701551,
+      "updates_done": 300,
+      "training_seconds": 23.538429417007137,
+      "bc_anchor": 0.02,
+      "arm": "counterfactual",
+      "parameters": 14946
+    },
+    {
+      "seed": 22,
+      "stage": "SUP-teacher",
+      "arm": "teacher",
+      "mode": "local",
+      "selected_step": 100,
+      "val_ratio": 0.8400578570885452,
+      "updates_done": 200,
+      "training_seconds": 8.652763209014665,
+      "parameters": 14946
+    },
+    {
+      "seed": 22,
+      "stage": "PPO-teacher",
+      "mode": "local",
+      "selected_step": 250,
+      "val_ratio": 0.8369617470230997,
+      "updates_done": 300,
+      "training_seconds": 23.226626290997956,
+      "bc_anchor": 0.02,
+      "arm": "teacher",
+      "parameters": 14946
+    },
+    {
+      "seed": 22,
+      "stage": "SUP-counterfactual",
+      "arm": "counterfactual",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.8409025768526049,
+      "updates_done": 200,
+      "training_seconds": 8.06972416600911,
+      "parameters": 14946
+    },
+    {
+      "seed": 22,
+      "stage": "PPO-counterfactual",
+      "mode": "local",
+      "selected_step": 300,
+      "val_ratio": 0.8395795373021305,
+      "updates_done": 300,
+      "training_seconds": 23.221701250004116,
+      "bc_anchor": 0.02,
+      "arm": "counterfactual",
+      "parameters": 14946
+    },
+    {
+      "seed": 33,
+      "stage": "SUP-teacher",
+      "arm": "teacher",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.8534410931721342,
+      "updates_done": 200,
+      "training_seconds": 9.07331950002117,
+      "parameters": 14946
+    },
+    {
+      "seed": 33,
+      "stage": "PPO-teacher",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.8534410931721342,
+      "updates_done": 300,
+      "training_seconds": 23.332398208032828,
+      "bc_anchor": 0.02,
+      "arm": "teacher",
+      "parameters": 14946
+    },
+    {
+      "seed": 33,
+      "stage": "SUP-counterfactual",
+      "arm": "counterfactual",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.8534410931721342,
+      "updates_done": 200,
+      "training_seconds": 8.274101875023916,
+      "parameters": 14946
+    },
+    {
+      "seed": 33,
+      "stage": "PPO-counterfactual",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.8534410931721342,
+      "updates_done": 300,
+      "training_seconds": 23.94694970798446,
+      "bc_anchor": 0.02,
+      "arm": "counterfactual",
+      "parameters": 14946
+    },
+    {
+      "seed": 11,
+      "stage": "P4-local-frozen",
+      "mode": "local",
+      "selected_step": 250,
+      "val_ratio": 0.834175944701551,
+      "updates_done": 300,
+      "training_seconds": 24.866559665999375,
+      "bc_anchor": 0.02,
+      "parameters": 14946
+    },
+    {
+      "seed": 22,
+      "stage": "P4-local-frozen",
+      "mode": "local",
+      "selected_step": 300,
+      "val_ratio": 0.8409025768526049,
+      "updates_done": 300,
+      "training_seconds": 24.254995625000447,
+      "bc_anchor": 0.02,
+      "parameters": 14946
+    },
+    {
+      "seed": 33,
+      "stage": "P4-local-frozen",
+      "mode": "local",
+      "selected_step": 0,
+      "val_ratio": 0.8534410931721342,
+      "updates_done": 300,
+      "training_seconds": 24.532657499948982,
+      "bc_anchor": 0.02,
+      "parameters": 14946
+    }
+  ],
+  "wall_seconds": 289.94892379199155,
+  "sampled_trajectories": 14400,
+  "greedy_baseline_trajectories": 14400
+}

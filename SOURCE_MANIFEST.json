@@ -1,0 +1,364 @@
+{
+  "source_commit": "a751dba9b40c585b977210165b2fc7449f4ed53b",
+  "created_date": "2026-10-15",
+  "copied_files": [
+    {
+      "source": "experiments/autoresearch/src/legacy_comm_core.py",
+      "target": "vendor/legacy_comm_core.py",
+      "sha256": "8f11736d32401b8bb552717ca56a54c6c10e6395a99af5ad9a2fc7a0f9cc5955"
+    },
+    {
+      "source": "experiments/autoresearch/src/budget_core.py",
+      "target": "vendor/budget_core.py",
+      "sha256": "638a033a3b9ff2a36037a0a00d4491b1ca29bd61be55f9cd401debe7d5556467"
+    },
+    {
+      "source": "experiments/autoresearch/src/budget_controls.py",
+      "target": "vendor/budget_controls.py",
+      "sha256": "93755d2459d19c3c76df4b6ec4b204c0ce72caa7b4d7956d0c24dd26e22fd4e5"
+    },
+    {
+      "source": "experiments/autoresearch/src/prepared_sgs.py",
+      "target": "vendor/prepared_sgs.py",
+      "sha256": "1212bd0b45fbccc825b064a377c512a0ab0bc86d6250323722a08733ee3c8f58"
+    },
+    {
+      "source": "experiments/autoresearch/src/search_controls.py",
+      "target": "vendor/search_controls.py",
+      "sha256": "e187c07924dea0687af4095070cb6249410aef4ec63766f7d904bbe247d9e5a0"
+    },
+    {
+      "source": "experiments/autoresearch/src/cached_budget_decoder.py",
+      "target": "vendor/cached_budget_decoder.py",
+      "sha256": "2694e0d3561e3798e1a882ac7a66f3083f576b42eb2d985f4d258e0196d5e38b"
+    },
+    {
+      "source": "experiments/autoresearch/src/single_forward_actor.py",
+      "target": "vendor/single_forward_actor.py",
+      "sha256": "9fc9976de15345d6b6f4fdf4913bb11467844cf0e2dba4d5edaa2f07d3d64340"
+    },
+    {
+      "source": "experiments/autoresearch/src/budget_feedback_actor.py",
+      "target": "vendor/budget_feedback_actor.py",
+      "sha256": "040b26e76c7f3ca7c380f1057f79178ffc252af06065b04780372aa856c03cf7"
+    },
+    {
+      "source": "experiments/autoresearch/src/legacy_comm_core.origin.json",
+      "target": "vendor/legacy_comm_core.origin.json",
+      "sha256": "fe5abdef317219435e509c309fe9723c087f6828abf436e88e1c07b293117c5f"
+    },
+    {
+      "source": "code/PPO-BiHyb/问题建模.pdf",
+      "target": "docs/problem_model.pdf",
+      "sha256": "3bc9025d214d40cfb07be4f187ac92ebd3de0bfb888d808f7fee254d5ca26e2f"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/large_dag_next/results/run001/dataset.jsonl.gz",
+      "target": "data/reference_dataset.jsonl.gz",
+      "sha256": "c0c37ad8aaf9778e2e4d8fca3a8932f8fa873bff836db336c4e6cddc6d77bba3"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/large_dag_next/results/run001/bc_seed11.pt",
+      "target": "checkpoints/bc_seed11.pt",
+      "sha256": "bc28e105705f53a9535614da8e065de7bbdb9d691edacd4aa2ef747d876cf277"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/large_dag_next/results/run001/local_seed11.pt",
+      "target": "checkpoints/local_seed11.pt",
+      "sha256": "e3adef7c7e30a0260000155c05b9adaf0b7b42654659ba1de4e1f4ba6bd20e16"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/gnn_metric_pilot/results/run001/bc_seed11.pt",
+      "target": "checkpoints/warmstart_bc_seed11.pt",
+      "sha256": "e7e44c4ca5b1533948d1db2c4439a1a73a69285f2ce6e610395fd565f4c4ddd6"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/large_dag_next/results/run001/bc_seed22.pt",
+      "target": "checkpoints/bc_seed22.pt",
+      "sha256": "37579de8682df71bc271ce38a3f6f88b67bf33105f96c32d3d1b06a1f843c579"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/large_dag_next/results/run001/local_seed22.pt",
+      "target": "checkpoints/local_seed22.pt",
+      "sha256": "83395c45836bc521d9d6efaa3bd2281c6355ec38843e74da924cd664337c40ec"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/gnn_metric_pilot/results/run001/bc_seed22.pt",
+      "target": "checkpoints/warmstart_bc_seed22.pt",
+      "sha256": "d2ec242866702c798e87ba22a18a35157ec118959e7879ae5138867a54bb257e"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/large_dag_next/results/run001/bc_seed33.pt",
+      "target": "checkpoints/bc_seed33.pt",
+      "sha256": "34faec3a8f0c76f49ae4a8a1824d8fb6a3075c6717d2efe95bc5d74f9d6beeba"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/large_dag_next/results/run001/local_seed33.pt",
+      "target": "checkpoints/local_seed33.pt",
+      "sha256": "e77e14bf9aa884864824bbf078c531cab31cb47ffb92c108d1d3e9f912301013"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/gnn_metric_pilot/results/run001/bc_seed33.pt",
+      "target": "checkpoints/warmstart_bc_seed33.pt",
+      "sha256": "3a21fe4e24ec2078cc97b739e9ef365c0f67f7a8c8543e317faa3f6b108be166"
+    },
+    {
+      "source": "experiments/autoresearch/findings.md",
+      "target": "archive/findings.md",
+      "sha256": "669d8ac14e81edb8b24aee79304de4c9dec769cd4fb131720ed60ebd32aa0dbe"
+    },
+    {
+      "source": "experiments/autoresearch/research-log.md",
+      "target": "archive/research-log.md",
+      "sha256": "b4104eaa45424c541aae9489d28a0391c1259132324ae5ec5b61bf36e59b94cf"
+    },
+    {
+      "source": "experiments/autoresearch/research-state.yaml",
+      "target": "archive/research-state.yaml",
+      "sha256": "a1090d5b8502e5348ee08750562ba2b79c655d947136c27c3fc1a4e8554031ee"
+    },
+    {
+      "source": "experiments/autoresearch/results.tsv",
+      "target": "archive/results.tsv",
+      "sha256": "a57a432f6fc70f98c08dbf20bc19ba459a612eb981e153f98dc65bd0d9a55834"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/large_dag_next/server.py",
+      "target": "archive/large_dag_next__server.py",
+      "sha256": "7e5dc256ca8a8d8cb7d724a5cee76641c07394262c36d2793ca1c05d6e327e50"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/large_dag_next/train.py",
+      "target": "archive/large_dag_next__train.py",
+      "sha256": "a351d2ff32b0ffe27b8df65aa1f54c82c4752eedc5439701fd945c007cdbd68e"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/large_dag_next/protocol.md",
+      "target": "archive/large_dag_next__protocol.md",
+      "sha256": "1b9fd97190340749744a24dddcc7e4a34857fb99f5b3c822686f5edf24f1676c"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/h1b_rl_pilot/server.py",
+      "target": "archive/h1b_rl_pilot__server.py",
+      "sha256": "15bacb4dc9749d7bd62a6827c885c04db508dcc1dbb5bc96bdc9a074bf8ba8c5"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/budget_ppo/train.py",
+      "target": "archive/budget_ppo__train.py",
+      "sha256": "9865d955bce9cbb47bd3c25652998702e3e0f697fdd8470a62f0dcd4fcc2fe43"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/llm_role_pilot/protocol.md",
+      "target": "archive/llm_role_pilot__protocol.md",
+      "sha256": "c6f9debcb80b2229e8947291e5fda4a8bca70c5f196cdbdda4997c59d5925e6a"
+    },
+    {
+      "source": "experiments/autoresearch/literature/llm_roles_20261015.md",
+      "target": "docs/llm_roles_20261015.md",
+      "sha256": "85c18b4f1b2c0bf06f608c4d18842bded594cd2c95f1d01eb94283780e5ae93a"
+    },
+    {
+      "source": "experiments/autoresearch/literature/improvement_scale_teacher_20261015.md",
+      "target": "docs/improvement_scale_teacher_20261015.md",
+      "sha256": "5424575c7f184e30fa4268abac53fd69c8764b1c026c245c4f6bf724945cbb6f"
+    },
+    {
+      "source": "experiments/autoresearch/literature/mslbl2017.md",
+      "target": "docs/mslbl2017.md",
+      "sha256": "41307d4e40bd0e1286beab4fbae0963d09b7c4d3ec5026d21bed75b08612c77b"
+    },
+    {
+      "source": "experiments/autoresearch/literature/buda2022.md",
+      "target": "docs/buda2022.md",
+      "sha256": "a7a3f202a1df73116341f7dddde01cee8cf1f2a538c221bbd1863b4303d9777b"
+    },
+    {
+      "source": "experiments/autoresearch/literature/giph2023.md",
+      "target": "docs/giph2023.md",
+      "sha256": "a6c385e6586c75827179e79a2244e59dff9cc5e340d59869f56b051df762c432"
+    },
+    {
+      "source": "experiments/autoresearch/literature/wecan2026.md",
+      "target": "docs/wecan2026.md",
+      "sha256": "8f8af0ab34f1a2ec9a627f2d2e4f9a1e8214264ecb73c6139e310f4781c294be"
+    },
+    {
+      "source": "experiments/autoresearch/literature/budget_prior_art_20261012.md",
+      "target": "docs/budget_prior_art_20261012.md",
+      "sha256": "01713b33475f978ee0e8330d25bffd6ef56894842531496df68b9f5287fd09a6"
+    },
+    {
+      "source": "experiments/autoresearch/literature/baseline_scale_comparison_20261014.md",
+      "target": "docs/baseline_scale_comparison_20261014.md",
+      "sha256": "2e81e9fe184a72078b93aadd49a10eea9469b5796fb588bf091124ee05672641"
+    },
+    {
+      "source": "experiments/autoresearch/to_human/progress-014.md",
+      "target": "docs/progress-014.md",
+      "sha256": "e5594383d5a15c35dc8027b293f273a8a1bfcc994dc12c60621b88bd4a35c013"
+    },
+    {
+      "source": "experiments/autoresearch/to_human/progress-015.md",
+      "target": "docs/progress-015.md",
+      "sha256": "e88aa360d3dd9950e91d2d0deac5cdb2e82908e146176ecdc5b232b8eed4c820"
+    },
+    {
+      "source": "experiments/autoresearch/to_human/progress-016.md",
+      "target": "docs/progress-016.md",
+      "sha256": "93e38f3342e14e50b61263ff7eb3781f5d0e7bc4dc10c46015daa0ce33b80155"
+    },
+    {
+      "source": "experiments/autoresearch/to_human/progress-017.md",
+      "target": "docs/progress-017.md",
+      "sha256": "d3b3eec0d428fc48ffa730edd2fc59bcb7a7d4493a704f168e1159b9a15cc136"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/large_dag_next/results/run001/metadata.json",
+      "target": "evidence/large_dag_next__metadata.json",
+      "sha256": "8d5786ca068651d555ed7711776fb0b1a71c4ce44360da5b33e2fc9cb04d344d"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/large_dag_next/results/run001/summary.json",
+      "target": "evidence/large_dag_next__summary.json",
+      "sha256": "de348e65a833542c941cb8ed9d85d3cbdfa00e88fcec6d04375d3aaf3b66a433"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/large_dag_next/results/run001/rows.csv",
+      "target": "evidence/large_dag_next__rows.csv",
+      "sha256": "7cea5c0a27551ffbe591c6e5b5f03bebf92684dc4692dfec5e915ba862f2f388"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/counterfactual_targets/results/run001/metadata.json",
+      "target": "evidence/counterfactual_targets__metadata.json",
+      "sha256": "1010dfb20d7bf119a1270b9135bd51ef8122ecf65dbafb2d4706455854389a90"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/counterfactual_targets/results/run001/summary.json",
+      "target": "evidence/counterfactual_targets__summary.json",
+      "sha256": "81df1d3f6a1de74c4c5793dfa309fae1fd2517c13829e47505408fdd03233118"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/counterfactual_targets/results/run001/rows.csv",
+      "target": "evidence/counterfactual_targets__rows.csv",
+      "sha256": "30fc860c27b2a3bba6f7bcba88db457ed4279edda2906e928709163a9fcd8035"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/retrospective_baselines/results/run001/metadata.json",
+      "target": "evidence/retrospective_baselines__metadata.json",
+      "sha256": "bb966ec6d5fef919b360a04d2462dadf17f9e03375aef7091e992478f106fee9"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/retrospective_baselines/results/run001/summary.json",
+      "target": "evidence/retrospective_baselines__summary.json",
+      "sha256": "13a3d6bdb8d3e9ba05aa886ff80beda0ab7c1d075fdcfb6adc881159061b3947"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/retrospective_baselines/results/run001/rows.csv",
+      "target": "evidence/retrospective_baselines__rows.csv",
+      "sha256": "30044577fc89957f99906e2266eed5be9f8cc66b24761821b05ed3a4a8086711"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/teacher_quality_audit/results/run001/metadata.json",
+      "target": "evidence/teacher_quality_audit__metadata.json",
+      "sha256": "5a2516c651d25a7ed6b534ef544dc6e1c61ca965a981d701c9248d8f0a42a2e2"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/teacher_quality_audit/results/run001/summary.json",
+      "target": "evidence/teacher_quality_audit__summary.json",
+      "sha256": "f4b38f7212bb66ba10122a9ec3cf37219dd5747769a67ceee29697b886a70529"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/strong_headroom/results/run001/metadata.json",
+      "target": "evidence/strong_headroom__metadata.json",
+      "sha256": "bc78bda997af970e4e718637f1b4bbb8c68c73ef3b88c8199fe2d9cbec5ca3d5"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/strong_headroom/results/run001/summary.json",
+      "target": "evidence/strong_headroom__summary.json",
+      "sha256": "d344df79a4f3d5261ab7fed21a31d5f0603fe29262b3d5f4abe2ed5642a9494e"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/strong_headroom/results/run001/rows.csv",
+      "target": "evidence/strong_headroom__rows.csv",
+      "sha256": "a1abcfd5f9dba49dce960e67eefee0af15877ae521fa2851a4bc0a9cbab45f61"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/score_range/results/run001/metadata.json",
+      "target": "evidence/score_range__metadata.json",
+      "sha256": "98a4a1491db6bfcad863358d7ef9b924aa67761502e4e872bb7e3f9a0d45abc4"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/score_range/results/run001/summary.json",
+      "target": "evidence/score_range__summary.json",
+      "sha256": "fcf6c1f81b4edb0e37726cad43b55e580e81a24ada5783cae601936da707f683"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/score_range/results/run001/rows.csv",
+      "target": "evidence/score_range__rows.csv",
+      "sha256": "e3716e544135286110feb3ad1ef7e57cb43ae556abb4e6b09cb1cc618b85934a"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/edge_encoding/results/run001/metadata.json",
+      "target": "evidence/edge_encoding__metadata.json",
+      "sha256": "73f7ef23b31ef9df593eefca4c30e06e248cb286e43f390552311a9d38abe7ea"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/edge_encoding/results/run001/summary.json",
+      "target": "evidence/edge_encoding__summary.json",
+      "sha256": "1bd9d0db53d8c9e2471b1c58133cba6b4d520b1d56d2c52ccbb54b2b8d1b7ed3"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/edge_encoding/results/run001/rows.csv",
+      "target": "evidence/edge_encoding__rows.csv",
+      "sha256": "0ebd9338dc44ac8663cbd86bd6ab9f5bf816f8a7615d54ce1b3c2aea42f79f7f"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/prefix_credit/results/run001/metadata.json",
+      "target": "evidence/prefix_credit__metadata.json",
+      "sha256": "7d6dc4b4238a56d1ea5f21a9f04bb8ca507bc0219ea6305f503ad4553acca60c"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/prefix_credit/results/run001/summary.json",
+      "target": "evidence/prefix_credit__summary.json",
+      "sha256": "6e6831d7de31de9aff635f11fa07d72effc2c9583f2e66b0c123462decaf1a8f"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/prefix_credit/results/run001/rows.csv",
+      "target": "evidence/prefix_credit__rows.csv",
+      "sha256": "46994813b31e9b2c714d2928f76e751138e5b57dd925f3254cc24e4188f04cd1"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/mean_allowance/results/run001/metadata.json",
+      "target": "evidence/mean_allowance__metadata.json",
+      "sha256": "f35989b231c429ce6e2d6970764a1f6d8284432c33b4f40a6548365038820f05"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/mean_allowance/results/run001/summary.json",
+      "target": "evidence/mean_allowance__summary.json",
+      "sha256": "fb9cefe52aeea2677b47034f450e2b2bbcf92fc41aadf0f310342f1dc75232e7"
+    },
+    {
+      "source": "experiments/autoresearch/experiments/mean_allowance/results/run001/rows.csv",
+      "target": "evidence/mean_allowance__rows.csv",
+      "sha256": "d7b5db8d0467326e58d65cea2a8117c72cd3a6dab2f4c7844942a7203c3da488"
+    }
+  ],
+  "extracted_functions": {
+    "daglab/reference.py": [
+      "large_dag_next/server.py:base,teacher",
+      "h1b_rl_pilot/server.py:add_budget,graph_features,rollout"
+    ],
+    "scripts/train_reference.py": [
+      "large_dag_next/train.py:conditionals,evaluate,validation,shared_bc,ppo"
+    ]
+  },
+  "note": "source hashes are preserved; portable wrappers are new and benchmark/checkpoint files are unchanged",
+  "transformed_files": [
+    {
+      "source": "experiments/autoresearch/experiments/score_range/results/run001/new_test.jsonl.gz",
+      "source_sha256": "70ae33ffdb94975f1ecbb6138fd41f563bb5c73f4fa87c185a5a578731ba58d6",
+      "target": "data/known_cycle24_test.jsonl.gz",
+      "transformation": "Retain key/instance/graph/reference for all432; remove duplicated baseline schedules. Add random_seed_base=271 from source metric_data_rpc.py for exact Randommean5 replay; reference dataset uses131."
+    }
+  ]
+}

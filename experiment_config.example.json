@@ -1,0 +1,21 @@
+{
+  "goal": "strict-one-forward budgeted DAG makespan",
+  "access_type": "local_weights_or_custom_policy_endpoint",
+  "base_model_path": "/path/to/user-provided/model",
+  "policy_output": "node-major [n*k,2] a/w scores",
+  "decoder": "unchanged LOCAL CachedBudgetDecoder",
+  "reference_data": "data/reference_dataset.jsonl.gz",
+  "known_comparison_test": "data/known_cycle24_test.jsonl.gz",
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "stages": [
+    "BC",
+    "BC+PPO"
+  ],
+  "generation_not_equivalent_to_one_forward": true,
+  "run_directory": "runs/llm_pilot_unique_name",
+  "status": "template,notimplemented"
+}

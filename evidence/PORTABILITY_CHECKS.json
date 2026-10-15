@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-15",
+  "purpose": "migration correctness,not new method gains",
+  "data_split_counts": {
+    "train": 800,
+    "val": 216,
+    "test": 432
+  },
+  "latent_graph_counts": {
+    "train": 800,
+    "val": 24,
+    "test": 48
+  },
+  "training_actions": 36540,
+  "zero_head_full_HEFT_schedule_identities": 4,
+  "teacher_exact_replay_cases": 1,
+  "known_cycle24_outputs": 432,
+  "all_output_forward_counts_one": true,
+  "baseline_point_means_exactly_reproduced": {
+    "Greedy": 20.966168075145642,
+    "HEFT": 15.582848164857243,
+    "PEFT": 17.557652516489277,
+    "MSLBL": -3.5033575447345267,
+    "Portfolio": -10.091473761759824,
+    "RandomMean5": 46.35961435245527,
+    "Teacher64": -12.625171208612517
+  },
+  "bootstrap_seed_in_portable_metrics": 271828,
+  "original_CI_seed_may_differ": true,
+  "reference_retraining": {
+    "seed": 11,
+    "BC_updates": 200,
+    "PPO_updates": 300,
+    "BC_all_weight_tensors_identical_to_frozen": true,
+    "PPO_all_weight_tensors_identical_to_frozen": true,
+    "metadata": {
+      "BC": {
+        "seed": 11,
+        "stage": "BC-large",
+        "mode": "initial",
+        "selected_step": 200,
+        "val_ratio": 0.8492220272018138,
+        "updates_done": 200,
+        "training_seconds": 6.232134125020821
+      },
+      "PPO": {
+        "seed": 11,
+        "stage": "PPO-local",
+        "mode": "local",
+        "selected_step": 250,
+        "val_ratio": 0.834175944701551,
+        "updates_done": 300,
+        "training_seconds": 23.936843667004723,
+        "bc_anchor": 0.02
+      },
+      "seed": 11,
+      "data": "reference_dataset.jsonl.gz",
+      "device": "cpu",
+      "threads": 1,
+      "classification": "portable reference replay on known reference split; not a fresh method gain"
+    }
+  },
+  "export_train_val_target_isolation": "PASS",
+  "environment_note": "simulation in dag-research Python3.11,torch2.11 in dag_env Python3.10,via portable RPC; no dependency installs",
+  "LLM_implemented": false
+}

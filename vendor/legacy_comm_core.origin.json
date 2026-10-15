@@ -1,0 +1,5 @@
+{
+  "source": "experiments/dag_comm_core.py",
+  "sha256": "8f11736d32401b8bb552717ca56a54c6c10e6395a99af5ad9a2fc7a0f9cc5955",
+  "copied_for": "isolated reproducible research; original unchanged"
+}

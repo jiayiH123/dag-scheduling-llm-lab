@@ -1,0 +1,26 @@
+{
+  "classification": "EXPLORATORY existing-teacher audit on inspected fold",
+  "started": "2026-10-14T23:06:38.795555+08:00",
+  "status": "completed",
+  "protocol_commit": "390f2dd9a857ce7672d7bd947094b0c8a5af01a6",
+  "source_hashes": {
+    "experiments/teacher_quality_audit/run.py": "64f4d5b489ffe493c084bdef77edfcb852d1f699d6747f1897409adecaeff05a",
+    "experiments/teacher_quality_audit/protocol.md": "9a07f184b259f44a24c91e12455c707f572de776bcbc6a80df45d6202a5b58c9",
+    "experiments/retrospective_baselines/results/run001/records.jsonl.gz": "b6f44804f3db4d8e82bcc541a38256f7f5f3a85451394710036ca97ab969b26d",
+    "experiments/score_range/results/run001/evaluation.jsonl.gz": "c106cef44b6c1befee1fac128b33f65d8f13fcace79d667b030acd645acd0c76",
+    "experiments/large_dag_next/results/run001/dataset.jsonl.gz": "c0c37ad8aaf9778e2e4d8fca3a8932f8fa873bff836db336c4e6cddc6d77bba3",
+    "experiments/large_dag_next/server.py": "7e5dc256ca8a8d8cb7d724a5cee76641c07394262c36d2793ca1c05d6e327e50",
+    "src/search_controls.py": "e187c07924dea0687af4095070cb6249410aef4ec63766f7d904bbe247d9e5a0",
+    "src/budget_controls.py": "93755d2459d19c3c76df4b6ec4b204c0ce72caa7b4d7956d0c24dd26e22fd4e5",
+    "src/cached_budget_decoder.py": "2694e0d3561e3798e1a882ac7a66f3083f576b42eb2d985f4d258e0196d5e38b",
+    "src/prepared_sgs.py": "1212bd0b45fbccc825b064a377c512a0ab0bc86d6250323722a08733ee3c8f58",
+    "src/budget_core.py": "638a033a3b9ff2a36037a0a00d4491b1ca29bd61be55f9cd401debe7d5556467",
+    "src/legacy_comm_core.py": "8f11736d32401b8bb552717ca56a54c6c10e6395a99af5ad9a2fc7a0f9cc5955"
+  },
+  "new_neural_calls": 0,
+  "new_training_runs": 0,
+  "solver_calls": 0,
+  "new_test_teacher_labels_permitted_for_training": false,
+  "finished": "2026-10-14T23:07:02.859398+08:00",
+  "records_sha256": "e7234412622475d29fa4e494d74620ccbbe2f3c2c2671fe7a27656a72598c695"
+}

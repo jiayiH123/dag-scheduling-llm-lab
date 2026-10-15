@@ -1,0 +1,9 @@
+# 文件选择原则
+
+优先迁移原问题PDF、共同物理和检查器、全部已实现的核心对照、训练和已知比较数据、冻结检查点、教师来源、失败结果及下一步LLM契约。完整原始3GB目录包含重复未压缩JSONL和大量逐调度档案，未全量上传。
+
+vendor是逐字复制原文件；daglab/reference.py与scripts/train_reference.py从原函数精确抽取后增加可移植胶水，来源见SOURCE_MANIFEST。archive内脚本是历史快照，仍可能带原机路径，不作为新机入口。scripts/daglab所有入口是相对仓库路径；模型/解释器由参数提供。
+
+reference_dataset保留原归档字节，known_cycle24_test仅删去可由同模拟器重算的重复baseline/random调度，实例/graph/reference逐值保留。两者均不能作为新盲测。evidence保留历次数值与负结果，不拷贝不可复现的只有好消息摘录。
+
+BUNDLE_MANIFEST验证携带内容的SHA256，不是科学结论认证。不要将未来生成的LLM权重、token、model缓存和大量run日志提交到Git；以run元数据+外部权重路径/哈希记录。

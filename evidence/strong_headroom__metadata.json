@@ -1,0 +1,26 @@
+{
+  "classification": "EXPLORATORY strong-control headroom and matched-data reanalysis",
+  "started": "2026-10-15T11:56:58.419793+08:00",
+  "status": "completed",
+  "protocol_commit": "c12dde67cce4721d8d66acc8c1b2e95a4ca21df0",
+  "source_hashes": {
+    "experiments/strong_headroom/run.py": "c9a0b5d26906e7b2f521a6afebd84c8b25c3dfe7ddfe59f796d29d82018a9b54",
+    "experiments/strong_headroom/protocol.md": "746f9a4b4c6d85fb077878412ae83491fd7e148da1987a8e7bbed53f90cf9742",
+    "src/budget_core.py": "638a033a3b9ff2a36037a0a00d4491b1ca29bd61be55f9cd401debe7d5556467",
+    "src/legacy_comm_core.py": "8f11736d32401b8bb552717ca56a54c6c10e6395a99af5ad9a2fc7a0f9cc5955",
+    "src/budget_controls.py": "93755d2459d19c3c76df4b6ec4b204c0ce72caa7b4d7956d0c24dd26e22fd4e5",
+    "src/search_controls.py": "e187c07924dea0687af4095070cb6249410aef4ec63766f7d904bbe247d9e5a0",
+    "src/prepared_sgs.py": "1212bd0b45fbccc825b064a377c512a0ab0bc86d6250323722a08733ee3c8f58",
+    "src/cached_budget_decoder.py": "2694e0d3561e3798e1a882ac7a66f3083f576b42eb2d985f4d258e0196d5e38b",
+    "experiments/large_dag_next/server.py": "7e5dc256ca8a8d8cb7d724a5cee76641c07394262c36d2793ca1c05d6e327e50",
+    "experiments/h1_diagnostic/results/run001/records.jsonl.gz": "2bf1d94dec077d3bdfb16f1b7840755ba1ae3508dffde3ad17ec329c56baad22",
+    "experiments/h1_budget_exchange/results/run001/records.jsonl.gz": "e275e6e19a2044b407531c0792df8af94398a627c5986bccad6e98750c9cc997",
+    "experiments/budget_gap_audit/results/run001/records.jsonl.gz": "91ffa0550907a652a81ce9ad0988786a556babe0674272277d4709ba79b332fa"
+  },
+  "new_training_runs": 0,
+  "new_neural_calls": 0,
+  "new_solver_calls": 0,
+  "finished": "2026-10-15T11:57:09.282629+08:00",
+  "records_sha256": "5e6b85ce1925a1cf69018f8394c1044d351f6c64b91dfcba4c45664c520058c4",
+  "wall_seconds": 10.829701707989443
+}
