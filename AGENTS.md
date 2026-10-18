@@ -1,12 +1,14 @@
 # Agent handoff — read this first
 
-Owner:jiayiH123. Research snapshot2026-10-15. This repository is a portable handoff of an active, unpublished research project, not a completed LLM method.
+Owner:jiayiH123. Frozen evidence snapshot2026-10-15; active plan updated2026-10-18. This repository is an active research handoff, not a completed new Attention/BOPO or LLM method.
+
+**Current priority: read `docs/SERVER_EXPERIMENT_PLAN_20261018.md` and `docs/HANDOFF_PROMPT.md`. Implement and evaluate small structured Attention plus complete-feasible-schedule preference training, using ReSched/BOPO as attributed sources. The old LLM-first plan is deferred. User permits another computer's GPU resources; exact device typed “A00” remains to be checked. Do not start by downloading language-model weights.**
 
 ## Objective and task
 
-Minimize global DAG makespan with communication delays, cumulative resource capacity and hard additive execution-cost budget. Preserve one complete policy-network forward and one final schedule construction. Target venueIWQoS. First reproduce frozen GNN/BC/RL and adapted baselines, then implement a small LLM structured policy using locally available server model weights. Ask for the actual model path/hardware only after inspecting the server; do not assume a model or API key exists.
+Minimize global DAG makespan with communication delays, cumulative resource capacity and hard additive execution-cost budget. Preserve one complete policy-network forward and one final schedule construction. Target venueIWQoS. First reproduce frozen CPU GNN/BC/PPO and adapted baselines, then prepare public-workflow development data and implement new device-aware policy/training modules. Inspect hardware before choosing batches; no server credentials or particular GPU model are supplied here.
 
-Read docs/HANDOFF.md,docs/LLM_INTERFACE.md,docs/HANDOFF_PROMPT.md and docs/problem_model.pdf. Task is metric-driven experimentation, not restarting a broad search for an entirely unrelated research topic.
+Read docs/SERVER_EXPERIMENT_PLAN_20261018.md,docs/HANDOFF.md,docs/HANDOFF_PROMPT.md and docs/problem_model.pdf. `docs/LLM_INTERFACE.md` is a retained future option. Task is metric-driven experimentation, not restarting a broad search for an unrelated research topic.
 
 ## What is established
 
@@ -22,6 +24,9 @@ Earlier user explicitly targeted surpassing teacher, stableRLincrement andadapte
 - GNN/LLM must receive equivalent physical information for representation comparisons. Separate backbone changes from learnedtaskorder/expandedsolution spaces.
 - Ordinaryautoregressive textgeneration oroneAPIrequest doesnotimplyoneforward. Instrument the actualbaseforward count. Node/pairquery positions must see thecompleteinput prefix undercausalattention.
 - Existingteacherlabels arefixedHEFTorder. Newprioritylearning needsnewTRAINsupervision orRL, equally available toGNNcontrols.
+- First new comparison keeps fixedHEFT construction order, LOCAL decoder and score ranges across GNN/Attention x PPO/BOPO. Same architecture shares its BC start; different architectures share data/teacher rather than incompatible weights. Account historical GNN warmstart work.
+- CPU reference does not become CUDA code by adding a flag. New Attention/BOPO/CUDA code is not supplied yet; executable additions are hardware preflight and known-public-smoke preparation.
+- Each candidate must replay its own feasible sets, EFT and budget history for log probability. Training multiple candidates is allowed; deployment remains one deterministic construction. Actual rollout B and retained candidate K are separate counts.
 - NevertrainfromTESTlabels orselectbyTEST. Reserve freshgraphdisjoint confirmation aftersettingsselection; allbundled tests are known.
 - Baselines:Greedy,Randommean5,HEFT,PEFT,MSLBLadapted,tenruleportfolio,andfrozenteacher asquality/time reference. Distinguish paperadaptations fromauthorcoderuns.
 - Report BC versusBC+PPO onpairedinstances,>=3seeds forclaims,confidence intervals andnegativecases. Reporttotal/trainableparameters,trainingwork,endtoendlatency andmemory.
@@ -31,4 +36,4 @@ Earlier user explicitly targeted surpassing teacher, stableRLincrement andadapte
 
 ## First verification
 
-`python scripts/check_bundle.py`; then smoke andfullknownfold evaluation perREADME. Onserver install compatibledependencies inisolatedenvironment. `scripts/train_reference.py` isreferenceCPUtraining; archivedoriginalscripts arehistorical,notportableentrypoints. LLMimplementation isnewwork,notalreadydone.
+`python scripts/server_preflight.py --output runs/preflight.json`; `python scripts/check_bundle.py`; then smoke and fullknownfold evaluation perREADME. Install compatible dependencies in an isolated environment; use `--require-cuda` after installing the right wheel. `scripts/prepare_public_smoke.py` prepares six historically inspected public traces, never fresh confirmation data. `scripts/train_reference.py` remains CPU reference training. New implementation tasks and actual commands are in the current server plan.

@@ -1,0 +1,62 @@
+{
+  "plan_date": "2026-10-18",
+  "status": "draft configuration contract; a new GPU/BOPO trainer must implement this schema",
+  "objective": "global_makespan_under_exact_hard_constraints",
+  "physics": {
+    "decoder": "CachedBudgetDecoder",
+    "mode": "local",
+    "construction_order": "fixed_heft_rank",
+    "communication": "fixed_overlapping_no_link_contention",
+    "resource": "scalar_cumulative_capacity",
+    "budget": "hard_additive_duration_times_pool_rate",
+    "score_cap": 8,
+    "deploy_full_forwards": 1,
+    "deploy_decodes": 1
+  },
+  "data": {
+    "manifest": null,
+    "manifest_required_before_main_training": true,
+    "known_public_smoke_allowed_as_final_test": false,
+    "group_before_augmentation": true,
+    "split_group": "base_trace_id",
+    "development_tasks": [50, 200],
+    "development_pools": [3, 8],
+    "later_tasks": [100, 500],
+    "later_pools": [8, 16]
+  },
+  "architectures": {
+    "gnn": {"historical_parameters": 14946, "warmstart_policy": "new_matched_BC_or_explicit_extra_work_control"},
+    "attention": {"layers": 2, "hidden": 128, "heads": 8, "ffn_hidden": 512, "dropout": 0.0, "pair_output": ["a", "w"], "factorized_task_pool_attention": true}
+  },
+  "training": {
+    "seed_screen": [11],
+    "seeds_main": [11, 22, 33],
+    "instances_per_update": 8,
+    "actual_candidates_per_instance": 16,
+    "greedy_candidates_included": 1,
+    "retained_candidates_for_pairing": 8,
+    "mechanism_smoke_updates": 20,
+    "development_update_cap": 1000,
+    "bc_update_cap_initial": 1000,
+    "gradient_clip": 1.0,
+    "teacher_anchor_nll_weight_initial": 0.02,
+    "learning_rate_candidates": [0.0001, 0.0003],
+    "selection": "TRAIN gradients; VAL mean_C_over_HEFT; TEST after freeze only",
+    "same_architecture_same_BC_checkpoint": true,
+    "match_actual_candidates_and_report_optimizer_work": true,
+    "loss_normalization_and_anchor_gradient_scale_must_be_logged": true
+  },
+  "arms": ["gnn_ppo", "gnn_bopo_adapted", "attention_ppo", "attention_bopo_adapted"],
+  "required_references": ["gnn_BC", "attention_BC", "Greedy", "RandomMean5", "HEFT", "PEFT", "MSLBL_adapted", "ten_rule_portfolio", "Teacher64_quality_time"],
+  "training_diagnostics": ["best_sample_self_imitation", "unweighted_best_anchored_pairwise", "candidate_diversity", "best_candidate_vs_greedy"],
+  "resources": {"device_target": "cuda_after_preflight", "cpu_workers_initial": 4, "expand_only_after_profile": true},
+  "outputs": {"root": "runs/attention_bopo", "refuse_overwrite": true, "save_every_arm_and_negative_result": true},
+  "notes": [
+    "No executable training command in this repository currently consumes this file.",
+    "Budgets and candidate/update caps are planning defaults, not convergence or VRAM guarantees.",
+    "Do not use the old reference trainer's 180-second ceiling as the main training budget.",
+    "Attention and GNN cannot share weight tensors; share training data/teacher and pair-specific BC starts.",
+    "BOPO-inspired preference training is a changed objective, not unchanged PPO.",
+    "B=16 is actual decodes, K=8 is retained candidates; do not conflate them."
+  ]
+}

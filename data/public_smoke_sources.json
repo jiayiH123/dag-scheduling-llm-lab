@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "repository": "https://github.com/wfcommons/WfInstances",
+  "pinned_commit": "d7bfead08a4dbf985ebbf427b3685a6512c259e2",
+  "license": "LGPL-3.0",
+  "license_url": "https://github.com/wfcommons/WfInstances/blob/d7bfead08a4dbf985ebbf427b3685a6512c259e2/LICENSE",
+  "classification": "KNOWN_PUBLIC_SMOKE_ONLY",
+  "previously_inspected": true,
+  "scope": "All six complete traces were previously used for problem discovery and an early-model exploratory 24-configuration transfer screen. They are known development/smoke inputs, not a fresh held-out test. Two Epigenomics sizes are one application family. Raw JSON describes measured workflow executions; pool speeds/capacities, unit demands, rates, links and budgets are simulated assumptions.",
+  "profiles": ["10_40_MBps", "100_400_MBps"],
+  "budget_etas": [0.25, 0.6],
+  "entries": [
+    {
+      "file": "montage58.json",
+      "source": "montage58",
+      "family": "montage",
+      "tasks": 58,
+      "bytes": 111791,
+      "sha256": "ce48aaae97f9ac253d6df48d0da86a244cb40bcff02229e30c10af0db72629fa",
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/montage/montage-chameleon-2mass-005d-001.json"
+    },
+    {
+      "file": "genome52.json",
+      "source": "genome52",
+      "family": "1000genome",
+      "tasks": 52,
+      "bytes": 79654,
+      "sha256": "ba7589ae5516e7abd8eeb3f3eae4bffd00cc177515de35c91d6d72e596f92cb4",
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/1000genome/1000genome-chameleon-2ch-100k-001.json"
+    },
+    {
+      "file": "cycles67.json",
+      "source": "cycles67",
+      "family": "cycles",
+      "tasks": 67,
+      "bytes": 317232,
+      "sha256": "1dcbb80f9680486824c25bfb7405cced90d4366bd96225256fe059e7e96cd703",
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/cycles/cycles-chameleon-1l-1c-9p-001.json"
+    },
+    {
+      "file": "epigenomics41.json",
+      "source": "epigenomics41",
+      "family": "epigenomics",
+      "tasks": 41,
+      "bytes": 74857,
+      "sha256": "506a80e2adc5f9d813af0ec133393b85d908a4ca1bd27b193c268ad4219747c8",
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/epigenomics/epigenomics-chameleon-hep-1seq-100k-001.json"
+    },
+    {
+      "file": "epigenomics73.json",
+      "source": "epigenomics73",
+      "family": "epigenomics",
+      "tasks": 73,
+      "bytes": 133888,
+      "sha256": "7b2d8d332d271d2edfc983a027bc155615227fbb2affeb446fab36a58dba6822",
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/epigenomics/epigenomics-chameleon-hep-1seq-50k-001.json"
+    },
+    {
+      "file": "srasearch64.json",
+      "source": "srasearch64",
+      "family": "srasearch",
+      "tasks": 64,
+      "bytes": 108471,
+      "sha256": "cc4d9d556efabf87172435bba7d8cf9466fa1f3ab68daa59db9f82e0e65e69fe",
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/srasearch/srasearch-chameleon-30a-001.json"
+    }
+  ]
+}

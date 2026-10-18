@@ -1,0 +1,15 @@
+{
+  "checked_date": "2026-10-18",
+  "status": "source identity and code availability checked; original numerical results not reproduced here",
+  "repositories": [
+    {"name": "ReSched", "venue": "ICLR 2026", "url": "https://github.com/XiangjieXiao/ReSched.git", "commit": "4d1fda8ab4d78d1cd9664de28f3f77d88620f309", "role": "state/interaction module donor; original inference sequential", "paper": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/467e109270678b3e2b3c2e7fa6b3d575-Abstract-Conference.html"},
+    {"name": "BOPO", "venue": "ICML 2025", "url": "https://github.com/L-Z-7/BOPO.git", "commit": "2739fbfe39a478755173c892b80c4b06f9f59b05", "role": "complete-solution preference training donor", "paper": "https://proceedings.mlr.press/v267/liao25a.html"},
+    {"name": "DAG-CAI-DR", "venue": "NeurIPS 2025", "url": "https://github.com/9erAlpenjaeger/DAG-CAI-DR.git", "commit": "1a2aacc3fc44d8d8f1ef779488a39cab80abf991", "role": "external one-shot DAG baseline; no native full hard-budget model", "paper": "https://papers.nips.cc/paper_files/paper/2025/hash/dc16950e510bcd573783f5c2d7d8cc31-Abstract-Conference.html"},
+    {"name": "HDSE", "venue": "NeurIPS 2024", "url": "https://github.com/LUOyk1999/HDSE.git", "commit": "0218c178e020039ea74916afad84ee53d76d2533", "role": "optional later structure-bias donor; not first pilot", "paper": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/68a3919db3858f548dea769f2dbba611-Abstract-Conference.html"}
+  ],
+  "datasets": [
+    {"name": "WfInstances", "url": "https://github.com/wfcommons/WfInstances", "commit_for_known_smoke": "d7bfead08a4dbf985ebbf427b3685a6512c259e2", "role": "real workflow execution JSON; smoke sources are known inspected traces"},
+    {"name": "WfCommons / WfGen", "url": "https://github.com/wfcommons/WfCommons", "role": "optional training-only realistic-pattern synthesis; pin version when used, not measured new workflow executions"}
+  ],
+  "installation": {"pytorch": "https://pytorch.org/get-started/locally/", "policy": "choose a CUDA wheel compatible with server driver in an isolated environment; do not replace the driver"}
+}

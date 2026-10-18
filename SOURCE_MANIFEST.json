@@ -360,5 +360,28 @@
       "target": "data/known_cycle24_test.jsonl.gz",
       "transformation": "Retain key/instance/graph/reference for all432; remove duplicated baseline schedules. Add random_seed_base=271 from source metric_data_rpc.py for exact Randommean5 replay; reference dataset uses131."
     }
+  ],
+  "handoff_updates": [
+    {
+      "date": "2026-10-18",
+      "research_source_commit": "90afb5b5f35af2644ac471bc0d08ef838d1e69f3",
+      "purpose": "Attention + complete-solution preference experiment handoff; historical source copies remain unchanged",
+      "new_port": {
+        "source": "experiments/autoresearch/src/workflow_trace.py",
+        "source_sha256": "15486576029b6352f38f14b80973d0df3a9a1383d5c03db832e99b024da00971",
+        "target": "daglab/workflow_trace.py",
+        "changes": "Portable core import; provenance/evaluation metadata; optional family override after original ID. Original converter fields equal in all 24 known smoke configurations."
+      },
+      "preparation_tools": [
+        "scripts/prepare_public_smoke.py",
+        "scripts/server_preflight.py"
+      ],
+      "checks": "evidence/SERVER_HANDOFF_CHECKS_20261018.json",
+      "not_implemented": [
+        "Attention actor",
+        "BOPO trainer",
+        "CUDA batched training"
+      ]
+    }
   ]
 }

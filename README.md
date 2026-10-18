@@ -1,8 +1,10 @@
-# DAG Scheduling LLM Lab
+# DAG Scheduling Research Lab
 
 面向 **jiayiH123 的跨机器实验交接仓库**。目标：在通信延迟、硬预算和累积资源容量约束下，以一次完整神经网络 forward＋一次调度构造最小化全局 makespan，探索能产生稳定增益的 BC/SFT＋RL。目标会议 IWQoS，当前尚无可发表结果保证。
 
-**先读 [AGENTS.md](AGENTS.md) 和 [任务交接](docs/HANDOFF.md)。LLM 策略尚未实现或训练；本仓库提供已验证的对比基础、数据和接入规范。**
+**2026-10-18 当前路线：结构化 Attention＋完整可行调度偏好训练。先读 [AGENTS.md](AGENTS.md)、[服务器实验计划](docs/SERVER_EXPERIMENT_PLAN_20261018.md) 和 [任务提示词](docs/HANDOFF_PROMPT.md)。仓库名保留 `dag-scheduling-llm-lab` 便于同步；LLM暂后置。新 Attention/BOPO/CUDA trainer 尚待实现，现包提供CPU参考、硬件盘点与公开数据smoke准备。**
+
+准备资源：[论文/Git固定版本](docs/EXTERNAL_SOURCES_20261018.json)、[试验配置契约](configs/attention_bopo_pilot.example.json)。配置契约不是已有新trainer的运行入口。
 
 ## 带来了什么
 
@@ -13,12 +15,13 @@
 - `data/known_cycle24_test.jsonl.gz`：后来用于强基线和教师诊断的432配置；与上述原测试集不同，均已被查看，不是新的盲测。
 - `checkpoints/`：3种子的大图BC/PPO和早期warmstart，共9个小模型。
 - `scripts/`：完整性检查、统一评测、标签导出、参考BC/PPO重放、新测试集生成、外部评分解码校验。
+- `scripts/server_preflight.py`：读取CPU/GPU/PyTorch信息；`scripts/prepare_public_smoke.py`：下载并校验6条固定来源的公开已知trace，转换24个smoke配置；不代替主实验数据划分。
 - `evidence/`：关键实验原始汇总/CSV，保留负结果；`archive/`：原研究状态、发现、日志和关键训练代码。
 - `SOURCE_MANIFEST.json` / `BUNDLE_MANIFEST.json`：来源与逐文件校验。未携带多GB重复日志、原Git历史、第三方模型权重、账号密钥。
 
 ## 另一台机器如何开始
 
-首次使用 `git clone`，后续更新才用 `git pull`。仓库为私有，使用你自己的 GitHub 登录/SSH 凭据。
+首次使用 `git clone`，后续更新用 `git pull --ff-only`。使用HTTPS；公开时无需登录，若仍为私有则在该机器独立认证。SSH无论公开/私有都需要密钥。
 
 ```bash
 git clone https://github.com/jiayiH123/dag-scheduling-llm-lab.git
@@ -32,13 +35,14 @@ python -m pip install -r requirements.txt
 
 ```bash
 python scripts/check_bundle.py
+python scripts/server_preflight.py --output runs/preflight.json
 python scripts/evaluate.py --limit 8 --teacher --output runs/smoke.json
 python scripts/evaluate.py --data data/known_cycle24_test.jsonl.gz --teacher --output runs/cycle24_seed11.json
-python scripts/export_llm_data.py --split train --output exports/train.jsonl
-python scripts/export_llm_data.py --split val --output exports/val.jsonl
+python scripts/prepare_public_smoke.py --download --output runs/public_smoke.jsonl.gz
+python scripts/evaluate.py --data runs/public_smoke.jsonl.gz --split val --limit 4 --teacher --output runs/public_smoke_reference.json
 ```
 
-`evaluate.py` 默认使用冻结 `local_seed11.pt`。可分别指定 `--checkpoint checkpoints/bc_seed11.pt`（复核原BC报告时同时加 `--mode initial`；与LOCAL PPO做同解码器消融时用默认local）、`local_seed22.pt`、`local_seed33.pt`。所有基线受同一物理约束。输出逐实例结果、均值、胜负计数和底层图cluster bootstrap区间；计入特征、模型RPC与解码耗时。CPU参考不自动迁移CUDA；LLM实现须独立计时/计数。
+`evaluate.py` 默认使用冻结 `local_seed11.pt`。可分别指定 `--checkpoint checkpoints/bc_seed11.pt`（复核原BC报告时同时加 `--mode initial`；与LOCAL PPO做同解码器消融时用默认local）、`local_seed22.pt`、`local_seed33.pt`。所有基线受同一物理约束。输出逐实例结果、均值、胜负计数和底层图cluster bootstrap区间；计入特征、模型RPC与解码耗时。CPU参考不自动迁移CUDA；新模型实现须独立计时/计数。
 
 若Torch和模拟器在两个环境，评测增加 `--torch-python /path/to/torch/python`；训练增加 `--sim-python /path/to/simulation/python`。命令行默认单环境，均无本机硬编码路径。
 
@@ -52,6 +56,8 @@ python scripts/generate_fresh.py --seed-offset 3100000 --output runs/new_test.js
 训练脚本保留原200次BC、300次PPO上限及180秒PPO墙钟上限，仅重放已有配方，**不是新的算法结果，也不保证充分收敛**。生成新测试前要锁定方案/生成器/种子；示例偏移不是永久盲测保证，生成器只检查与仓库携带图不重复。所有运行拒绝覆盖已有输出。
 
 ## LLM 接入
+
+本节为未来备选；当前先执行[Attention＋偏好训练计划](docs/SERVER_EXPERIMENT_PLAN_20261018.md)，无需LLM权重或`requirements-llm.txt`。
 
 阅读 [LLM 接入规范](docs/LLM_INTERFACE.md) 和 [新机器任务提示词](docs/HANDOFF_PROMPT.md)。第一阶段保持固定HEFT顺序和相同解码器，LLM一次编码输出形状 `[n*k,2]` 的a/w评分；先BC再PPO。`scripts/export_llm_data.py` 给出结构化输入，只有TRAIN带动作目标。`scripts/validate_scores.py` 可验证外部评分产生的调度，但**不能替外部模型证明forward次数**。
 

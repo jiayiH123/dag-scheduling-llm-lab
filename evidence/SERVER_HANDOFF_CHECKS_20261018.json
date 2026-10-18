@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-18",
+  "scope": "Server handoff engineering validation; no new Attention/BOPO training or GPU benchmark",
+  "new_python_ast_files": [
+    "daglab/workflow_trace.py",
+    "scripts/prepare_public_smoke.py",
+    "scripts/server_preflight.py"
+  ],
+  "new_json_parse_files": [
+    "configs/attention_bopo_pilot.example.json",
+    "docs/EXTERNAL_SOURCES_20261018.json",
+    "data/public_smoke_sources.json"
+  ],
+  "local_document_links_checked": 17,
+  "public_smoke": {
+    "downloaded_raw_files": 6,
+    "sha_size_task_count_checks": "PASS by preparation CLI",
+    "configurations": 24,
+    "base_traces": 6,
+    "application_families": 5,
+    "labels_absent": true,
+    "offline_and_real_download_records_equal": true,
+    "old_converter_original_fields_equal_cases": 24,
+    "HEFT_feasible_cases": 24,
+    "overwrite_refused": "PASS",
+    "missing_raw_without_download_refused": "PASS",
+    "canonical_record_list_sha256": "43618521d9696c8c7facca2a968235e25a8a2325b3c544d3159c04dd23dc7f55"
+  },
+  "frozen_reference_evaluation": {
+    "rows": 24,
+    "one_forward_each": true,
+    "file": "evidence/public_smoke_reference_20261018.json",
+    "sha256": "515f6dafe93f8f244d1ca9c85ebdf502daf94aa95495a753178358943cb159b5",
+    "new_method_evidence": false,
+    "fresh_generalization_evidence": false
+  },
+  "hardware_inventory": {
+    "local_cpu_execution": "PASS",
+    "cuda_available": false,
+    "gpu_execution_tested": false
+  },
+  "limits": [
+    "The main public TRAIN/VAL/TEST manifest is not selected yet.",
+    "Device-aware GNN, Attention, BOPO trainer and CUDA batching remain implementation work.",
+    "These checks establish portability and reference behavior, not research effectiveness."
+  ],
+  "frozen_bundle_reference_checks": {
+    "status": "PASS",
+    "configs": {
+      "train": 800,
+      "val": 216,
+      "test": 432
+    },
+    "latent_graphs": {
+      "train": 800,
+      "val": 24,
+      "test": 48
+    },
+    "teacher_actions": 36540,
+    "zero_head_HEFT_identity_cases": 4,
+    "teacher_recipe_exact_replay_cases": 1
+  }
+}
