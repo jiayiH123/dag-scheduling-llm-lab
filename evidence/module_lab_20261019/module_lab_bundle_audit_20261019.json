@@ -1,0 +1,17 @@
+{
+  "frozen_SHA256_files": 106,
+  "checksums": "PASS",
+  "semantic_audit": "PASS_with_declared_logprob_tolerance",
+  "original_strict_checker": "PASS",
+  "original_strict_returncode": 0,
+  "original_strict_stdout": "{\"checksummed_files\": 106, \"configs\": {\"train\": 800, \"val\": 216, \"test\": 432}, \"latent_graphs\": {\"train\": 800, \"val\": 24, \"test\": 48}, \"teacher_actions\": 36540, \"zero_head_HEFT_identity_cases\": 4, \"teacher_recipe_exact_replay_cases\": 1, \"status\": \"PASS\"}\n",
+  "original_strict_stderr": "",
+  "tolerance": {
+    "only_field": "selected_log_probability",
+    "absolute": 1e-12,
+    "relative": 1e-12
+  },
+  "floating_differences": [],
+  "known_reference_replay_cases": 4,
+  "new_method_TEST_evaluated": false
+}

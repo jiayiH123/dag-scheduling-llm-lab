@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "seed": 11,
+      "stage": "BC",
+      "tensor_identical": true
+    },
+    {
+      "seed": 11,
+      "stage": "ppo",
+      "tensor_identical": true
+    },
+    {
+      "seed": 22,
+      "stage": "BC",
+      "tensor_identical": true
+    },
+    {
+      "seed": 22,
+      "stage": "ppo",
+      "tensor_identical": true
+    },
+    {
+      "seed": 33,
+      "stage": "BC",
+      "tensor_identical": true
+    },
+    {
+      "seed": 33,
+      "stage": "ppo",
+      "tensor_identical": true
+    }
+  ],
+  "status": "PASS",
+  "interpretation": "six repeated BC/PPO arms are exact controls, not new quality gains"
+}

@@ -1,0 +1,494 @@
+{
+  "scope": "EXPLORATORY adaptive normalization and longer-BC follow-up",
+  "code_commit": "3d14238b0cdc6ed5618277484274d99adf8fa346",
+  "protocol_commit": "1b1010d",
+  "config": {
+    "classification": "EXPLORATORY adaptive normalization and longer-BC follow-up",
+    "protocol_commit": "1b1010d",
+    "architectures": [
+      "edge_gnn",
+      "edge_gnn_ln",
+      "edge_attention"
+    ],
+    "objectives": [
+      "ppo",
+      "sil",
+      "pairwise",
+      "bopo"
+    ],
+    "seeds": [
+      11
+    ],
+    "hidden": 32,
+    "layers": 2,
+    "train_limit": 800,
+    "val_limit": 216,
+    "batch": 8,
+    "bc_updates": 400,
+    "bc_lr": 0.001,
+    "eval_every": 50,
+    "top_architectures": 2,
+    "rl_updates": 40,
+    "rl_eval_every": 10,
+    "rl_lr": 0.0001,
+    "candidates": 8,
+    "retained": 4,
+    "teacher_anchor": 0.02,
+    "entropy": 0.001
+  },
+  "torch": "2.11.0",
+  "device": "cpu",
+  "data_sha256": "c0c37ad8aaf9778e2e4d8fca3a8932f8fa873bff836db336c4e6cddc6d77bba3",
+  "summary_sha256": "2c7b0fdc6e2f75de2393eb49264146af573d8756271b5c8c36ad9e9c9be452df",
+  "selection_sha256": "20ad1ebf576a842c7104af912ed4bde91e16625cad501df27e8c0a2c4caba566",
+  "selected_architectures": [
+    "edge_attention",
+    "edge_gnn_ln"
+  ],
+  "results": [
+    {
+      "arm": "edge_gnn",
+      "seed": 11,
+      "objective": "BC",
+      "parameters": 13314,
+      "selected_step": 50,
+      "full_known_VAL_C_over_HEFT": 0.9985535700512691,
+      "training_seconds_including_validation": 11.299072499969043,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 8.203783322528649,
+        "HEFT": 0.14464299487309498,
+        "PEFT": 1.9820746274214036,
+        "MSLBL": -25.726328175837335,
+        "Portfolio": -32.853960805693085,
+        "Teacher64": -35.541579940856955
+      }
+    },
+    {
+      "arm": "edge_gnn_ln",
+      "seed": 11,
+      "objective": "BC",
+      "parameters": 13442,
+      "selected_step": 400,
+      "full_known_VAL_C_over_HEFT": 0.8769196759414848,
+      "training_seconds_including_validation": 8.881608833034988,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 19.151130046498892,
+        "HEFT": 12.30803240585154,
+        "PEFT": 13.870830146350649,
+        "MSLBL": -8.829302765654054,
+        "Portfolio": -15.073396108308168,
+        "Teacher64": -17.290182612628037
+      }
+    },
+    {
+      "arm": "edge_attention",
+      "seed": 11,
+      "objective": "BC",
+      "parameters": 30466,
+      "selected_step": 400,
+      "full_known_VAL_C_over_HEFT": 0.8536773780648902,
+      "training_seconds_including_validation": 13.787471250048839,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 21.260031062107625,
+        "HEFT": 14.63226219351104,
+        "PEFT": 16.299873661142836,
+        "MSLBL": -5.800932528847,
+        "Portfolio": -11.815353206010277,
+        "Teacher64": -13.96290840404763
+      }
+    },
+    {
+      "arm": "edge_attention",
+      "seed": 11,
+      "objective": "ppo",
+      "selected_step": 40,
+      "full_known_VAL_C_over_HEFT": 0.8381265026056267,
+      "last_full_known_VAL_C_over_HEFT": 0.8381265026056267,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": 1.1457725935560177,
+        "graph_cluster_CI95_percent": [
+          -1.0367424032651513,
+          3.1446273444444217
+        ],
+        "wins": 88,
+        "losses": 86,
+        "ties": 42,
+        "worst_regression_percent": 101.08359133126935,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": 1.1457725935560177,
+        "graph_cluster_CI95_percent": [
+          -1.0367424032651513,
+          3.1446273444444217
+        ],
+        "wins": 88,
+        "losses": 86,
+        "ties": 42,
+        "worst_regression_percent": 101.08359133126935,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 160,
+      "training_seconds_including_validation": 14.74671524995938,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 22.74320586755638,
+        "HEFT": 16.187349739437373,
+        "PEFT": 18.0119758255066,
+        "MSLBL": -3.5896101779062857,
+        "Portfolio": -9.272089839678456,
+        "Teacher64": -11.387509345340751
+      }
+    },
+    {
+      "arm": "edge_attention",
+      "seed": 11,
+      "objective": "sil",
+      "selected_step": 30,
+      "full_known_VAL_C_over_HEFT": 0.8436872812633935,
+      "last_full_known_VAL_C_over_HEFT": 0.8506180787570123,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": 0.8957149232357843,
+        "graph_cluster_CI95_percent": [
+          -0.17490681180964654,
+          1.7796470233423645
+        ],
+        "wins": 61,
+        "losses": 43,
+        "ties": 112,
+        "worst_regression_percent": 72.8643216080402,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": -0.03074905419146993,
+        "graph_cluster_CI95_percent": [
+          -1.2849935588326653,
+          1.1355454432427738
+        ],
+        "wins": 64,
+        "losses": 54,
+        "ties": 98,
+        "worst_regression_percent": 91.83417085427136,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 40,
+      "training_seconds_including_validation": 10.946076374966651,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 22.178939310938265,
+        "HEFT": 15.631271873660648,
+        "PEFT": 17.267018014110057,
+        "MSLBL": -4.546011942752732,
+        "Portfolio": -10.436839077494717,
+        "Teacher64": -12.52426755721615
+      }
+    },
+    {
+      "arm": "edge_attention",
+      "seed": 11,
+      "objective": "pairwise",
+      "selected_step": 40,
+      "full_known_VAL_C_over_HEFT": 0.8433721662449358,
+      "last_full_known_VAL_C_over_HEFT": 0.8433721662449358,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": 0.8309514003149195,
+        "graph_cluster_CI95_percent": [
+          -0.587233414540379,
+          1.9770205070254414
+        ],
+        "wins": 72,
+        "losses": 57,
+        "ties": 87,
+        "worst_regression_percent": 91.83417085427136,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": 0.8309514003149195,
+        "graph_cluster_CI95_percent": [
+          -0.587233414540379,
+          1.9770205070254414
+        ],
+        "wins": 72,
+        "losses": 57,
+        "ties": 87,
+        "worst_regression_percent": 91.83417085427136,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 40,
+      "training_seconds_including_validation": 10.95609695801977,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 22.204366012202605,
+        "HEFT": 15.662783375506443,
+        "PEFT": 17.31259941770104,
+        "MSLBL": -4.468463321245834,
+        "Portfolio": -10.376672506680448,
+        "Teacher64": -12.464622001269149
+      }
+    },
+    {
+      "arm": "edge_attention",
+      "seed": 11,
+      "objective": "bopo",
+      "selected_step": 40,
+      "full_known_VAL_C_over_HEFT": 0.8412821558010579,
+      "last_full_known_VAL_C_over_HEFT": 0.8412821558010579,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": 1.0780918141364497,
+        "graph_cluster_CI95_percent": [
+          -0.7015032798142746,
+          2.5809609910978537
+        ],
+        "wins": 68,
+        "losses": 64,
+        "ties": 84,
+        "worst_regression_percent": 91.83417085427136,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": 1.0780918141364497,
+        "graph_cluster_CI95_percent": [
+          -0.7015032798142746,
+          2.5809609910978537
+        ],
+        "wins": 68,
+        "losses": 64,
+        "ties": 84,
+        "worst_regression_percent": 91.83417085427136,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 40,
+      "training_seconds_including_validation": 11.166524708969519,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 22.2165372214954,
+        "HEFT": 15.871784419894228,
+        "PEFT": 17.478764257475813,
+        "MSLBL": -4.142440403154562,
+        "Portfolio": -10.017666449333651,
+        "Teacher64": -12.12927431904488
+      }
+    },
+    {
+      "arm": "edge_gnn_ln",
+      "seed": 11,
+      "objective": "ppo",
+      "selected_step": 30,
+      "full_known_VAL_C_over_HEFT": 0.8549111888411228,
+      "last_full_known_VAL_C_over_HEFT": 0.8576172538937283,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": 2.0238985240824325,
+        "graph_cluster_CI95_percent": [
+          0.5976430512762287,
+          3.544779404520951
+        ],
+        "wins": 91,
+        "losses": 49,
+        "ties": 76,
+        "worst_regression_percent": 46.902654867256636,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": 1.5370971579878248,
+        "graph_cluster_CI95_percent": [
+          -0.12956091761027905,
+          3.3539091467913407
+        ],
+        "wins": 95,
+        "losses": 55,
+        "ties": 66,
+        "worst_regression_percent": 72.15496368038741,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 160,
+      "training_seconds_including_validation": 12.540676709031686,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 21.03817658796652,
+        "HEFT": 14.508881115887688,
+        "PEFT": 16.0432285581392,
+        "MSLBL": -5.880385290452902,
+        "Portfolio": -11.901519477351247,
+        "Teacher64": -14.077152514759632
+      }
+    },
+    {
+      "arm": "edge_gnn_ln",
+      "seed": 11,
+      "objective": "sil",
+      "selected_step": 30,
+      "full_known_VAL_C_over_HEFT": 0.8655175438867317,
+      "last_full_known_VAL_C_over_HEFT": 0.8673732024165107,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": 0.8709590797195759,
+        "graph_cluster_CI95_percent": [
+          -1.0082981177141177,
+          2.653019514901188
+        ],
+        "wins": 73,
+        "losses": 59,
+        "ties": 84,
+        "worst_regression_percent": 83.28681661467739,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": 0.6490626542930626,
+        "graph_cluster_CI95_percent": [
+          -0.7701462749750484,
+          2.0651785585287588
+        ],
+        "wins": 70,
+        "losses": 52,
+        "ties": 94,
+        "worst_regression_percent": 83.28681661467739,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 40,
+      "training_seconds_including_validation": 9.671240583993495,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 20.31737014301416,
+        "HEFT": 13.44824561132684,
+        "PEFT": 14.988667252097066,
+        "MSLBL": -6.7481998769509755,
+        "Portfolio": -13.090903069615036,
+        "Teacher64": -15.28007603467014
+      }
+    },
+    {
+      "arm": "edge_gnn_ln",
+      "seed": 11,
+      "objective": "pairwise",
+      "selected_step": 40,
+      "full_known_VAL_C_over_HEFT": 0.8587425876520896,
+      "last_full_known_VAL_C_over_HEFT": 0.8587425876520896,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": 1.4835883746422396,
+        "graph_cluster_CI95_percent": [
+          0.3417115631965437,
+          2.630676518137972
+        ],
+        "wins": 80,
+        "losses": 48,
+        "ties": 88,
+        "worst_regression_percent": 83.28681661467739,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": 1.4835883746422396,
+        "graph_cluster_CI95_percent": [
+          0.3417115631965437,
+          2.630676518137972
+        ],
+        "wins": 80,
+        "losses": 48,
+        "ties": 88,
+        "worst_regression_percent": 83.28681661467739,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 40,
+      "training_seconds_including_validation": 10.177745207969565,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 20.68717745662812,
+        "HEFT": 14.125741234790985,
+        "PEFT": 15.631346941913641,
+        "MSLBL": -6.315675002617172,
+        "Portfolio": -12.513248870283347,
+        "Teacher64": -14.676858852287534
+      }
+    },
+    {
+      "arm": "edge_gnn_ln",
+      "seed": 11,
+      "objective": "bopo",
+      "selected_step": 40,
+      "full_known_VAL_C_over_HEFT": 0.8587634560309089,
+      "last_full_known_VAL_C_over_HEFT": 0.8587634560309089,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": 1.5698505426981237,
+        "graph_cluster_CI95_percent": [
+          0.22798759387549913,
+          3.030118824000691
+        ],
+        "wins": 78,
+        "losses": 44,
+        "ties": 94,
+        "worst_regression_percent": 63.1578947368421,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": 1.5698505426981237,
+        "graph_cluster_CI95_percent": [
+          0.22798759387549913,
+          3.030118824000691
+        ],
+        "wins": 78,
+        "losses": 44,
+        "ties": 94,
+        "worst_regression_percent": 63.1578947368421,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 40,
+      "training_seconds_including_validation": 9.60854816698702,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 20.732460628565473,
+        "HEFT": 14.1236543969091,
+        "PEFT": 15.652801557796048,
+        "MSLBL": -6.318113871221196,
+        "Portfolio": -12.366762212479399,
+        "Teacher64": -14.518866165627308
+      }
+    }
+  ],
+  "simulator_counts": {
+    "complete_decodes": 39068,
+    "validated_schedules": 39068,
+    "teacher_reference_calls": 216
+  },
+  "max_absolute_logprob_replay_error": 1.71661376953125e-05,
+  "TEST_evaluated": false,
+  "deploy_forwards": 1,
+  "deploy_decodes": 1,
+  "raw_files_remain_on_machine": [
+    "summary.json",
+    "curves.jsonl",
+    "data_selection.json",
+    "metadata.json",
+    "mechanism_checks.json"
+  ],
+  "caveat": "Copy this report; no GitHub push, credentials or model-weight upload needed."
+}

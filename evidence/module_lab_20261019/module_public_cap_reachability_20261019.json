@@ -1,0 +1,394 @@
+{
+  "scope": "TRAIN only necessary bound on representing teacher actions with cap8 heads and original EFT offsets",
+  "teacher_actions": 4992,
+  "blocked_actions": 411,
+  "configs_with_blocked_actions": 19,
+  "TRAIN_configs": 64,
+  "rows": [
+    {
+      "id": "train_public_montage-chameleon-dss-05d-001.json_3_10_40_MBps_0.25",
+      "n": 58,
+      "blocked_teacher_actions": 3,
+      "worst_max_possible_margin": -9.528493231514847
+    },
+    {
+      "id": "train_public_montage-chameleon-dss-05d-001.json_3_10_40_MBps_0.6",
+      "n": 58,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_montage-chameleon-dss-05d-001.json_3_100_400_MBps_0.25",
+      "n": 58,
+      "blocked_teacher_actions": 3,
+      "worst_max_possible_margin": -9.528493231514847
+    },
+    {
+      "id": "train_public_montage-chameleon-dss-05d-001.json_3_100_400_MBps_0.6",
+      "n": 58,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_montage-chameleon-dss-05d-001.json_6_10_40_MBps_0.25",
+      "n": 58,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_montage-chameleon-dss-05d-001.json_6_10_40_MBps_0.6",
+      "n": 58,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_montage-chameleon-dss-05d-001.json_6_100_400_MBps_0.25",
+      "n": 58,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_montage-chameleon-dss-05d-001.json_6_100_400_MBps_0.6",
+      "n": 58,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_1000genome-chameleon-4ch-100k-001.json_3_10_40_MBps_0.25",
+      "n": 104,
+      "blocked_teacher_actions": 41,
+      "worst_max_possible_margin": -10.6805654793706
+    },
+    {
+      "id": "train_public_1000genome-chameleon-4ch-100k-001.json_3_10_40_MBps_0.6",
+      "n": 104,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_1000genome-chameleon-4ch-100k-001.json_3_100_400_MBps_0.25",
+      "n": 104,
+      "blocked_teacher_actions": 41,
+      "worst_max_possible_margin": -10.682014949988613
+    },
+    {
+      "id": "train_public_1000genome-chameleon-4ch-100k-001.json_3_100_400_MBps_0.6",
+      "n": 104,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_1000genome-chameleon-4ch-100k-001.json_6_10_40_MBps_0.25",
+      "n": 104,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_1000genome-chameleon-4ch-100k-001.json_6_10_40_MBps_0.6",
+      "n": 104,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_1000genome-chameleon-4ch-100k-001.json_6_100_400_MBps_0.25",
+      "n": 104,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_1000genome-chameleon-4ch-100k-001.json_6_100_400_MBps_0.6",
+      "n": 104,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_1000genome-chameleon-2ch-250k-001.json_3_10_40_MBps_0.25",
+      "n": 82,
+      "blocked_teacher_actions": 8,
+      "worst_max_possible_margin": -11.272035176581646
+    },
+    {
+      "id": "train_public_1000genome-chameleon-2ch-250k-001.json_3_10_40_MBps_0.6",
+      "n": 82,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_1000genome-chameleon-2ch-250k-001.json_3_100_400_MBps_0.25",
+      "n": 82,
+      "blocked_teacher_actions": 8,
+      "worst_max_possible_margin": -11.272035176581646
+    },
+    {
+      "id": "train_public_1000genome-chameleon-2ch-250k-001.json_3_100_400_MBps_0.6",
+      "n": 82,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_1000genome-chameleon-2ch-250k-001.json_6_10_40_MBps_0.25",
+      "n": 82,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_1000genome-chameleon-2ch-250k-001.json_6_10_40_MBps_0.6",
+      "n": 82,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_1000genome-chameleon-2ch-250k-001.json_6_100_400_MBps_0.25",
+      "n": 82,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_1000genome-chameleon-2ch-250k-001.json_6_100_400_MBps_0.6",
+      "n": 82,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_3_10_40_MBps_0.25",
+      "n": 119,
+      "blocked_teacher_actions": 12,
+      "worst_max_possible_margin": -47.11192277229362
+    },
+    {
+      "id": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_3_10_40_MBps_0.6",
+      "n": 119,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_3_100_400_MBps_0.25",
+      "n": 119,
+      "blocked_teacher_actions": 14,
+      "worst_max_possible_margin": -50.41406863029185
+    },
+    {
+      "id": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_3_100_400_MBps_0.6",
+      "n": 119,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_6_10_40_MBps_0.25",
+      "n": 119,
+      "blocked_teacher_actions": 9,
+      "worst_max_possible_margin": -16.698326972203283
+    },
+    {
+      "id": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_6_10_40_MBps_0.6",
+      "n": 119,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_6_100_400_MBps_0.25",
+      "n": 119,
+      "blocked_teacher_actions": 6,
+      "worst_max_possible_margin": -5.539767871647756
+    },
+    {
+      "id": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_6_100_400_MBps_0.6",
+      "n": 119,
+      "blocked_teacher_actions": 2,
+      "worst_max_possible_margin": -2.446845698211064
+    },
+    {
+      "id": "train_public_srasearch-chameleon-10a-001.json_3_10_40_MBps_0.25",
+      "n": 22,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_srasearch-chameleon-10a-001.json_3_10_40_MBps_0.6",
+      "n": 22,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_srasearch-chameleon-10a-001.json_3_100_400_MBps_0.25",
+      "n": 22,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_srasearch-chameleon-10a-001.json_3_100_400_MBps_0.6",
+      "n": 22,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_srasearch-chameleon-10a-001.json_6_10_40_MBps_0.25",
+      "n": 22,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_srasearch-chameleon-10a-001.json_6_10_40_MBps_0.6",
+      "n": 22,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_srasearch-chameleon-10a-001.json_6_100_400_MBps_0.25",
+      "n": 22,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_srasearch-chameleon-10a-001.json_6_100_400_MBps_0.6",
+      "n": 22,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_srasearch-chameleon-20a-001.json_3_10_40_MBps_0.25",
+      "n": 42,
+      "blocked_teacher_actions": 3,
+      "worst_max_possible_margin": -3.038633806804723
+    },
+    {
+      "id": "train_public_srasearch-chameleon-20a-001.json_3_10_40_MBps_0.6",
+      "n": 42,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_srasearch-chameleon-20a-001.json_3_100_400_MBps_0.25",
+      "n": 42,
+      "blocked_teacher_actions": 3,
+      "worst_max_possible_margin": -3.063748574471384
+    },
+    {
+      "id": "train_public_srasearch-chameleon-20a-001.json_3_100_400_MBps_0.6",
+      "n": 42,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_srasearch-chameleon-20a-001.json_6_10_40_MBps_0.25",
+      "n": 42,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_srasearch-chameleon-20a-001.json_6_10_40_MBps_0.6",
+      "n": 42,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_srasearch-chameleon-20a-001.json_6_100_400_MBps_0.25",
+      "n": 42,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_srasearch-chameleon-20a-001.json_6_100_400_MBps_0.6",
+      "n": 42,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_soykb-chameleon-10fastq-10ch-001.json_3_10_40_MBps_0.25",
+      "n": 96,
+      "blocked_teacher_actions": 2,
+      "worst_max_possible_margin": -1.3633769017891684
+    },
+    {
+      "id": "train_public_soykb-chameleon-10fastq-10ch-001.json_3_10_40_MBps_0.6",
+      "n": 96,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_soykb-chameleon-10fastq-10ch-001.json_3_100_400_MBps_0.25",
+      "n": 96,
+      "blocked_teacher_actions": 2,
+      "worst_max_possible_margin": -1.3633769017891657
+    },
+    {
+      "id": "train_public_soykb-chameleon-10fastq-10ch-001.json_3_100_400_MBps_0.6",
+      "n": 96,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_soykb-chameleon-10fastq-10ch-001.json_6_10_40_MBps_0.25",
+      "n": 96,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_soykb-chameleon-10fastq-10ch-001.json_6_10_40_MBps_0.6",
+      "n": 96,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_soykb-chameleon-10fastq-10ch-001.json_6_100_400_MBps_0.25",
+      "n": 96,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_soykb-chameleon-10fastq-10ch-001.json_6_100_400_MBps_0.6",
+      "n": 96,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_seismology-chameleon-100p-001.json_3_10_40_MBps_0.25",
+      "n": 101,
+      "blocked_teacher_actions": 79,
+      "worst_max_possible_margin": -39.05980343161752
+    },
+    {
+      "id": "train_public_seismology-chameleon-100p-001.json_3_10_40_MBps_0.6",
+      "n": 101,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_seismology-chameleon-100p-001.json_3_100_400_MBps_0.25",
+      "n": 101,
+      "blocked_teacher_actions": 79,
+      "worst_max_possible_margin": -39.05980343161752
+    },
+    {
+      "id": "train_public_seismology-chameleon-100p-001.json_3_100_400_MBps_0.6",
+      "n": 101,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_seismology-chameleon-100p-001.json_6_10_40_MBps_0.25",
+      "n": 101,
+      "blocked_teacher_actions": 48,
+      "worst_max_possible_margin": -8.331889610750176
+    },
+    {
+      "id": "train_public_seismology-chameleon-100p-001.json_6_10_40_MBps_0.6",
+      "n": 101,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    },
+    {
+      "id": "train_public_seismology-chameleon-100p-001.json_6_100_400_MBps_0.25",
+      "n": 101,
+      "blocked_teacher_actions": 48,
+      "worst_max_possible_margin": -8.331889610750176
+    },
+    {
+      "id": "train_public_seismology-chameleon-100p-001.json_6_100_400_MBps_0.6",
+      "n": 101,
+      "blocked_teacher_actions": 0,
+      "worst_max_possible_margin": 0
+    }
+  ],
+  "not_a_new_policy_result": true
+}

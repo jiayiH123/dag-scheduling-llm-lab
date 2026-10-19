@@ -1,0 +1,12 @@
+{
+  "ranking": [
+    "edge_gnn_ln",
+    "edge_attention"
+  ],
+  "selected": [
+    "edge_gnn_ln",
+    "edge_attention"
+  ],
+  "selection": "mean screen VAL over configured seeds; no TEST",
+  "parameter_matched": false
+}

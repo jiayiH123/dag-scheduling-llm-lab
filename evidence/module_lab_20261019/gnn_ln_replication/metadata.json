@@ -1,0 +1,51 @@
+{
+  "config": {
+    "classification": "EXPLORATORY selected normalized GNN development seed replication",
+    "protocol_commit": "96e67b8",
+    "architectures": [
+      "edge_gnn_ln"
+    ],
+    "objectives": [
+      "ppo",
+      "sil",
+      "pairwise",
+      "bopo"
+    ],
+    "seeds": [
+      22,
+      33
+    ],
+    "hidden": 32,
+    "layers": 2,
+    "train_limit": 800,
+    "val_limit": 216,
+    "batch": 8,
+    "bc_updates": 400,
+    "bc_lr": 0.001,
+    "eval_every": 50,
+    "top_architectures": 1,
+    "rl_updates": 40,
+    "rl_eval_every": 10,
+    "rl_lr": 0.0001,
+    "candidates": 8,
+    "retained": 4,
+    "teacher_anchor": 0.02,
+    "entropy": 0.001
+  },
+  "argv": [
+    "scripts/run_module_lab.py",
+    "--config",
+    "configs/module_lab_gnn_ln_replication.json",
+    "--sim-python",
+    "/opt/miniconda3/envs/dag-research/bin/python",
+    "--output",
+    "runs/module_lab_gnn_ln_replication_20261019"
+  ],
+  "torch": "2.11.0",
+  "device": "cpu",
+  "code_commit_at_start": "90e4781776f4c347d08fbf8a024ef1eab5979b85",
+  "protocol_commit": "96e67b8",
+  "classification": "EXPLORATORY selected normalized GNN development seed replication",
+  "TEST_evaluated": false,
+  "historical_warmstart_used": false
+}

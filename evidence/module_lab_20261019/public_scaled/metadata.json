@@ -1,0 +1,54 @@
+{
+  "config": {
+    "classification": "EXPLORATORY public normalized-EFT score calibration after TRAIN reachability audit",
+    "protocol_commit": "4f01ec4",
+    "decoder": "normalized_eft",
+    "architectures": [
+      "edge_gnn_ln",
+      "edge_attention"
+    ],
+    "objectives": [
+      "ppo",
+      "bopo",
+      "ppo_kl1"
+    ],
+    "seeds": [
+      11
+    ],
+    "hidden": 32,
+    "layers": 2,
+    "train_limit": 64,
+    "val_limit": 32,
+    "batch": 4,
+    "bc_updates": 200,
+    "bc_lr": 0.001,
+    "eval_every": 50,
+    "top_architectures": 2,
+    "rl_updates": 20,
+    "rl_eval_every": 5,
+    "rl_lr": 0.0001,
+    "candidates": 8,
+    "retained": 4,
+    "teacher_anchor": 0.02,
+    "entropy": 0.001,
+    "probability_dtype": "float64"
+  },
+  "argv": [
+    "scripts/run_module_lab.py",
+    "--config",
+    "configs/module_lab_public_scaled.json",
+    "--data",
+    "runs/module_public_development_20261019.jsonl.gz",
+    "--sim-python",
+    "/opt/miniconda3/envs/dag-research/bin/python",
+    "--output",
+    "runs/module_lab_public_scaled_20261019"
+  ],
+  "torch": "2.11.0",
+  "device": "cpu",
+  "code_commit_at_start": "dca73d6d125e20b46fc29c85a3a3c3740faf084b",
+  "protocol_commit": "4f01ec4",
+  "classification": "EXPLORATORY public normalized-EFT score calibration after TRAIN reachability audit",
+  "TEST_evaluated": false,
+  "historical_warmstart_used": false
+}

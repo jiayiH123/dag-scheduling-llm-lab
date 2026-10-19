@@ -1,0 +1,52 @@
+{
+  "config": {
+    "classification": "EXPLORATORY local screen, not public confirmation",
+    "architectures": [
+      "legacy_gnn",
+      "physical_gnn",
+      "edge_gnn",
+      "edge_attention",
+      "physical_mlp",
+      "edge_gnn_oct"
+    ],
+    "objectives": [
+      "ppo",
+      "sil",
+      "pairwise",
+      "bopo"
+    ],
+    "seeds": [
+      11
+    ],
+    "hidden": 32,
+    "layers": 2,
+    "train_limit": 128,
+    "val_limit": 72,
+    "batch": 4,
+    "bc_updates": 80,
+    "bc_lr": 0.001,
+    "eval_every": 20,
+    "top_architectures": 2,
+    "rl_updates": 20,
+    "rl_eval_every": 5,
+    "rl_lr": 0.0003,
+    "candidates": 8,
+    "retained": 4,
+    "teacher_anchor": 0.02,
+    "entropy": 0.001
+  },
+  "argv": [
+    "scripts/run_module_lab.py",
+    "--sim-python",
+    "/opt/miniconda3/envs/dag-research/bin/python",
+    "--output",
+    "runs/module_lab_screen_20261019"
+  ],
+  "torch": "2.11.0",
+  "device": "cpu",
+  "code_commit_at_start": "61bb1a80a9ff3d6acd946aec0fcbd2a8d423e78b",
+  "protocol_commit": "836ab82",
+  "classification": "EXPLORATORY known synthetic TRAIN/VAL only",
+  "TEST_evaluated": false,
+  "historical_warmstart_used": false
+}

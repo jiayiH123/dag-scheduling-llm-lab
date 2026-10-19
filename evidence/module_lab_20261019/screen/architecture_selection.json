@@ -1,0 +1,16 @@
+{
+  "ranking": [
+    "edge_attention",
+    "edge_gnn",
+    "legacy_gnn",
+    "physical_gnn",
+    "physical_mlp",
+    "edge_gnn_oct"
+  ],
+  "selected": [
+    "edge_attention",
+    "edge_gnn"
+  ],
+  "selection": "mean screen VAL over configured seeds; no TEST",
+  "parameter_matched": false
+}

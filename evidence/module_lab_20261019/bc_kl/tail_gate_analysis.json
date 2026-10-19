@@ -1,0 +1,123 @@
+{
+  "rows": [
+    {
+      "seed": 11,
+      "objective": "ppo",
+      "p95_positive_regression_percent": 16.047375814731797,
+      "max_regression_percent": 101.08359133126935,
+      "mean_paired_gain_percent": 1.1457725935560177,
+      "C_over_HEFT": 0.8381265026056267
+    },
+    {
+      "seed": 11,
+      "objective": "ppo_kl1",
+      "p95_positive_regression_percent": 6.720474692239712,
+      "max_regression_percent": 80.15075376884423,
+      "mean_paired_gain_percent": 1.0448881256056572,
+      "C_over_HEFT": 0.8424607564270287
+    },
+    {
+      "seed": 11,
+      "objective": "ppo_kl10",
+      "p95_positive_regression_percent": 1.9861354062169707,
+      "max_regression_percent": 11.836115326251896,
+      "mean_paired_gain_percent": 0.4415472721593561,
+      "C_over_HEFT": 0.8491795655078678
+    },
+    {
+      "seed": 22,
+      "objective": "ppo",
+      "p95_positive_regression_percent": 13.006732655848216,
+      "max_regression_percent": 57.05967976710335,
+      "mean_paired_gain_percent": 0.9553036084115357,
+      "C_over_HEFT": 0.8452601828142455
+    },
+    {
+      "seed": 22,
+      "objective": "ppo_kl1",
+      "p95_positive_regression_percent": 8.175986104885702,
+      "max_regression_percent": 41.791044776119406,
+      "mean_paired_gain_percent": 1.0429011925372893,
+      "C_over_HEFT": 0.8468546976619997
+    },
+    {
+      "seed": 22,
+      "objective": "ppo_kl10",
+      "p95_positive_regression_percent": 1.108424216732822,
+      "max_regression_percent": 18.023255813953487,
+      "mean_paired_gain_percent": 0.11286561591234892,
+      "C_over_HEFT": 0.8564110144915916
+    },
+    {
+      "seed": 33,
+      "objective": "ppo",
+      "p95_positive_regression_percent": 20.749343478688054,
+      "max_regression_percent": 92.31738035264483,
+      "mean_paired_gain_percent": 0.522482716660073,
+      "C_over_HEFT": 0.8493472197704528
+    },
+    {
+      "seed": 33,
+      "objective": "ppo_kl1",
+      "p95_positive_regression_percent": 10.145051596987052,
+      "max_regression_percent": 44.91379310344828,
+      "mean_paired_gain_percent": 0.6314667130822997,
+      "C_over_HEFT": 0.8554873762707167
+    },
+    {
+      "seed": 33,
+      "objective": "ppo_kl10",
+      "p95_positive_regression_percent": 3.8610308881306805,
+      "max_regression_percent": 39.558232931726906,
+      "mean_paired_gain_percent": 0.2467351320528254,
+      "C_over_HEFT": 0.8635518585847666
+    }
+  ],
+  "locked_exploratory_gates": {
+    "ppo_kl1": {
+      "per_seed": [
+        {
+          "seed": 11,
+          "tail_gate": true,
+          "paired_quality_gate": true
+        },
+        {
+          "seed": 22,
+          "tail_gate": true,
+          "paired_quality_gate": true
+        },
+        {
+          "seed": 33,
+          "tail_gate": true,
+          "paired_quality_gate": true
+        }
+      ],
+      "joint_pass_seeds": 3,
+      "required": 2
+    },
+    "ppo_kl10": {
+      "per_seed": [
+        {
+          "seed": 11,
+          "tail_gate": true,
+          "paired_quality_gate": false
+        },
+        {
+          "seed": 22,
+          "tail_gate": true,
+          "paired_quality_gate": false
+        },
+        {
+          "seed": 33,
+          "tail_gate": true,
+          "paired_quality_gate": false
+        }
+      ],
+      "joint_pass_seeds": 0,
+      "required": 2
+    }
+  },
+  "quantile_method": "linear interpolation at(.95*(n-1))",
+  "syntax_AST_parse_files": 9,
+  "scope": "known VAL; checkpoint and architecture selection bias not covered"
+}

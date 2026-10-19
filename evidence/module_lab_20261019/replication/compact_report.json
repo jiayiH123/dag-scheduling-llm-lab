@@ -1,0 +1,475 @@
+{
+  "scope": "EXPLORATORY additional development seeds after seed11 architecture selection",
+  "code_commit": "eaf29824fd99d514fa16bbeab58bc2a1d1f391e7",
+  "protocol_commit": "e383c45",
+  "config": {
+    "classification": "EXPLORATORY additional development seeds after seed11 architecture selection",
+    "protocol_commit": "e383c45",
+    "architectures": [
+      "edge_attention"
+    ],
+    "objectives": [
+      "ppo",
+      "sil",
+      "pairwise",
+      "bopo"
+    ],
+    "seeds": [
+      22,
+      33
+    ],
+    "hidden": 32,
+    "layers": 2,
+    "train_limit": 800,
+    "val_limit": 216,
+    "batch": 8,
+    "bc_updates": 400,
+    "bc_lr": 0.001,
+    "eval_every": 50,
+    "top_architectures": 1,
+    "rl_updates": 40,
+    "rl_eval_every": 10,
+    "rl_lr": 0.0001,
+    "candidates": 8,
+    "retained": 4,
+    "teacher_anchor": 0.02,
+    "entropy": 0.001
+  },
+  "torch": "2.11.0",
+  "device": "cpu",
+  "data_sha256": "c0c37ad8aaf9778e2e4d8fca3a8932f8fa873bff836db336c4e6cddc6d77bba3",
+  "summary_sha256": "c390b2ad68d0e8f9f199f6d1cb766d72bd5f9c1f2ba71fe0ffce15178375c2c3",
+  "selection_sha256": "20ad1ebf576a842c7104af912ed4bde91e16625cad501df27e8c0a2c4caba566",
+  "selected_architectures": [
+    "edge_attention"
+  ],
+  "results": [
+    {
+      "arm": "edge_attention",
+      "seed": 22,
+      "objective": "BC",
+      "parameters": 30466,
+      "selected_step": 400,
+      "full_known_VAL_C_over_HEFT": 0.8575432694376534,
+      "training_seconds_including_validation": 16.149919124960434,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 20.59573660841906,
+        "HEFT": 14.245673056234681,
+        "PEFT": 15.875435871737531,
+        "MSLBL": -6.267668276121704,
+        "Portfolio": -12.641222029031253,
+        "Teacher64": -14.866505769523137
+      }
+    },
+    {
+      "arm": "edge_attention",
+      "seed": 33,
+      "objective": "BC",
+      "parameters": 30466,
+      "selected_step": 400,
+      "full_known_VAL_C_over_HEFT": 0.8663242795538975,
+      "training_seconds_including_validation": 14.817812208959367,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 19.827847451465825,
+        "HEFT": 13.36757204461022,
+        "PEFT": 14.872653496831832,
+        "MSLBL": -6.708700892024138,
+        "Portfolio": -13.035457615495272,
+        "Teacher64": -15.200004466973205
+      }
+    },
+    {
+      "arm": "edge_attention",
+      "seed": 22,
+      "objective": "ppo",
+      "selected_step": 40,
+      "full_known_VAL_C_over_HEFT": 0.8452601828142455,
+      "last_full_known_VAL_C_over_HEFT": 0.8452601828142455,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": 0.9553036084115357,
+        "graph_cluster_CI95_percent": [
+          -1.0919295918155643,
+          2.8529012606628754
+        ],
+        "wins": 73,
+        "losses": 80,
+        "ties": 63,
+        "worst_regression_percent": 57.05967976710335,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": 0.9553036084115357,
+        "graph_cluster_CI95_percent": [
+          -1.0919295918155643,
+          2.8529012606628754
+        ],
+        "wins": 73,
+        "losses": 80,
+        "ties": 63,
+        "worst_regression_percent": 57.05967976710335,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 160,
+      "training_seconds_including_validation": 14.495480249985121,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 22.085791996699374,
+        "HEFT": 15.473981718575429,
+        "PEFT": 17.397781859130035,
+        "MSLBL": -4.385053942206342,
+        "Portfolio": -10.1089572880973,
+        "Teacher64": -12.253170201929606
+      }
+    },
+    {
+      "arm": "edge_attention",
+      "seed": 22,
+      "objective": "sil",
+      "selected_step": 20,
+      "full_known_VAL_C_over_HEFT": 0.8551300227211245,
+      "last_full_known_VAL_C_over_HEFT": 0.8634154863389346,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": -0.2167397377985465,
+        "graph_cluster_CI95_percent": [
+          -2.378927556761494,
+          1.373502289592623
+        ],
+        "wins": 69,
+        "losses": 54,
+        "ties": 93,
+        "worst_regression_percent": 116.5938864628821,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": -1.2402582408948928,
+        "graph_cluster_CI95_percent": [
+          -2.983735248078976,
+          0.3096172518896871
+        ],
+        "wins": 63,
+        "losses": 64,
+        "ties": 89,
+        "worst_regression_percent": 79.33042212518195,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 40,
+      "training_seconds_including_validation": 10.5233165420359,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 20.841437098129678,
+        "HEFT": 14.486997727887447,
+        "PEFT": 16.130154456031963,
+        "MSLBL": -6.198261595023309,
+        "Portfolio": -12.324581544108,
+        "Teacher64": -14.596392256384458
+      }
+    },
+    {
+      "arm": "edge_attention",
+      "seed": 22,
+      "objective": "pairwise",
+      "selected_step": 10,
+      "full_known_VAL_C_over_HEFT": 0.8529613308319317,
+      "last_full_known_VAL_C_over_HEFT": 0.8538300931185141,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": 0.3717656549531197,
+        "graph_cluster_CI95_percent": [
+          -0.6747914988854465,
+          1.4197101538899564
+        ],
+        "wins": 57,
+        "losses": 48,
+        "ties": 111,
+        "worst_regression_percent": 50.87108013937282,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": 0.05278798186468486,
+        "graph_cluster_CI95_percent": [
+          -1.2478118953084159,
+          1.281906079421155
+        ],
+        "wins": 72,
+        "losses": 68,
+        "ties": 76,
+        "worst_regression_percent": 116.5938864628821,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 40,
+      "training_seconds_including_validation": 10.528810499992687,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 21.032054083640784,
+        "HEFT": 14.703866916806792,
+        "PEFT": 16.30409011979876,
+        "MSLBL": -5.799448240262876,
+        "Portfolio": -11.916552530923989,
+        "Teacher64": -14.153009298793258
+      }
+    },
+    {
+      "arm": "edge_attention",
+      "seed": 22,
+      "objective": "bopo",
+      "selected_step": 40,
+      "full_known_VAL_C_over_HEFT": 0.8510573809539923,
+      "last_full_known_VAL_C_over_HEFT": 0.8510573809539923,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": 0.3823771320884226,
+        "graph_cluster_CI95_percent": [
+          -1.051472431085914,
+          1.6874145306944546
+        ],
+        "wins": 82,
+        "losses": 60,
+        "ties": 74,
+        "worst_regression_percent": 116.5938864628821,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": 0.3823771320884226,
+        "graph_cluster_CI95_percent": [
+          -1.051472431085914,
+          1.6874145306944546
+        ],
+        "wins": 82,
+        "losses": 60,
+        "ties": 74,
+        "worst_regression_percent": 116.5938864628821,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 40,
+      "training_seconds_including_validation": 10.651966708013788,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 21.308817854664174,
+        "HEFT": 14.894261904600729,
+        "PEFT": 16.60809238344773,
+        "MSLBL": -5.522116640490861,
+        "Portfolio": -11.51254717811411,
+        "Teacher64": -13.735943442381549
+      }
+    },
+    {
+      "arm": "edge_attention",
+      "seed": 33,
+      "objective": "ppo",
+      "selected_step": 30,
+      "full_known_VAL_C_over_HEFT": 0.8493472197704528,
+      "last_full_known_VAL_C_over_HEFT": 0.8582138717591675,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": 0.522482716660073,
+        "graph_cluster_CI95_percent": [
+          -1.9380767284342555,
+          2.991022808747064
+        ],
+        "wins": 97,
+        "losses": 72,
+        "ties": 47,
+        "worst_regression_percent": 92.31738035264483,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": -0.814975395912591,
+        "graph_cluster_CI95_percent": [
+          -4.026289072735619,
+          2.376115752749407
+        ],
+        "wins": 93,
+        "losses": 82,
+        "ties": 41,
+        "worst_regression_percent": 124.78510028653295,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 160,
+      "training_seconds_including_validation": 14.737141167046502,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 21.61582963663632,
+        "HEFT": 15.065278022954708,
+        "PEFT": 16.92415797122802,
+        "MSLBL": -4.8668797611837356,
+        "Portfolio": -10.594317199544774,
+        "Teacher64": -12.829180253605136
+      }
+    },
+    {
+      "arm": "edge_attention",
+      "seed": 33,
+      "objective": "sil",
+      "selected_step": 10,
+      "full_known_VAL_C_over_HEFT": 0.8604754249251748,
+      "last_full_known_VAL_C_over_HEFT": 0.8634005647593542,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": 0.49953022788767326,
+        "graph_cluster_CI95_percent": [
+          -0.23590807884148593,
+          1.1970567395355236
+        ],
+        "wins": 58,
+        "losses": 38,
+        "ties": 120,
+        "worst_regression_percent": 41.61179878851725,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": -0.7425291697623694,
+        "graph_cluster_CI95_percent": [
+          -2.7792063535432585,
+          0.9804890005302057
+        ],
+        "wins": 70,
+        "losses": 58,
+        "ties": 88,
+        "worst_regression_percent": 80.60453400503778,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 40,
+      "training_seconds_including_validation": 10.702488707960583,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 20.422161806165043,
+        "HEFT": 13.952457507482492,
+        "PEFT": 15.491972534412483,
+        "MSLBL": -5.862252226600352,
+        "Portfolio": -12.15009597525761,
+        "Teacher64": -14.264184907831309
+      }
+    },
+    {
+      "arm": "edge_attention",
+      "seed": 33,
+      "objective": "pairwise",
+      "selected_step": 10,
+      "full_known_VAL_C_over_HEFT": 0.8606211841308393,
+      "last_full_known_VAL_C_over_HEFT": 0.8638815249208031,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": 0.3147608645818962,
+        "graph_cluster_CI95_percent": [
+          -0.42669020341455194,
+          0.9541300535944771
+        ],
+        "wins": 63,
+        "losses": 44,
+        "ties": 109,
+        "worst_regression_percent": 48.41437632135307,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": -0.6954265472093568,
+        "graph_cluster_CI95_percent": [
+          -2.86017839707506,
+          1.2389112541212606
+        ],
+        "wins": 77,
+        "losses": 61,
+        "ties": 78,
+        "worst_regression_percent": 80.60453400503778,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 40,
+      "training_seconds_including_validation": 10.579854957992211,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 20.379875931511265,
+        "HEFT": 13.937881586916019,
+        "PEFT": 15.55202320235909,
+        "MSLBL": -5.835721617713591,
+        "Portfolio": -12.249482084062777,
+        "Teacher64": -14.393197249725025
+      }
+    },
+    {
+      "arm": "edge_attention",
+      "seed": 33,
+      "objective": "bopo",
+      "selected_step": 10,
+      "full_known_VAL_C_over_HEFT": 0.859104336125325,
+      "last_full_known_VAL_C_over_HEFT": 0.8658438133181561,
+      "paired_vs_own_BC": {
+        "mean_paired_gain_percent": 0.6326344094541794,
+        "graph_cluster_CI95_percent": [
+          -0.8101930538411574,
+          1.6172410991376627
+        ],
+        "wins": 59,
+        "losses": 37,
+        "ties": 120,
+        "worst_regression_percent": 48.41437632135307,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "last_paired_vs_own_BC": {
+        "mean_paired_gain_percent": -1.3005744696245978,
+        "graph_cluster_CI95_percent": [
+          -3.8702766045417856,
+          1.094713391146274
+        ],
+        "wins": 77,
+        "losses": 74,
+        "ties": 65,
+        "worst_regression_percent": 124.78510028653295,
+        "configs": 216,
+        "latent_graphs": 24,
+        "scope": "exploratory known VAL, checkpoint-selection uncertainty not included"
+      },
+      "actual_complete_candidates": 2560,
+      "optimizer_steps": 40,
+      "training_seconds_including_validation": 10.587557999999262,
+      "strong_control_mean_paired_gain_percent": {
+        "Greedy": 20.63643378013228,
+        "HEFT": 14.089566387467462,
+        "PEFT": 15.64607995450684,
+        "MSLBL": -5.624773692007704,
+        "Portfolio": -11.944099185262473,
+        "Teacher64": -14.099679843479732
+      }
+    }
+  ],
+  "simulator_counts": {
+    "complete_decodes": 36900,
+    "validated_schedules": 36900,
+    "teacher_reference_calls": 216
+  },
+  "max_absolute_logprob_replay_error": 1.537799835205078e-05,
+  "TEST_evaluated": false,
+  "deploy_forwards": 1,
+  "deploy_decodes": 1,
+  "raw_files_remain_on_machine": [
+    "summary.json",
+    "curves.jsonl",
+    "data_selection.json",
+    "metadata.json",
+    "mechanism_checks.json"
+  ],
+  "caveat": "Copy this report; no GitHub push, credentials or model-weight upload needed."
+}

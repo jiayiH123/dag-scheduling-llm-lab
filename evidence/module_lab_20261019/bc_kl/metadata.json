@@ -1,0 +1,51 @@
+{
+  "config": {
+    "classification": "EXPLORATORY BC-KL tail-control study on known development folds",
+    "protocol_commit": "90e4781",
+    "architectures": [
+      "edge_attention"
+    ],
+    "objectives": [
+      "ppo",
+      "ppo_kl1",
+      "ppo_kl10"
+    ],
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "hidden": 32,
+    "layers": 2,
+    "train_limit": 800,
+    "val_limit": 216,
+    "batch": 8,
+    "bc_updates": 400,
+    "bc_lr": 0.001,
+    "eval_every": 50,
+    "top_architectures": 1,
+    "rl_updates": 40,
+    "rl_eval_every": 10,
+    "rl_lr": 0.0001,
+    "candidates": 8,
+    "retained": 4,
+    "teacher_anchor": 0.02,
+    "entropy": 0.001
+  },
+  "argv": [
+    "scripts/run_module_lab.py",
+    "--config",
+    "configs/module_lab_bc_kl.json",
+    "--sim-python",
+    "/opt/miniconda3/envs/dag-research/bin/python",
+    "--output",
+    "runs/module_lab_bc_kl_20261019"
+  ],
+  "torch": "2.11.0",
+  "device": "cpu",
+  "code_commit_at_start": "82dba40663be1b56b0a4bbd0eb0f65b4afbbc476",
+  "protocol_commit": "90e4781",
+  "classification": "EXPLORATORY BC-KL tail-control study on known development folds",
+  "TEST_evaluated": false,
+  "historical_warmstart_used": false
+}

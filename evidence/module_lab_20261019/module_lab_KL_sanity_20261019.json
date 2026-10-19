@@ -1,0 +1,7 @@
+{
+  "identity_KL": 0.0,
+  "identity_max_gradient": 0.0,
+  "perturbed_reference_KL": 0.07690618187189102,
+  "padding_and_own_prefix_finite": true,
+  "status": "PASS"
+}

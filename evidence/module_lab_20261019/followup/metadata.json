@@ -1,0 +1,52 @@
+{
+  "config": {
+    "classification": "EXPLORATORY adaptive normalization and longer-BC follow-up",
+    "protocol_commit": "1b1010d",
+    "architectures": [
+      "edge_gnn",
+      "edge_gnn_ln",
+      "edge_attention"
+    ],
+    "objectives": [
+      "ppo",
+      "sil",
+      "pairwise",
+      "bopo"
+    ],
+    "seeds": [
+      11
+    ],
+    "hidden": 32,
+    "layers": 2,
+    "train_limit": 800,
+    "val_limit": 216,
+    "batch": 8,
+    "bc_updates": 400,
+    "bc_lr": 0.001,
+    "eval_every": 50,
+    "top_architectures": 2,
+    "rl_updates": 40,
+    "rl_eval_every": 10,
+    "rl_lr": 0.0001,
+    "candidates": 8,
+    "retained": 4,
+    "teacher_anchor": 0.02,
+    "entropy": 0.001
+  },
+  "argv": [
+    "scripts/run_module_lab.py",
+    "--config",
+    "configs/module_lab_followup.json",
+    "--sim-python",
+    "/opt/miniconda3/envs/dag-research/bin/python",
+    "--output",
+    "runs/module_lab_followup_20261019"
+  ],
+  "torch": "2.11.0",
+  "device": "cpu",
+  "code_commit_at_start": "3d14238b0cdc6ed5618277484274d99adf8fa346",
+  "protocol_commit": "1b1010d",
+  "classification": "EXPLORATORY adaptive normalization and longer-BC follow-up",
+  "TEST_evaluated": false,
+  "historical_warmstart_used": false
+}

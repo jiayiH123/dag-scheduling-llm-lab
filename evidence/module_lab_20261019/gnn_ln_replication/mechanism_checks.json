@@ -1,0 +1,39 @@
+{
+  "checks": [
+    {
+      "arm": "edge_gnn_ln",
+      "id": "train319",
+      "initial_C_over_HEFT": 1.0,
+      "one_forward_verified": true,
+      "own_prefix_replay": true
+    },
+    {
+      "arm": "edge_gnn_ln",
+      "id": "train777",
+      "initial_C_over_HEFT": 1.0,
+      "one_forward_verified": true,
+      "own_prefix_replay": true
+    }
+  ],
+  "one_batch_overfit": [
+    {
+      "arm": "legacy_gnn",
+      "id": "train319",
+      "initial_nll": 1.6722326278686523,
+      "final_nll": 0.7980203032493591,
+      "diagnostic_steps": 81,
+      "reduced": true
+    },
+    {
+      "arm": "edge_attention",
+      "id": "train319",
+      "initial_nll": 1.6722326278686523,
+      "final_nll": 0.5367441177368164,
+      "diagnostic_steps": 81,
+      "reduced": true
+    }
+  ],
+  "max_absolute_logprob_replay_error": 2.384185791015625e-07,
+  "device": "cpu",
+  "TEST_evaluated": false
+}

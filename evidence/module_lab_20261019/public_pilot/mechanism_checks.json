@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "arm": "edge_gnn_ln",
+      "id": "train_public_srasearch-chameleon-20a-001.json_3_10_40_MBps_0.6",
+      "initial_C_over_HEFT": 1.0,
+      "one_forward_verified": true,
+      "own_prefix_replay": true
+    },
+    {
+      "arm": "edge_gnn_ln",
+      "id": "train_public_seismology-chameleon-100p-001.json_3_100_400_MBps_0.6",
+      "initial_C_over_HEFT": 1.0,
+      "one_forward_verified": true,
+      "own_prefix_replay": true
+    },
+    {
+      "arm": "edge_attention",
+      "id": "train_public_srasearch-chameleon-20a-001.json_3_10_40_MBps_0.6",
+      "initial_C_over_HEFT": 1.0,
+      "one_forward_verified": true,
+      "own_prefix_replay": true
+    },
+    {
+      "arm": "edge_attention",
+      "id": "train_public_seismology-chameleon-100p-001.json_3_100_400_MBps_0.6",
+      "initial_C_over_HEFT": 1.0,
+      "one_forward_verified": true,
+      "own_prefix_replay": true
+    }
+  ],
+  "one_batch_overfit": [
+    {
+      "arm": "legacy_gnn",
+      "id": "train_public_srasearch-chameleon-20a-001.json_3_10_40_MBps_0.6",
+      "initial_nll": 1.5809560579179731,
+      "final_nll": 1.1824180375391091,
+      "diagnostic_steps": 81,
+      "reduced": true
+    },
+    {
+      "arm": "edge_attention",
+      "id": "train_public_srasearch-chameleon-20a-001.json_3_10_40_MBps_0.6",
+      "initial_nll": 1.5809560579179731,
+      "final_nll": 0.3318982656154933,
+      "diagnostic_steps": 81,
+      "reduced": true
+    }
+  ],
+  "max_absolute_logprob_replay_error": 4.440892098500626e-16,
+  "device": "cpu",
+  "TEST_evaluated": false
+}

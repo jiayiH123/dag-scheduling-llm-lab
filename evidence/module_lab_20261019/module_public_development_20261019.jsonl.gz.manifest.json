@@ -1,0 +1,179 @@
+{
+  "sources_manifest_sha256": "67e84f08420254c0f6dfc3dcd16c4fc7e9a2307c39b48991cd26103d8011a031",
+  "pinned_commit": "d7bfead08a4dbf985ebbf427b3685a6512c259e2",
+  "license_url": "https://github.com/wfcommons/WfInstances/blob/d7bfead08a4dbf985ebbf427b3685a6512c259e2/LICENSE",
+  "source_entries": [
+    {
+      "split": "train",
+      "path": "pegasus/montage/montage-chameleon-dss-05d-001.json",
+      "file": "montage-chameleon-dss-05d-001.json",
+      "family": "montage",
+      "git_blob_sha1": "dc869c038f4c45f465bf6c30c477f1f27ab8ce9e",
+      "bytes": 107546,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/montage/montage-chameleon-dss-05d-001.json",
+      "sha256": "3eeeddf2589bf232f9f5d4202a7878871042169d39638de0be742ca19980ea1f",
+      "topology_fingerprint": "2e63817c4dbb080f197eb53e13fb667821efdca693fa00060fa008de3adcaf7b",
+      "tasks": 58
+    },
+    {
+      "split": "train",
+      "path": "pegasus/1000genome/1000genome-chameleon-4ch-100k-001.json",
+      "file": "1000genome-chameleon-4ch-100k-001.json",
+      "family": "1000genome",
+      "git_blob_sha1": "7b8c54c2f246e07ddeb31965ed802645a46e11c8",
+      "bytes": 157253,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/1000genome/1000genome-chameleon-4ch-100k-001.json",
+      "sha256": "282728a466f3d91582a7923002d322b7b8a50555c698f6004ba75b2e9c494254",
+      "topology_fingerprint": "adfd28a0726484a623da1cb01440a9c126e533ed18f15645dd6198abf926bc04",
+      "tasks": 104
+    },
+    {
+      "split": "train",
+      "path": "pegasus/1000genome/1000genome-chameleon-2ch-250k-001.json",
+      "file": "1000genome-chameleon-2ch-250k-001.json",
+      "family": "1000genome",
+      "git_blob_sha1": "2bf3ba4754a3f84e31a40e7a5c85186a18958de2",
+      "bytes": 125709,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/1000genome/1000genome-chameleon-2ch-250k-001.json",
+      "sha256": "3ba6931a3ccaf5cd16b8aefcaa75658e297df19a49980e245d10e17bf0d06c54",
+      "topology_fingerprint": "8993f46790b3abe780ae1aaa36213f57997974e7c32995372dddc3e29d4e67a7",
+      "tasks": 82
+    },
+    {
+      "split": "train",
+      "path": "pegasus/epigenomics/epigenomics-chameleon-hep-2seq-100k-001.json",
+      "file": "epigenomics-chameleon-hep-2seq-100k-001.json",
+      "family": "epigenomics",
+      "git_blob_sha1": "7370d27785292ddb7b08558389dceac965233a82",
+      "bytes": 217086,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/epigenomics/epigenomics-chameleon-hep-2seq-100k-001.json",
+      "sha256": "99a55694a5f0a1be6bede1bd2f8b18a9ca8aed0c5e5b142d1abe72a569105048",
+      "topology_fingerprint": "958de650dd97ef440fccf5570bdfd43f52e26d949aab9ac51bffc0b02d6db8e5",
+      "tasks": 119
+    },
+    {
+      "split": "train",
+      "path": "pegasus/srasearch/srasearch-chameleon-10a-001.json",
+      "file": "srasearch-chameleon-10a-001.json",
+      "family": "srasearch",
+      "git_blob_sha1": "821ae2ed48cc31cdf54d2e618762599004893643",
+      "bytes": 38312,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/srasearch/srasearch-chameleon-10a-001.json",
+      "sha256": "3c6b71c7ffb24ed4a49f33387b115232a674790722e54ef64f154b452643e65e",
+      "topology_fingerprint": "39b721f991fe15689d304aa65d74bb30e6a96a44748076bd30ac75fb338f994f",
+      "tasks": 22
+    },
+    {
+      "split": "train",
+      "path": "pegasus/srasearch/srasearch-chameleon-20a-001.json",
+      "file": "srasearch-chameleon-20a-001.json",
+      "family": "srasearch",
+      "git_blob_sha1": "16608ac3100d7b5701142a0844bfa012626c181e",
+      "bytes": 72365,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/srasearch/srasearch-chameleon-20a-001.json",
+      "sha256": "b67c727e126fa9b5744b7cc6cba4322bd73c225f1e7758f20a171dff14c3d46c",
+      "topology_fingerprint": "e351fd0a3b607f22abeccbabf428b77add79772d935edea403e493511c1b68b1",
+      "tasks": 42
+    },
+    {
+      "split": "train",
+      "path": "pegasus/soykb/soykb-chameleon-10fastq-10ch-001.json",
+      "file": "soykb-chameleon-10fastq-10ch-001.json",
+      "family": "soykb",
+      "git_blob_sha1": "92e9814aeacb198e2a4de24237424db68317dcda",
+      "bytes": 269952,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/soykb/soykb-chameleon-10fastq-10ch-001.json",
+      "sha256": "158cd51e84d019297e4678c69c22edca3a9a2203d97d81f565f8b167da650500",
+      "topology_fingerprint": "d4f10cfae33db5ba2f3b02e90061c009fafa0afbfa31db91e65f3b07b8330dfd",
+      "tasks": 96
+    },
+    {
+      "split": "train",
+      "path": "pegasus/seismology/seismology-chameleon-100p-001.json",
+      "file": "seismology-chameleon-100p-001.json",
+      "family": "seismology",
+      "git_blob_sha1": "13a1c0b3e62b5b65fc37d7e7ba9abe311ce29ee9",
+      "bytes": 175472,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/seismology/seismology-chameleon-100p-001.json",
+      "sha256": "03266a6c007b8e7f8d40a08371e8bf0634c0d8cde8a701364196d5f5b937f3a7",
+      "topology_fingerprint": "6cd547995240c7ecdad1f09e5b6444fca933ad6f3c99acbb7f772acb63117db6",
+      "tasks": 101
+    },
+    {
+      "split": "val",
+      "path": "pegasus/montage/montage-chameleon-2mass-01d-001.json",
+      "file": "montage-chameleon-2mass-01d-001.json",
+      "family": "montage",
+      "git_blob_sha1": "7458bbf0cf38271cf2f2b98224cee581ccfb5fb5",
+      "bytes": 203826,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/montage/montage-chameleon-2mass-01d-001.json",
+      "sha256": "7f615b37a39ea359a7b33eb80dd26a0e89764343b2ed8e18109a4e6fe871c977",
+      "topology_fingerprint": "23b1efe4da3eb15189f26b5a277568693fbad512d633051e0ba2f8d0902d7e51",
+      "tasks": 103
+    },
+    {
+      "split": "val",
+      "path": "pegasus/1000genome/1000genome-chameleon-6ch-100k-001.json",
+      "file": "1000genome-chameleon-6ch-100k-001.json",
+      "family": "1000genome",
+      "git_blob_sha1": "242fb63e44bcbc1124455d20a858615e0f6dd51e",
+      "bytes": 234072,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/1000genome/1000genome-chameleon-6ch-100k-001.json",
+      "sha256": "8d18873c74fa5edd5658c8b266ef7a83f5018613458ba5167452b083218f3f05",
+      "topology_fingerprint": "130aa656d6ae376f04834fb274300bd4e618a23e474beb64ecf7aab7ef3bc7f5",
+      "tasks": 156
+    },
+    {
+      "split": "val",
+      "path": "pegasus/epigenomics/epigenomics-chameleon-hep-3seq-100k-001.json",
+      "file": "epigenomics-chameleon-hep-3seq-100k-001.json",
+      "family": "epigenomics",
+      "git_blob_sha1": "949f24a8a15dd61c97c878368be3c2095677778e",
+      "bytes": 424774,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/epigenomics/epigenomics-chameleon-hep-3seq-100k-001.json",
+      "sha256": "b445a62b2f6de8298c3b20cea105430111a6db0aa254b1e9568d707c4e422108",
+      "topology_fingerprint": "5fd1b8e0141b31a152adf4018dd6e48fc1a87c0aae376d7514411a77a5d6f1bb",
+      "tasks": 233
+    },
+    {
+      "split": "val",
+      "path": "pegasus/srasearch/srasearch-chameleon-40a-001.json",
+      "file": "srasearch-chameleon-40a-001.json",
+      "family": "srasearch",
+      "git_blob_sha1": "9db133841ebc5a98578a49e741e9d7d79abcbbb0",
+      "bytes": 142059,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/srasearch/srasearch-chameleon-40a-001.json",
+      "sha256": "da5f21662aebfc159340989bb0e0409ed3698580f8f72babc0d8b50891e05cd5",
+      "topology_fingerprint": "1323a2113101cf18a4984342c71e82da018513195f3f81889c8781e253f799a0",
+      "tasks": 84
+    }
+  ],
+  "configs": {
+    "train": 64,
+    "val": 32
+  },
+  "base_traces": {
+    "train": 8,
+    "val": 4
+  },
+  "unique_topology_fingerprints": {
+    "train": 8,
+    "val": 4
+  },
+  "TRAIN_VAL_topology_overlap": false,
+  "teacher_actions_TRAIN_only": 4992,
+  "pool_counts": [
+    3,
+    6
+  ],
+  "task_range": [
+    22,
+    233
+  ],
+  "TEST_downloaded": false,
+  "TEST_evaluated": false,
+  "dataset_sha256": "aee6f1a707fc76a839906220fd8201cafc28268bdc0a62f42608d8a08b1b79ba",
+  "prepare_seconds": 11.520262958016247,
+  "measurement_scope": "measured topology/runtime/filebytes; simulated pools,unit-demand capacities,prices,network,budget",
+  "classification": "small public development pilot; no cross-application or final-test claim"
+}
