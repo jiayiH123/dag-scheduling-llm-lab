@@ -1,0 +1,22 @@
+{
+  "classification": "EXPLORATORY additional development seeds after seed11 architecture selection",
+  "architectures": ["edge_attention"],
+  "objectives": ["ppo", "sil", "pairwise", "bopo"],
+  "seeds": [22, 33],
+  "hidden": 32,
+  "layers": 2,
+  "train_limit": 800,
+  "val_limit": 216,
+  "batch": 8,
+  "bc_updates": 400,
+  "bc_lr": 0.001,
+  "eval_every": 50,
+  "top_architectures": 1,
+  "rl_updates": 40,
+  "rl_eval_every": 10,
+  "rl_lr": 0.0001,
+  "candidates": 8,
+  "retained": 4,
+  "teacher_anchor": 0.02,
+  "entropy": 0.001
+}
