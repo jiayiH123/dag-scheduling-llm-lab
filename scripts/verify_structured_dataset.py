@@ -10,6 +10,7 @@ import time
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from daglab.structured_dataset import sha256, validate_record
+from daglab.offline_data import topology_fingerprint
 
 
 def main():
@@ -26,6 +27,7 @@ def main():
         if b['topology_fingerprint'] in seen_fp: raise AssertionError('duplicate topology base')
         seen_fp.add(b['topology_fingerprint'])
     counts = Counter(); base_roles = {}; keys = set(); action_count = 0; maxpos = 0
+    actual_topologies = set(); physical_pairs = {}; per_base_counts = Counter()
     sizes = Counter(); budgets = Counter(); cr = Counter(); pools = Counter(); ccr_error = 0.
     for shard in manifest['shards']:
         rows = 0; labels = 0
@@ -36,6 +38,18 @@ def main():
                 keys.add(row['key']); b = ids[row['base_id']]
                 if b['split'] != row['split'] or b['topology_fingerprint'] != row['meta']['topology_fingerprint']:
                     raise AssertionError('base provenance')
+                if row['base_id'] not in base_roles:
+                    fp = topology_fingerprint(row['input']['n'], [e[:2] for e in row['input']['network']['edges']])
+                    if fp != b['topology_fingerprint'] or fp in actual_topologies:
+                        raise AssertionError('serialized topology hash/overlap')
+                    actual_topologies.add(fp)
+                # Exactly the same physical instance, apart from the paired budget.
+                import hashlib
+                physical = {k: v for k, v in row['input'].items() if k != 'budget'}
+                ph = hashlib.sha256(json.dumps(physical, sort_keys=True).encode()).hexdigest()
+                if row['base_id'] in physical_pairs and physical_pairs[row['base_id']] != ph:
+                    raise AssertionError('paired budget changed other physics')
+                physical_pairs[row['base_id']] = ph; per_base_counts[row['base_id']] += 1
                 base_roles[row['base_id']] = row['split']; maxpos = max(maxpos, validate_record(row))
                 counts[row['split']] += 1
                 labels += len(row.get('supervision', {}).get('decisions', []))
@@ -48,6 +62,7 @@ def main():
         action_count += labels
     if dict(counts) != manifest['record_counts'] or action_count != manifest['TRAIN_teacher_actions']:
         raise AssertionError('total counts')
+    if any(v != 2 for v in per_base_counts.values()): raise AssertionError('two configurations per base')
     if manifest['status'] == 'complete':
         expected = {role: 2*count for role, count in manifest['all_role_base_counts'].items()}
         if dict(counts) != expected: raise AssertionError('incomplete main data')
