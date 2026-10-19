@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "data_manifest_sha256": "8ef25bfef98975e8a79999c44df263f9650124abd4cac3773d4dce75a2b9a4ab",
+  "scope": "data identity and deterministic first-row view; no learned-policy or TEST scheduling result",
+  "selection": "first serialized row; never best-of-two labels or quality",
+  "independent_base_DAGs": 12300,
+  "raw_records": {
+    "train": 20000,
+    "val": 1000,
+    "test": 2000,
+    "ood_size": 800,
+    "ood_pools": 800
+  },
+  "unique_physical_configurations": {
+    "train": 17261,
+    "val": 862,
+    "test": 1718,
+    "ood_size": 694,
+    "ood_pools": 711
+  },
+  "removed_repeated_configurations": {
+    "train": 2739,
+    "val": 138,
+    "test": 282,
+    "ood_size": 106,
+    "ood_pools": 89
+  },
+  "raw_action_labels": {
+    "train": 1300000,
+    "val": 0,
+    "test": 0,
+    "ood_size": 0,
+    "ood_pools": 0
+  },
+  "unique_view_action_labels": {
+    "train": 1122860,
+    "val": 0,
+    "test": 0,
+    "ood_size": 0,
+    "ood_pools": 0
+  },
+  "repeated_second_eta": {
+    "None": 3354
+  },
+  "repeated_TRAIN_configs_with_different_teacher_mappings": 2573,
+  "raw_data_modified": false,
+  "heldout_labels_or_schedules_generated": false
+}

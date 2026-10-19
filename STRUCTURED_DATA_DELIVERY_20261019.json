@@ -2,7 +2,7 @@
   "schema": "structured-data-delivery-v1",
   "date": "2026-10-19",
   "protocol_commit": "ee4b4a8b4e3010736898c4ab39c19d090cea7a61",
-  "scope": "complete structured data and TRAIN targets; no Qwen model or new trained policy result",
+  "scope": "immutable raw structured data plus deterministic unique-physical training view; no Qwen model or new trained-policy result",
   "data_manifest": "data/structured_scheduling_v1/MANIFEST.json",
   "files": [
     {
@@ -22,8 +22,8 @@
     },
     {
       "path": "STRUCTURED_DATA_README_20261019.md",
-      "bytes": 6985,
-      "sha256": "a3141497999721ebb3e8904b9bc4245f96970659c9198cb181465d323b1827fc"
+      "bytes": 8887,
+      "sha256": "1835b7d4f4298afddc327685287dabcfe0e2bb5a97134919f88647d77a7db527"
     },
     {
       "path": "configs/structured_scheduling_v1.json",
@@ -46,14 +46,19 @@
       "sha256": "01c587fb84e12f696455eec5a872cf63945e7cb42dcc2ff573381ca899c22045"
     },
     {
+      "path": "daglab/structured_unique.py",
+      "bytes": 1209,
+      "sha256": "bfd27aca938a14362b79de61848a238a44a11d4d85498c4f9727d40c42e4f8e6"
+    },
+    {
       "path": "data/structured_scheduling_v1/MANIFEST.json",
       "bytes": 1371070,
       "sha256": "8ef25bfef98975e8a79999c44df263f9650124abd4cac3773d4dce75a2b9a4ab"
     },
     {
       "path": "docs/STRUCTURED_QWEN_HANDOFF_20261019.md",
-      "bytes": 2856,
-      "sha256": "1ee512a7f3b4874b641451ba4fbb55c6106a275c9d59914e0b79e27337755112"
+      "bytes": 3197,
+      "sha256": "f128fce5a883775fb747533e76745b61c97f95637eb5cf1df677d4854f1a6829"
     },
     {
       "path": "evidence/structured_engineering_interfaces.json",
@@ -131,9 +136,19 @@
       "sha256": "6efcdb3f3b394709a452908b850082980b223aae91f574a689aa7a5e15eee9bb"
     },
     {
+      "path": "evidence/structured_v1_unique_view_audit.json",
+      "bytes": 1171,
+      "sha256": "d618280182950b3ab4203240ac04499619210804d9f6bf13e012bb00f15455ca"
+    },
+    {
       "path": "protocols/structured_scheduling_v1_20261019.md",
       "bytes": 6200,
       "sha256": "20ad9a4070d8489b906df560d1acdcd26fe083b43ace99520b5deb6db5168c8c"
+    },
+    {
+      "path": "scripts/audit_structured_unique.py",
+      "bytes": 3481,
+      "sha256": "e4cec67cb8ca27dda59b9ffaad57e3afb0da2a6ec8e36aa48fc5566806c34458"
     },
     {
       "path": "scripts/build_structured_dataset.py",
@@ -147,8 +162,8 @@
     },
     {
       "path": "scripts/materialize_structured_training.py",
-      "bytes": 2654,
-      "sha256": "f9abe45b43b891c1881fc778ee38a26a4f7164969749d954beaf52b3797a86ae"
+      "bytes": 2765,
+      "sha256": "72e897821ccb648bf733db3575cc56a4571a8bf694fa962fb4d2f736edbd806f"
     },
     {
       "path": "scripts/verify_structured_dataset.py",
@@ -160,5 +175,13 @@
       "bytes": 1145,
       "sha256": "0cec33d19556658352120bfbc45ebda782019881513bbe0c3131d2ebe116d709"
     }
-  ]
+  ],
+  "configuration_identity_correction": {
+    "raw_records": 24600,
+    "unique_physical_configurations": 21246,
+    "TRAIN_raw_actions": 1300000,
+    "TRAIN_unique_view_actions": 1122860,
+    "view": "daglab.structured_unique.iter_unique_rows",
+    "selection": "first serialized row, independent of teacher quality"
+  }
 }
