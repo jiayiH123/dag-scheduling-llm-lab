@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-19",
+  "scope": "script hash capture during two ongoing offline TRAIN/VAL preparation jobs; not a pre-run training registration",
+  "scripts": {
+    "scripts/prepare_offline_training.py": "f52477aa587952f0cf72c71da5c062279270141af149c893660a3291ab8c060c",
+    "daglab/offline_data.py": "3f9e4945cdcd699471806d49d9a1f9c09361914d85f0e94b5ea7bdc399bc624b",
+    "daglab/reference.py": "5e0ef84203543ffd325cc1d98ff0b4ebe961513f7266b2b90919e0a04c1ea92b",
+    "vendor/cached_budget_decoder.py": "2694e0d3561e3798e1a882ac7a66f3083f576b42eb2d985f4d258e0196d5e38b",
+    "vendor/budget_core.py": "638a033a3b9ff2a36037a0a00d4491b1ca29bd61be55f9cd401debe7d5556467"
+  },
+  "data_protocol_commits": [
+    "2a557f7",
+    "e27ea88"
+  ],
+  "datasets": [
+    "wfinstances",
+    "tpch_composite"
+  ],
+  "max_tasks": 512,
+  "pools": [
+    3
+  ],
+  "profiles": [
+    "10_40_MBps"
+  ],
+  "budget_etas": [
+    0.25,
+    0.6
+  ],
+  "teacher": "existing ten-rule mapping portfolio plus64local proposals; TRAIN only",
+  "neural_optimization": false,
+  "preparation_source_snapshot": "evidence/offline_ready_prepare_source_20261019.txt",
+  "status": "both preparation jobs completed"
+}

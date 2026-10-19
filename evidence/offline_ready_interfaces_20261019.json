@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "data": "wfinstances_trainval.jsonl.gz",
+      "id": "train_wf_7a1fd0cd989e9091b455_3_10_40_MBps_0.25",
+      "arm": "edge_gnn_ln",
+      "n": 507,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 2.220446049250313e-16
+    },
+    {
+      "data": "wfinstances_trainval.jsonl.gz",
+      "id": "train_wf_7a1fd0cd989e9091b455_3_10_40_MBps_0.25",
+      "arm": "edge_attention",
+      "n": 507,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 2.220446049250313e-16
+    },
+    {
+      "data": "wfinstances_trainval.jsonl.gz",
+      "id": "val_wf_cf1f1bbbc0a4bbc85333_3_10_40_MBps_0.25",
+      "arm": "edge_gnn_ln",
+      "n": 492,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 2.220446049250313e-16
+    },
+    {
+      "data": "wfinstances_trainval.jsonl.gz",
+      "id": "val_wf_cf1f1bbbc0a4bbc85333_3_10_40_MBps_0.25",
+      "arm": "edge_attention",
+      "n": 492,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 2.220446049250313e-16
+    },
+    {
+      "data": "tpch_composite_trainval.jsonl.gz",
+      "id": "train_tpchmix_train_0137_bec19bc26483_3_10_40_MBps_0.25",
+      "arm": "edge_gnn_ln",
+      "n": 251,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 2.220446049250313e-16
+    },
+    {
+      "data": "tpch_composite_trainval.jsonl.gz",
+      "id": "train_tpchmix_train_0137_bec19bc26483_3_10_40_MBps_0.25",
+      "arm": "edge_attention",
+      "n": 251,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 2.220446049250313e-16
+    },
+    {
+      "data": "tpch_composite_trainval.jsonl.gz",
+      "id": "val_tpchmix_val_0038_1595dc73eb63_3_10_40_MBps_0.25",
+      "arm": "edge_gnn_ln",
+      "n": 216,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 2.220446049250313e-16
+    },
+    {
+      "data": "tpch_composite_trainval.jsonl.gz",
+      "id": "val_tpchmix_val_0038_1595dc73eb63_3_10_40_MBps_0.25",
+      "arm": "edge_attention",
+      "n": 216,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 2.220446049250313e-16
+    }
+  ],
+  "simulator_counts": [
+    {
+      "complete_decodes": 4,
+      "validated_schedules": 4,
+      "teacher_reference_calls": 0,
+      "forced_TRAIN_teacher_replays": 1,
+      "zero_head_HEFT_identity_checks": 2
+    },
+    {
+      "complete_decodes": 4,
+      "validated_schedules": 4,
+      "teacher_reference_calls": 0,
+      "forced_TRAIN_teacher_replays": 1,
+      "zero_head_HEFT_identity_checks": 2
+    }
+  ],
+  "max_absolute_logprob_replay_error": 2.220446049250313e-16,
+  "neural_optimizer_steps": 0,
+  "TEST_evaluated": false,
+  "CUDA_tested": false,
+  "scope": "CPU engineering on selected TRAIN/VAL inputs, random models with zero output heads; no policy quality claim"
+}

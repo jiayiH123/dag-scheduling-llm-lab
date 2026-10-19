@@ -1,0 +1,68 @@
+{
+  "classification": "complete offline data/physical adaptation; no new learned method result",
+  "protocol_commits": [
+    "2a557f7",
+    "e27ea88"
+  ],
+  "code_commit_at_build": "f9a5303279f35b7b617b403c8c681996e421a0fa",
+  "source_WfInstances_JSONs": 318,
+  "source_WfInstances_blobs": 351,
+  "source_TPC_H_query_bases": 154,
+  "generated_TPC_H_composites": 1000,
+  "physical_records": 11776,
+  "all_sparse_records_validated": 11776,
+  "all_records_serial_min_cost_feasible_witness": true,
+  "by_dataset_split": {
+    "tpch_composite": {
+      "train": 800,
+      "val": 100,
+      "test": 100
+    },
+    "tpch_primitive": {
+      "train": 98,
+      "val": 28,
+      "test": 28
+    },
+    "wfinstances": {
+      "example": 2,
+      "train": 214,
+      "val": 61,
+      "test": 41
+    }
+  },
+  "n_range_by_dataset": {
+    "tpch_composite": [
+      18,
+      251
+    ],
+    "tpch_primitive": [
+      2,
+      18
+    ],
+    "wfinstances": [
+      5,
+      9805
+    ]
+  },
+  "topology_groups_by_dataset_split": {
+    "tpch_composite": {
+      "test": 83,
+      "train": 795,
+      "val": 85
+    },
+    "tpch_primitive": {
+      "test": 4,
+      "train": 14,
+      "val": 4
+    },
+    "wfinstances": {
+      "example": 2,
+      "test": 24,
+      "train": 128,
+      "val": 37
+    }
+  },
+  "teacher_labels_generated": false,
+  "model_TEST_evaluated": false,
+  "external_download_needed_after_pull": false
+}

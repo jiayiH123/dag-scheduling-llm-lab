@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "bundle_files": 1483,
+  "verified_bytes": 181817890,
+  "external_network_requests": 0,
+  "scope": "offline engineering integrity, not model evaluation",
+  "sources": {
+    "wfinstances": {
+      "extracted_source_files": 351,
+      "all_SHA256_match": true
+    },
+    "tpch": {
+      "extracted_source_files": 622,
+      "all_SHA256_match": true
+    }
+  }
+}

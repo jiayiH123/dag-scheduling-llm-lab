@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "data": "offline_wf_engineering_20261019.jsonl.gz",
+      "id": "train_wf_005543216b2d63069919_3_10_40_MBps_0.25",
+      "arm": "edge_gnn_ln",
+      "n": 42,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 0.0
+    },
+    {
+      "data": "offline_wf_engineering_20261019.jsonl.gz",
+      "id": "train_wf_005543216b2d63069919_3_10_40_MBps_0.25",
+      "arm": "edge_attention",
+      "n": 42,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 0.0
+    },
+    {
+      "data": "offline_wf_engineering_20261019.jsonl.gz",
+      "id": "val_wf_09c9b54d8e4f2477ea79_3_10_40_MBps_0.25",
+      "arm": "edge_gnn_ln",
+      "n": 203,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 2.220446049250313e-16
+    },
+    {
+      "data": "offline_wf_engineering_20261019.jsonl.gz",
+      "id": "val_wf_09c9b54d8e4f2477ea79_3_10_40_MBps_0.25",
+      "arm": "edge_attention",
+      "n": 203,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 2.220446049250313e-16
+    },
+    {
+      "data": "offline_tpch_engineering_20261019.jsonl.gz",
+      "id": "train_tpchmix_train_0000_a55783f8c2be_3_10_40_MBps_0.25",
+      "arm": "edge_gnn_ln",
+      "n": 46,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 0.0
+    },
+    {
+      "data": "offline_tpch_engineering_20261019.jsonl.gz",
+      "id": "train_tpchmix_train_0000_a55783f8c2be_3_10_40_MBps_0.25",
+      "arm": "edge_attention",
+      "n": 46,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 0.0
+    },
+    {
+      "data": "offline_tpch_engineering_20261019.jsonl.gz",
+      "id": "val_tpchmix_val_0000_b1f327e223c0_3_10_40_MBps_0.25",
+      "arm": "edge_gnn_ln",
+      "n": 44,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 0.0
+    },
+    {
+      "data": "offline_tpch_engineering_20261019.jsonl.gz",
+      "id": "val_tpchmix_val_0000_b1f327e223c0_3_10_40_MBps_0.25",
+      "arm": "edge_attention",
+      "n": 44,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 0.0
+    }
+  ],
+  "simulator_counts": [
+    {
+      "complete_decodes": 4,
+      "validated_schedules": 4,
+      "teacher_reference_calls": 0,
+      "forced_TRAIN_teacher_replays": 1,
+      "zero_head_HEFT_identity_checks": 2
+    },
+    {
+      "complete_decodes": 4,
+      "validated_schedules": 4,
+      "teacher_reference_calls": 0,
+      "forced_TRAIN_teacher_replays": 1,
+      "zero_head_HEFT_identity_checks": 2
+    }
+  ],
+  "max_absolute_logprob_replay_error": 2.220446049250313e-16,
+  "neural_optimizer_steps": 0,
+  "TEST_evaluated": false,
+  "CUDA_tested": false,
+  "scope": "CPU engineering on selected TRAIN/VAL inputs, random models with zero output heads; no policy quality claim"
+}

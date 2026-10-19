@@ -1,0 +1,680 @@
+{
+  "scope": "engineering compatibility on previously inspected pilot; not new policy/test result",
+  "physical_identities": 96,
+  "HEFT_identities": 96,
+  "old_TRAIN_teachers_revalidated": 64,
+  "rows": [
+    {
+      "old_key": "train_public_montage-chameleon-dss-05d-001.json_3_10_40_MBps_0.25",
+      "new_key": "train_wf_29f10583cdec65ac0908_3_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_montage-chameleon-dss-05d-001.json_3_10_40_MBps_0.6",
+      "new_key": "train_wf_29f10583cdec65ac0908_3_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_montage-chameleon-dss-05d-001.json_3_100_400_MBps_0.25",
+      "new_key": "train_wf_29f10583cdec65ac0908_3_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_montage-chameleon-dss-05d-001.json_3_100_400_MBps_0.6",
+      "new_key": "train_wf_29f10583cdec65ac0908_3_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_montage-chameleon-dss-05d-001.json_6_10_40_MBps_0.25",
+      "new_key": "train_wf_29f10583cdec65ac0908_6_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_montage-chameleon-dss-05d-001.json_6_10_40_MBps_0.6",
+      "new_key": "train_wf_29f10583cdec65ac0908_6_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_montage-chameleon-dss-05d-001.json_6_100_400_MBps_0.25",
+      "new_key": "train_wf_29f10583cdec65ac0908_6_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_montage-chameleon-dss-05d-001.json_6_100_400_MBps_0.6",
+      "new_key": "train_wf_29f10583cdec65ac0908_6_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-4ch-100k-001.json_3_10_40_MBps_0.25",
+      "new_key": "train_wf_b9da6a268a15f0f8da6e_3_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-4ch-100k-001.json_3_10_40_MBps_0.6",
+      "new_key": "train_wf_b9da6a268a15f0f8da6e_3_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-4ch-100k-001.json_3_100_400_MBps_0.25",
+      "new_key": "train_wf_b9da6a268a15f0f8da6e_3_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-4ch-100k-001.json_3_100_400_MBps_0.6",
+      "new_key": "train_wf_b9da6a268a15f0f8da6e_3_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-4ch-100k-001.json_6_10_40_MBps_0.25",
+      "new_key": "train_wf_b9da6a268a15f0f8da6e_6_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-4ch-100k-001.json_6_10_40_MBps_0.6",
+      "new_key": "train_wf_b9da6a268a15f0f8da6e_6_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-4ch-100k-001.json_6_100_400_MBps_0.25",
+      "new_key": "train_wf_b9da6a268a15f0f8da6e_6_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-4ch-100k-001.json_6_100_400_MBps_0.6",
+      "new_key": "train_wf_b9da6a268a15f0f8da6e_6_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-2ch-250k-001.json_3_10_40_MBps_0.25",
+      "new_key": "train_wf_2e117ed3e3efb6ea2fa3_3_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-2ch-250k-001.json_3_10_40_MBps_0.6",
+      "new_key": "train_wf_2e117ed3e3efb6ea2fa3_3_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-2ch-250k-001.json_3_100_400_MBps_0.25",
+      "new_key": "train_wf_2e117ed3e3efb6ea2fa3_3_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-2ch-250k-001.json_3_100_400_MBps_0.6",
+      "new_key": "train_wf_2e117ed3e3efb6ea2fa3_3_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-2ch-250k-001.json_6_10_40_MBps_0.25",
+      "new_key": "train_wf_2e117ed3e3efb6ea2fa3_6_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-2ch-250k-001.json_6_10_40_MBps_0.6",
+      "new_key": "train_wf_2e117ed3e3efb6ea2fa3_6_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-2ch-250k-001.json_6_100_400_MBps_0.25",
+      "new_key": "train_wf_2e117ed3e3efb6ea2fa3_6_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_1000genome-chameleon-2ch-250k-001.json_6_100_400_MBps_0.6",
+      "new_key": "train_wf_2e117ed3e3efb6ea2fa3_6_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_3_10_40_MBps_0.25",
+      "new_key": "train_wf_8bf30d5df36521bd408a_3_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_3_10_40_MBps_0.6",
+      "new_key": "train_wf_8bf30d5df36521bd408a_3_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_3_100_400_MBps_0.25",
+      "new_key": "train_wf_8bf30d5df36521bd408a_3_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_3_100_400_MBps_0.6",
+      "new_key": "train_wf_8bf30d5df36521bd408a_3_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_6_10_40_MBps_0.25",
+      "new_key": "train_wf_8bf30d5df36521bd408a_6_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_6_10_40_MBps_0.6",
+      "new_key": "train_wf_8bf30d5df36521bd408a_6_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_6_100_400_MBps_0.25",
+      "new_key": "train_wf_8bf30d5df36521bd408a_6_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_epigenomics-chameleon-hep-2seq-100k-001.json_6_100_400_MBps_0.6",
+      "new_key": "train_wf_8bf30d5df36521bd408a_6_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-10a-001.json_3_10_40_MBps_0.25",
+      "new_key": "train_wf_96c85a9e59ea52629388_3_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-10a-001.json_3_10_40_MBps_0.6",
+      "new_key": "train_wf_96c85a9e59ea52629388_3_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-10a-001.json_3_100_400_MBps_0.25",
+      "new_key": "train_wf_96c85a9e59ea52629388_3_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-10a-001.json_3_100_400_MBps_0.6",
+      "new_key": "train_wf_96c85a9e59ea52629388_3_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-10a-001.json_6_10_40_MBps_0.25",
+      "new_key": "train_wf_96c85a9e59ea52629388_6_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-10a-001.json_6_10_40_MBps_0.6",
+      "new_key": "train_wf_96c85a9e59ea52629388_6_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-10a-001.json_6_100_400_MBps_0.25",
+      "new_key": "train_wf_96c85a9e59ea52629388_6_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-10a-001.json_6_100_400_MBps_0.6",
+      "new_key": "train_wf_96c85a9e59ea52629388_6_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-20a-001.json_3_10_40_MBps_0.25",
+      "new_key": "train_wf_522a27100e17ff2ffcef_3_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-20a-001.json_3_10_40_MBps_0.6",
+      "new_key": "train_wf_522a27100e17ff2ffcef_3_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-20a-001.json_3_100_400_MBps_0.25",
+      "new_key": "train_wf_522a27100e17ff2ffcef_3_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-20a-001.json_3_100_400_MBps_0.6",
+      "new_key": "train_wf_522a27100e17ff2ffcef_3_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-20a-001.json_6_10_40_MBps_0.25",
+      "new_key": "train_wf_522a27100e17ff2ffcef_6_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-20a-001.json_6_10_40_MBps_0.6",
+      "new_key": "train_wf_522a27100e17ff2ffcef_6_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-20a-001.json_6_100_400_MBps_0.25",
+      "new_key": "train_wf_522a27100e17ff2ffcef_6_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_srasearch-chameleon-20a-001.json_6_100_400_MBps_0.6",
+      "new_key": "train_wf_522a27100e17ff2ffcef_6_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_soykb-chameleon-10fastq-10ch-001.json_3_10_40_MBps_0.25",
+      "new_key": "train_wf_1aad488a5066d93175a4_3_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_soykb-chameleon-10fastq-10ch-001.json_3_10_40_MBps_0.6",
+      "new_key": "train_wf_1aad488a5066d93175a4_3_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_soykb-chameleon-10fastq-10ch-001.json_3_100_400_MBps_0.25",
+      "new_key": "train_wf_1aad488a5066d93175a4_3_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_soykb-chameleon-10fastq-10ch-001.json_3_100_400_MBps_0.6",
+      "new_key": "train_wf_1aad488a5066d93175a4_3_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_soykb-chameleon-10fastq-10ch-001.json_6_10_40_MBps_0.25",
+      "new_key": "train_wf_1aad488a5066d93175a4_6_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_soykb-chameleon-10fastq-10ch-001.json_6_10_40_MBps_0.6",
+      "new_key": "train_wf_1aad488a5066d93175a4_6_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_soykb-chameleon-10fastq-10ch-001.json_6_100_400_MBps_0.25",
+      "new_key": "train_wf_1aad488a5066d93175a4_6_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_soykb-chameleon-10fastq-10ch-001.json_6_100_400_MBps_0.6",
+      "new_key": "train_wf_1aad488a5066d93175a4_6_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_seismology-chameleon-100p-001.json_3_10_40_MBps_0.25",
+      "new_key": "train_wf_fdbb8311308852aa9d52_3_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_seismology-chameleon-100p-001.json_3_10_40_MBps_0.6",
+      "new_key": "train_wf_fdbb8311308852aa9d52_3_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_seismology-chameleon-100p-001.json_3_100_400_MBps_0.25",
+      "new_key": "train_wf_fdbb8311308852aa9d52_3_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_seismology-chameleon-100p-001.json_3_100_400_MBps_0.6",
+      "new_key": "train_wf_fdbb8311308852aa9d52_3_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_seismology-chameleon-100p-001.json_6_10_40_MBps_0.25",
+      "new_key": "train_wf_fdbb8311308852aa9d52_6_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_seismology-chameleon-100p-001.json_6_10_40_MBps_0.6",
+      "new_key": "train_wf_fdbb8311308852aa9d52_6_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_seismology-chameleon-100p-001.json_6_100_400_MBps_0.25",
+      "new_key": "train_wf_fdbb8311308852aa9d52_6_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "train_public_seismology-chameleon-100p-001.json_6_100_400_MBps_0.6",
+      "new_key": "train_wf_fdbb8311308852aa9d52_6_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": true
+    },
+    {
+      "old_key": "val_public_montage-chameleon-2mass-01d-001.json_3_10_40_MBps_0.25",
+      "new_key": "val_wf_9c419106778611c9c284_3_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_montage-chameleon-2mass-01d-001.json_3_10_40_MBps_0.6",
+      "new_key": "val_wf_9c419106778611c9c284_3_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_montage-chameleon-2mass-01d-001.json_3_100_400_MBps_0.25",
+      "new_key": "val_wf_9c419106778611c9c284_3_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_montage-chameleon-2mass-01d-001.json_3_100_400_MBps_0.6",
+      "new_key": "val_wf_9c419106778611c9c284_3_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_montage-chameleon-2mass-01d-001.json_6_10_40_MBps_0.25",
+      "new_key": "val_wf_9c419106778611c9c284_6_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_montage-chameleon-2mass-01d-001.json_6_10_40_MBps_0.6",
+      "new_key": "val_wf_9c419106778611c9c284_6_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_montage-chameleon-2mass-01d-001.json_6_100_400_MBps_0.25",
+      "new_key": "val_wf_9c419106778611c9c284_6_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_montage-chameleon-2mass-01d-001.json_6_100_400_MBps_0.6",
+      "new_key": "val_wf_9c419106778611c9c284_6_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_1000genome-chameleon-6ch-100k-001.json_3_10_40_MBps_0.25",
+      "new_key": "val_wf_52440b24e3b47b123cb6_3_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_1000genome-chameleon-6ch-100k-001.json_3_10_40_MBps_0.6",
+      "new_key": "val_wf_52440b24e3b47b123cb6_3_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_1000genome-chameleon-6ch-100k-001.json_3_100_400_MBps_0.25",
+      "new_key": "val_wf_52440b24e3b47b123cb6_3_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_1000genome-chameleon-6ch-100k-001.json_3_100_400_MBps_0.6",
+      "new_key": "val_wf_52440b24e3b47b123cb6_3_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_1000genome-chameleon-6ch-100k-001.json_6_10_40_MBps_0.25",
+      "new_key": "val_wf_52440b24e3b47b123cb6_6_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_1000genome-chameleon-6ch-100k-001.json_6_10_40_MBps_0.6",
+      "new_key": "val_wf_52440b24e3b47b123cb6_6_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_1000genome-chameleon-6ch-100k-001.json_6_100_400_MBps_0.25",
+      "new_key": "val_wf_52440b24e3b47b123cb6_6_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_1000genome-chameleon-6ch-100k-001.json_6_100_400_MBps_0.6",
+      "new_key": "val_wf_52440b24e3b47b123cb6_6_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_epigenomics-chameleon-hep-3seq-100k-001.json_3_10_40_MBps_0.25",
+      "new_key": "val_wf_4f67ba85c85a14274084_3_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_epigenomics-chameleon-hep-3seq-100k-001.json_3_10_40_MBps_0.6",
+      "new_key": "val_wf_4f67ba85c85a14274084_3_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_epigenomics-chameleon-hep-3seq-100k-001.json_3_100_400_MBps_0.25",
+      "new_key": "val_wf_4f67ba85c85a14274084_3_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_epigenomics-chameleon-hep-3seq-100k-001.json_3_100_400_MBps_0.6",
+      "new_key": "val_wf_4f67ba85c85a14274084_3_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_epigenomics-chameleon-hep-3seq-100k-001.json_6_10_40_MBps_0.25",
+      "new_key": "val_wf_4f67ba85c85a14274084_6_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_epigenomics-chameleon-hep-3seq-100k-001.json_6_10_40_MBps_0.6",
+      "new_key": "val_wf_4f67ba85c85a14274084_6_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_epigenomics-chameleon-hep-3seq-100k-001.json_6_100_400_MBps_0.25",
+      "new_key": "val_wf_4f67ba85c85a14274084_6_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_epigenomics-chameleon-hep-3seq-100k-001.json_6_100_400_MBps_0.6",
+      "new_key": "val_wf_4f67ba85c85a14274084_6_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_srasearch-chameleon-40a-001.json_3_10_40_MBps_0.25",
+      "new_key": "val_wf_6a664ab6eb6d5350910d_3_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_srasearch-chameleon-40a-001.json_3_10_40_MBps_0.6",
+      "new_key": "val_wf_6a664ab6eb6d5350910d_3_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_srasearch-chameleon-40a-001.json_3_100_400_MBps_0.25",
+      "new_key": "val_wf_6a664ab6eb6d5350910d_3_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_srasearch-chameleon-40a-001.json_3_100_400_MBps_0.6",
+      "new_key": "val_wf_6a664ab6eb6d5350910d_3_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_srasearch-chameleon-40a-001.json_6_10_40_MBps_0.25",
+      "new_key": "val_wf_6a664ab6eb6d5350910d_6_10_40_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_srasearch-chameleon-40a-001.json_6_10_40_MBps_0.6",
+      "new_key": "val_wf_6a664ab6eb6d5350910d_6_10_40_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_srasearch-chameleon-40a-001.json_6_100_400_MBps_0.25",
+      "new_key": "val_wf_6a664ab6eb6d5350910d_6_100_400_MBps_0.25",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    },
+    {
+      "old_key": "val_public_srasearch-chameleon-40a-001.json_6_100_400_MBps_0.6",
+      "new_key": "val_wf_6a664ab6eb6d5350910d_6_100_400_MBps_0.6",
+      "exact_physical_fields": true,
+      "exact_HEFT": true,
+      "teacher_revalidated": false
+    }
+  ]
+}

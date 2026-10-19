@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "scope": "serialized ready-data/target and split audit, not learned makespan performance",
+  "datasets": [
+    {
+      "dataset": "wfinstances",
+      "configs": {
+        "train": 246,
+        "val": 70
+      },
+      "bases": {
+        "train": 123,
+        "val": 35
+      },
+      "task_range": [
+        11,
+        507
+      ],
+      "TRAIN_teacher_actions": 49838,
+      "VAL_teacher_labels": 0,
+      "TRAIN_VAL_topology_overlap": false,
+      "TEST_records": 0,
+      "data_sha256": "d62853073b119946c8d0a7a541a5b4457e852fdd29d171232ff770112b9308ce",
+      "bytes": 11366867
+    },
+    {
+      "dataset": "tpch_composite",
+      "configs": {
+        "train": 1600,
+        "val": 200
+      },
+      "bases": {
+        "train": 800,
+        "val": 100
+      },
+      "task_range": [
+        18,
+        251
+      ],
+      "TRAIN_teacher_actions": 173020,
+      "VAL_teacher_labels": 0,
+      "TRAIN_VAL_topology_overlap": false,
+      "TEST_records": 0,
+      "data_sha256": "bde15e0beadb54687ddccff1304d6ed67fb84d4dfcbc35cc4c61a93fb2dc13f5",
+      "bytes": 46035376
+    }
+  ],
+  "network_requests": 0,
+  "neural_optimizer_steps": 0
+}

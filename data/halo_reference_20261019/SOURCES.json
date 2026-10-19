@@ -1,0 +1,258 @@
+{
+  "retrieved_date": "2026-10-19",
+  "repository": "https://github.com/mlsys-io/Halo_demo",
+  "commit_from_github_archive_pax_comment": "ebba1634cdc15067b9a73a190c213546d74fb74f",
+  "archive": {
+    "path": "source.tar.gz",
+    "bytes": 761505,
+    "sha256": "c0d4dc192602176e2046f02dd054f47e2a97a6d003bc127a9dfc688139ed67d5"
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 3139,
+      "sha256": "1674ac8ed7488af605be80c1f3a20bc1f4c2b47b8549346722948385ffc87e8c"
+    },
+    {
+      "path": ".python-version",
+      "bytes": 5,
+      "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8788,
+      "sha256": "50f71b1582c6e369bdcf1f711a5f4012ca545c8abfd2a833a37ca4b89fbc7fce"
+    },
+    {
+      "path": "figs/logo.jpg",
+      "bytes": 71338,
+      "sha256": "c1f47634687e73436c0c5fe16502c55a4eeb94e0dec2670c5d68bc56d7cf5ed4"
+    },
+    {
+      "path": "figs/overview.png",
+      "bytes": 343067,
+      "sha256": "c55ce4569108c7058f8089426f17a97744170fc73f8bd94a74428234b50dc8cf"
+    },
+    {
+      "path": "halo/__init__.py",
+      "bytes": 811,
+      "sha256": "8e2f33729d190a6c28e9c0b5829d59c48337248528fd9d80759a3e405d86a889"
+    },
+    {
+      "path": "halo/db.py",
+      "bytes": 23866,
+      "sha256": "0675e05fc048fd22f3041a084e0efeed5dcd1a0d2f7b5baee2769e803326e5c3"
+    },
+    {
+      "path": "halo/engines.py",
+      "bytes": 16722,
+      "sha256": "521ed1635e3bf6bd7e8690d4c047208cfc6669ed9769626c9b6f479ef5f96e7c"
+    },
+    {
+      "path": "halo/executor.py",
+      "bytes": 59658,
+      "sha256": "f3609c5155cdcbb8153f5cb03f9efc8d3db5dff06ecd6c541ef263dc6fd17da8"
+    },
+    {
+      "path": "halo/metrics.py",
+      "bytes": 23855,
+      "sha256": "a597391397f6c34083157a723d94924497f2afce6481a0dcaed491be3704841e"
+    },
+    {
+      "path": "halo/models.py",
+      "bytes": 5054,
+      "sha256": "1cd319870103cc88d1f201a79773ab6db20f56af6cc6ea9d7766c7822e665c94"
+    },
+    {
+      "path": "halo/monitoring.py",
+      "bytes": 10515,
+      "sha256": "085c329b601e0ac64407c202f07a0e08f6f835c5d8536ce1b094fffa843acb47"
+    },
+    {
+      "path": "halo/node_processors.py",
+      "bytes": 7344,
+      "sha256": "3687ab5e37338a995d273bc5beee1656bff6658b330003037b591c3a04ccce5e"
+    },
+    {
+      "path": "halo/optimizer.py",
+      "bytes": 41328,
+      "sha256": "6b57085dd908c0b9286c2037b1ba3e6973576be1563a032557603cc769d32019"
+    },
+    {
+      "path": "halo/optimizers/__init__.py",
+      "bytes": 732,
+      "sha256": "6b870ae34537dc6524067a43fae936adac5e60bf23d3eb6dd58ac8179440e732"
+    },
+    {
+      "path": "halo/optimizers/dp.py",
+      "bytes": 70300,
+      "sha256": "9380e28663e7334c31db54763af4aa3c3f91fb646112d52a38fac15781c2ebab"
+    },
+    {
+      "path": "halo/optimizers/dp_config.py",
+      "bytes": 8122,
+      "sha256": "df1805d06b3be90273116cd2fc3bd9d42047b6aeb18fddb88ca6859f338e4b66"
+    },
+    {
+      "path": "halo/optimizers/dp_payload.py",
+      "bytes": 6509,
+      "sha256": "1207f8cb8ff9ef9ca96392032407f64ed92e41b0cbace4cf4da07b64c32a0b01"
+    },
+    {
+      "path": "halo/optimizers/greedy.py",
+      "bytes": 3600,
+      "sha256": "6692329ede1cf98ca5b2bf5a2f32bba02d45f80aeaf2d7b822d6cc1a7414f5d9"
+    },
+    {
+      "path": "halo/optimizers/milp.py",
+      "bytes": 43045,
+      "sha256": "e33d0f5422170cffd78e9b90d1b3400ec56391df3557128d4025ba12131919ca"
+    },
+    {
+      "path": "halo/optimizers/minswitch.py",
+      "bytes": 3764,
+      "sha256": "3fa6bab70cf83b79b1dd058b54dcfda94519a2eb2b3998c6284c0feef4cf0901"
+    },
+    {
+      "path": "halo/optimizers/random_topo.py",
+      "bytes": 3716,
+      "sha256": "6139a857ad31964880cbe2935a3c4b3196ac66b90fd92b0d8f4be3218c03beec"
+    },
+    {
+      "path": "halo/optimizers/rr_topo.py",
+      "bytes": 3415,
+      "sha256": "8b0550e85c33aeb9cabe23cca5519f7d0741cc8b5bfbdcc192679f0833e16cdc"
+    },
+    {
+      "path": "halo/optimizers/topo_utils.py",
+      "bytes": 2273,
+      "sha256": "1f440a644d47d4e3fae8616fa1de6a667b53889c6ce3e6aad105c03406a87250"
+    },
+    {
+      "path": "halo/parser.py",
+      "bytes": 12373,
+      "sha256": "de017bd8f2c9a015e65c2ad8864d463fcbb2570a0c0e9ca7068598ef3decb1ca"
+    },
+    {
+      "path": "halo/processors/__init__.py",
+      "bytes": 241,
+      "sha256": "68aba7cbc93500c346e2aeeaa5f00a4c3dde543d98187349c10451a59f948f8c"
+    },
+    {
+      "path": "halo/processors/base.py",
+      "bytes": 9460,
+      "sha256": "156d79f16f57c30b383b135e85db02eda06b96f5e1a71d7ff8982a5a1e8925d5"
+    },
+    {
+      "path": "halo/processors/multi_process.py",
+      "bytes": 42919,
+      "sha256": "04eb226a62e1662cbb193121ce85d2ddf921ec0cc7e4b950a0edeb8ac31551bf"
+    },
+    {
+      "path": "halo/processors/opwise.py",
+      "bytes": 15091,
+      "sha256": "f69a17d5fd93b26368e93db57b3df55168d4a3d46f7e863d0a2183189d2d262a"
+    },
+    {
+      "path": "halo/processors/serial.py",
+      "bytes": 5727,
+      "sha256": "fb07e35b27345176a522e8296f2bbfedcbb1940fa63db4945aa611f6205c6e17"
+    },
+    {
+      "path": "halo/profiler.py",
+      "bytes": 5307,
+      "sha256": "500b212c7ee5fc912e08b224620c738f2d2ba95a6f787d9cd3e8b22d17ab78f5"
+    },
+    {
+      "path": "halo/query_planner.py",
+      "bytes": 14961,
+      "sha256": "ae24c30c58c197a632be8628d97c1a085f65e2574e29e4427753f6f7454531b3"
+    },
+    {
+      "path": "halo/streaming.py",
+      "bytes": 4206,
+      "sha256": "5be6dd84b9c31e398f4b894fd361979a38ed726dd6f200d996718ec11f324c80"
+    },
+    {
+      "path": "halo/utils.py",
+      "bytes": 3626,
+      "sha256": "0485e5e66d759ca704c8c52ea88a756999cde0a21287a75d87c2fcc3b2e1b2d9"
+    },
+    {
+      "path": "halo/worker.py",
+      "bytes": 12287,
+      "sha256": "d8e23f79f601752e3488e8d9e70ab8dc1b64648f41a6600e89621ec69f5a1553"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 487,
+      "sha256": "f0c0f7157850ff8668091c7012dacbe6808e648e18bc6affacf0461185514127"
+    },
+    {
+      "path": "scripts/batch_inference.py",
+      "bytes": 3852,
+      "sha256": "0a953b3ea6532e14a63b85c75f65af67fb1bc722f13579fa09908c9644e26ada"
+    },
+    {
+      "path": "scripts/mock_api.py",
+      "bytes": 25354,
+      "sha256": "e0287929a742a801253cc9d1378bb7d718b6aa2bcd747eb123478ea4bfc5794d"
+    },
+    {
+      "path": "templates/example_chain.yaml",
+      "bytes": 1179,
+      "sha256": "2ece64f1c0a66e77f8a45ccbefe180ec21c6597c2036f56a7cf14f7ffb722cae"
+    },
+    {
+      "path": "templates/example_dag.yaml",
+      "bytes": 2783,
+      "sha256": "44f4eda1cd2355c75aacb6f21d8a4d6e9bcd3357c5c64cfe55db49a2ed5c1aac"
+    },
+    {
+      "path": "templates/exps/README.md",
+      "bytes": 11321,
+      "sha256": "da1614bbd737c32852cb83d1ff5c2e11a19a5a837887597aebbd023e6dd43893"
+    },
+    {
+      "path": "templates/exps/w1_imdb_diamond.yaml",
+      "bytes": 13831,
+      "sha256": "b5e5f22d89b2cb25748965785c6cb49af8ace03fe99682240d5a6bc02eb2c572"
+    },
+    {
+      "path": "templates/exps/w2_imdb_triple_chain.yaml",
+      "bytes": 11141,
+      "sha256": "7071ca3a8a518633de6ebb49dc7a413caa2e9e2d9060b870a8e5948fe8e2f6c1"
+    },
+    {
+      "path": "templates/exps/w3_finewiki_long_chain.yaml",
+      "bytes": 11869,
+      "sha256": "6441c919e64f14b4085d438255606ff7a1138a8e90972e1b0dd81c732a050237"
+    },
+    {
+      "path": "templates/exps/w4_finewiki_bridge.yaml",
+      "bytes": 8817,
+      "sha256": "d9df75eb4af483e281c8ef6654ee226b07b50961915c5e64fc660dc3f84de3cf"
+    },
+    {
+      "path": "templates/exps/w5_tpch_trident.yaml",
+      "bytes": 17470,
+      "sha256": "5a9d094bac9404dc379205b16d6083f0abdc5d621e7ce75890fe90d18940b774"
+    },
+    {
+      "path": "templates/exps/w6_tpch_fanout.yaml",
+      "bytes": 22910,
+      "sha256": "24c3d30aad2d2e1be4ac1c146c5280b4dc4b3fd2570f6330d48ba1de62c807ad"
+    },
+    {
+      "path": "uv.lock",
+      "bytes": 770499,
+      "sha256": "96a4cffcbf1355b1eae1e4a48be51bb22e138bb5e60281818cb975335a4b2b36"
+    }
+  ],
+  "scope": "Source/template reference only. No database, model weights, profiled traces or adaptation to current simulator; not paper-result reproduction. Current demo may differ from arXiv v2."
+}

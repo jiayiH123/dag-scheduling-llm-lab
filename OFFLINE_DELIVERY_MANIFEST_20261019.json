@@ -1,0 +1,163 @@
+{
+  "schema": "offline-delivery-v1",
+  "date": "2026-10-19",
+  "scope": "Actual offline data plus TRAIN/VAL labels, code and reference sources; not neural training or CUDA validation",
+  "source_bundle_manifest": "data/offline_20261019/MANIFEST.json",
+  "files": [
+    {
+      "path": "OFFLINE_DATA_README_20261019.md",
+      "bytes": 7687,
+      "sha256": "b525694cdd5f599b8213125be44a7ac55e5b88c9dc59ea918770c81446c08bb2"
+    },
+    {
+      "path": "configs/offline_tpch_composite_trainval.json",
+      "bytes": 696,
+      "sha256": "c5106c9d27e6d093505cb4a9b1f57ead2e53545a274261e8a7890f78cee996fd"
+    },
+    {
+      "path": "configs/offline_wfinstances_trainval.json",
+      "bytes": 694,
+      "sha256": "a67ec9aa7aa4429fa34db6f68d82080666d4e42a81db41242eee1a8fd2d0f27b"
+    },
+    {
+      "path": "daglab/offline_data.py",
+      "bytes": 10124,
+      "sha256": "3f9e4945cdcd699471806d49d9a1f9c09361914d85f0e94b5ea7bdc399bc624b"
+    },
+    {
+      "path": "daglab/offline_tpch.py",
+      "bytes": 7354,
+      "sha256": "c8d26eea0188179f7293a6398a296fd69e358c036117333ec12155b538a975c7"
+    },
+    {
+      "path": "data/halo_reference_20261019/LICENSE.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "data/halo_reference_20261019/SOURCES.json",
+      "bytes": 8260,
+      "sha256": "b0b1fcf6799fca2650b9f0c2e6f628604961616243aef8351c9178ce14264113"
+    },
+    {
+      "path": "data/halo_reference_20261019/source.tar.gz",
+      "bytes": 761505,
+      "sha256": "c0d4dc192602176e2046f02dd054f47e2a97a6d003bc127a9dfc688139ed67d5"
+    },
+    {
+      "path": "data/offline_20261019/MANIFEST.json",
+      "bytes": 286857,
+      "sha256": "9c0ef7104235c62fb6a612197cfd4a388e42caf027c3531c6881c2ebd3c9cff3"
+    },
+    {
+      "path": "data/offline_ready_20261019/tpch_composite_trainval.jsonl.gz",
+      "bytes": 46035376,
+      "sha256": "bde15e0beadb54687ddccff1304d6ed67fb84d4dfcbc35cc4c61a93fb2dc13f5"
+    },
+    {
+      "path": "data/offline_ready_20261019/tpch_composite_trainval.jsonl.gz.manifest.json",
+      "bytes": 147233,
+      "sha256": "cb3a825b12643f4ae052853e8c828c0b8730269f200966779be4f234f89c4b6d"
+    },
+    {
+      "path": "data/offline_ready_20261019/wfinstances_trainval.jsonl.gz",
+      "bytes": 11366867,
+      "sha256": "d62853073b119946c8d0a7a541a5b4457e852fdd29d171232ff770112b9308ce"
+    },
+    {
+      "path": "data/offline_ready_20261019/wfinstances_trainval.jsonl.gz.manifest.json",
+      "bytes": 22605,
+      "sha256": "23022a2d2d47cfaf4384052eb0f0ea5e69f4a60a44bd15c90c9725c905c7c8a2"
+    },
+    {
+      "path": "docs/HALO_SCOPE_REVIEW_20261019.md",
+      "bytes": 5600,
+      "sha256": "c1dcaf2fa659f451fa71291fb91fc19275845b577f281f137be1acb8da68f777"
+    },
+    {
+      "path": "docs/OFFLINE_AGENT_HANDOFF_20261019.md",
+      "bytes": 3686,
+      "sha256": "09b43801e2365d16967adf56ee7a5231545e2c5687f077b3264321938db30451"
+    },
+    {
+      "path": "evidence/offline_bundle_verification_20261019.json",
+      "bytes": 382,
+      "sha256": "a623536448871dc31a1ea3b3f808191978ec4d62a2256a9ac751da3a4602f81f"
+    },
+    {
+      "path": "evidence/offline_interfaces_20261019.json",
+      "bytes": 3359,
+      "sha256": "43d7f7ee36c82241f09a1f83f091dbb6e37f7a59094417d3ec45c768a70524f7"
+    },
+    {
+      "path": "evidence/offline_pilot_compatibility_20261019.json",
+      "bytes": 25803,
+      "sha256": "6ae68df81fbdca165b1d94b76a65ad2cbb0705901a006c2ab5dfeb5f43bdd481"
+    },
+    {
+      "path": "evidence/offline_ready_build_provenance_20261019.json",
+      "bytes": 1179,
+      "sha256": "9fbf56baa0697b244ec82579b78800396b460e49a6ff17a6cc119f0999ae6c18"
+    },
+    {
+      "path": "evidence/offline_ready_data_audit_20261019.json",
+      "bytes": 1167,
+      "sha256": "9b360403ac6ba86dba73a336237dc6efe0b4fdc82af85f3ff844e96f2562436f"
+    },
+    {
+      "path": "evidence/offline_ready_interfaces_20261019.json",
+      "bytes": 3389,
+      "sha256": "0bba5dcc74a0f587c48f2941369ac079c3574aa86dc1d8905d161b692c1ea1cc"
+    },
+    {
+      "path": "evidence/offline_ready_prepare_source_20261019.txt",
+      "bytes": 5688,
+      "sha256": "f52477aa587952f0cf72c71da5c062279270141af149c893660a3291ab8c060c"
+    },
+    {
+      "path": "evidence/offline_wf_size_audit_20261019.json",
+      "bytes": 1241,
+      "sha256": "9b908ca1dbb56a4bdb055e52911cb1f0ae190787e678af41c7af8a2daeef8204"
+    },
+    {
+      "path": "protocols/offline_full_datasets_20261019.md",
+      "bytes": 2799,
+      "sha256": "eadcbf047ffc0211aa437aef1a2edd5688153bcf8f0c80ef9908fd8da8ff3326"
+    },
+    {
+      "path": "protocols/offline_tpch_compositions_20261019.md",
+      "bytes": 2168,
+      "sha256": "b7429760a147d708c3abaaa09d324c1915fda2f947cc562eadaed2aea3d22f5e"
+    },
+    {
+      "path": "scripts/build_offline_datasets.py",
+      "bytes": 12075,
+      "sha256": "cf04361d48666082193dcde5bd2128990a3438b91127095d2d7b7f78072a0695"
+    },
+    {
+      "path": "scripts/check_offline_interfaces.py",
+      "bytes": 3580,
+      "sha256": "8eeca98ac6523946d7a9c3f949ba16c08905161faad9cd222171fcf010f74b86"
+    },
+    {
+      "path": "scripts/fetch_full_wfinstances.py",
+      "bytes": 4235,
+      "sha256": "b12c7610c1848d579bd86cd36393d93b7843b5f42fc7b08222d5b8a6e6626b66"
+    },
+    {
+      "path": "scripts/prepare_offline_training.py",
+      "bytes": 5825,
+      "sha256": "cb9a09aa6f503da5b5ff94d5ccb03364923679407960ce293ad4daeeef503f9e"
+    },
+    {
+      "path": "scripts/verify_offline_bundle.py",
+      "bytes": 3848,
+      "sha256": "7aa569db58f79f35a39846771e1feead5135b418b9b89fb4ed0c153e7b2f24d9"
+    },
+    {
+      "path": "scripts/verify_offline_delivery.py",
+      "bytes": 1608,
+      "sha256": "f59c2b7fa802557ec41b5f1de96c2eb3f43d474c5e7fd41611c5e8a4e8c6e65b"
+    }
+  ]
+}

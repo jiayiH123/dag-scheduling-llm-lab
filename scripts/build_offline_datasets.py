@@ -35,7 +35,7 @@ def source_entries(root, entries):
 
 def archive_source(root, entries, out, temp, prefix):
     temp.parent.mkdir(parents=True, exist_ok=True)
-    with temp.open('wb') as raw, gzip.GzipFile(fileobj=raw, filename='', mtime=0, compresslevel=6) as z:
+    with temp.open('wb') as raw, gzip.GzipFile(fileobj=raw, mode='wb', filename='', mtime=0, compresslevel=6) as z:
         with tarfile.open(fileobj=z, mode='w|') as archive:
             for e in entries:
                 info = tarfile.TarInfo(prefix + '/' + e['path'])
@@ -145,7 +145,7 @@ def main():
     for b in bases:
         dest = out / 'adapted' / b['dataset'] / (b['base_id'] + '.jsonl.gz')
         dest.parent.mkdir(parents=True, exist_ok=True)
-        with dest.open('wb') as raw, gzip.GzipFile(fileobj=raw, filename='', mtime=0, compresslevel=6) as z:
+        with dest.open('wb') as raw, gzip.GzipFile(fileobj=raw, mode='wb', filename='', mtime=0, compresslevel=6) as z:
             for row in physical_variants(b):
                 validate_sparse(row)
                 z.write((json.dumps(row, separators=(',', ':'), allow_nan=False) + '\n').encode())
@@ -157,7 +157,7 @@ def main():
                      {'edges': len(b['edges']), 'adapted_file': str(dest.relative_to(out)), 'variants': 8})
         if len(index) % 100 == 0:
             print(json.dumps({'bases_written': len(index), 'physical_records': records}), flush=True)
-    with (out / 'base_catalog.jsonl.gz').open('wb') as raw, gzip.GzipFile(fileobj=raw, filename='', mtime=0) as z:
+    with (out / 'base_catalog.jsonl.gz').open('wb') as raw, gzip.GzipFile(fileobj=raw, mode='wb', filename='', mtime=0) as z:
         for b in bases:
             z.write((json.dumps(b, separators=(',', ':'), allow_nan=False) + '\n').encode())
     archives = {}
