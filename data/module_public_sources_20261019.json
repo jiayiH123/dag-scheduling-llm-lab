@@ -1,0 +1,159 @@
+{
+  "classification": "PUBLIC_DEVELOPMENT_PILOT; no policy results inspected before source selection",
+  "repository": "https://github.com/wfcommons/WfInstances",
+  "pinned_commit": "d7bfead08a4dbf985ebbf427b3685a6512c259e2",
+  "license": "LGPL-3.0",
+  "license_url": "https://github.com/wfcommons/WfInstances/blob/d7bfead08a4dbf985ebbf427b3685a6512c259e2/LICENSE",
+  "entries": [
+    {
+      "split": "train",
+      "path": "pegasus/montage/montage-chameleon-dss-05d-001.json",
+      "file": "montage-chameleon-dss-05d-001.json",
+      "family": "montage",
+      "git_blob_sha1": "dc869c038f4c45f465bf6c30c477f1f27ab8ce9e",
+      "bytes": 107546,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/montage/montage-chameleon-dss-05d-001.json"
+    },
+    {
+      "split": "train",
+      "path": "pegasus/1000genome/1000genome-chameleon-4ch-100k-001.json",
+      "file": "1000genome-chameleon-4ch-100k-001.json",
+      "family": "1000genome",
+      "git_blob_sha1": "7b8c54c2f246e07ddeb31965ed802645a46e11c8",
+      "bytes": 157253,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/1000genome/1000genome-chameleon-4ch-100k-001.json"
+    },
+    {
+      "split": "train",
+      "path": "pegasus/1000genome/1000genome-chameleon-2ch-250k-001.json",
+      "file": "1000genome-chameleon-2ch-250k-001.json",
+      "family": "1000genome",
+      "git_blob_sha1": "2bf3ba4754a3f84e31a40e7a5c85186a18958de2",
+      "bytes": 125709,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/1000genome/1000genome-chameleon-2ch-250k-001.json"
+    },
+    {
+      "split": "train",
+      "path": "pegasus/epigenomics/epigenomics-chameleon-hep-2seq-100k-001.json",
+      "file": "epigenomics-chameleon-hep-2seq-100k-001.json",
+      "family": "epigenomics",
+      "git_blob_sha1": "7370d27785292ddb7b08558389dceac965233a82",
+      "bytes": 217086,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/epigenomics/epigenomics-chameleon-hep-2seq-100k-001.json"
+    },
+    {
+      "split": "train",
+      "path": "pegasus/srasearch/srasearch-chameleon-10a-001.json",
+      "file": "srasearch-chameleon-10a-001.json",
+      "family": "srasearch",
+      "git_blob_sha1": "821ae2ed48cc31cdf54d2e618762599004893643",
+      "bytes": 38312,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/srasearch/srasearch-chameleon-10a-001.json"
+    },
+    {
+      "split": "train",
+      "path": "pegasus/srasearch/srasearch-chameleon-20a-001.json",
+      "file": "srasearch-chameleon-20a-001.json",
+      "family": "srasearch",
+      "git_blob_sha1": "16608ac3100d7b5701142a0844bfa012626c181e",
+      "bytes": 72365,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/srasearch/srasearch-chameleon-20a-001.json"
+    },
+    {
+      "split": "train",
+      "path": "pegasus/soykb/soykb-chameleon-10fastq-10ch-001.json",
+      "file": "soykb-chameleon-10fastq-10ch-001.json",
+      "family": "soykb",
+      "git_blob_sha1": "92e9814aeacb198e2a4de24237424db68317dcda",
+      "bytes": 269952,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/soykb/soykb-chameleon-10fastq-10ch-001.json"
+    },
+    {
+      "split": "train",
+      "path": "pegasus/seismology/seismology-chameleon-100p-001.json",
+      "file": "seismology-chameleon-100p-001.json",
+      "family": "seismology",
+      "git_blob_sha1": "13a1c0b3e62b5b65fc37d7e7ba9abe311ce29ee9",
+      "bytes": 175472,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/seismology/seismology-chameleon-100p-001.json"
+    },
+    {
+      "split": "val",
+      "path": "pegasus/montage/montage-chameleon-2mass-01d-001.json",
+      "file": "montage-chameleon-2mass-01d-001.json",
+      "family": "montage",
+      "git_blob_sha1": "7458bbf0cf38271cf2f2b98224cee581ccfb5fb5",
+      "bytes": 203826,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/montage/montage-chameleon-2mass-01d-001.json"
+    },
+    {
+      "split": "val",
+      "path": "pegasus/1000genome/1000genome-chameleon-6ch-100k-001.json",
+      "file": "1000genome-chameleon-6ch-100k-001.json",
+      "family": "1000genome",
+      "git_blob_sha1": "242fb63e44bcbc1124455d20a858615e0f6dd51e",
+      "bytes": 234072,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/1000genome/1000genome-chameleon-6ch-100k-001.json"
+    },
+    {
+      "split": "val",
+      "path": "pegasus/epigenomics/epigenomics-chameleon-hep-3seq-100k-001.json",
+      "file": "epigenomics-chameleon-hep-3seq-100k-001.json",
+      "family": "epigenomics",
+      "git_blob_sha1": "949f24a8a15dd61c97c878368be3c2095677778e",
+      "bytes": 424774,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/epigenomics/epigenomics-chameleon-hep-3seq-100k-001.json"
+    },
+    {
+      "split": "val",
+      "path": "pegasus/srasearch/srasearch-chameleon-40a-001.json",
+      "file": "srasearch-chameleon-40a-001.json",
+      "family": "srasearch",
+      "git_blob_sha1": "9db133841ebc5a98578a49e741e9d7d79abcbbb0",
+      "bytes": 142059,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/srasearch/srasearch-chameleon-40a-001.json"
+    },
+    {
+      "split": "test_reserved_not_downloaded",
+      "path": "pegasus/cycles/cycles-chameleon-1l-2c-9p-001.json",
+      "file": "cycles-chameleon-1l-2c-9p-001.json",
+      "family": "cycles",
+      "git_blob_sha1": "c1ee7373e7c492acdd0e83ac0fca87670385d7ea",
+      "bytes": 632587,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/cycles/cycles-chameleon-1l-2c-9p-001.json"
+    },
+    {
+      "split": "test_reserved_not_downloaded",
+      "path": "pegasus/1000genome/1000genome-chameleon-8ch-100k-001.json",
+      "file": "1000genome-chameleon-8ch-100k-001.json",
+      "family": "1000genome",
+      "git_blob_sha1": "738906942290bc374ea2d4fbc11bb8d612f1158d",
+      "bytes": 310953,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/1000genome/1000genome-chameleon-8ch-100k-001.json"
+    },
+    {
+      "split": "test_reserved_not_downloaded",
+      "path": "pegasus/seismology/seismology-chameleon-200p-001.json",
+      "file": "seismology-chameleon-200p-001.json",
+      "family": "seismology",
+      "git_blob_sha1": "5217e1fa9a4074e65f615577a87ea21618144659",
+      "bytes": 347894,
+      "source_url": "https://raw.githubusercontent.com/wfcommons/WfInstances/d7bfead08a4dbf985ebbf427b3685a6512c259e2/pegasus/seismology/seismology-chameleon-200p-001.json"
+    }
+  ],
+  "pool_counts": [
+    3,
+    6
+  ],
+  "network_profiles": [
+    "10_40_MBps",
+    "100_400_MBps"
+  ],
+  "budget_etas": [
+    0.25,
+    0.6
+  ],
+  "source_split_policy": "preselected different traces/scales; verify normalized topology fingerprints before training; no reserved TEST download",
+  "platform": "same measured trace; simulated speeds/rates/slot capacities/network/budget",
+  "reserved_TEST_status": "path metadata only; raw files not fetched or evaluated"
+}
