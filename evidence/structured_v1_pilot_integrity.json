@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "scope": "data/labels/integrity only, no learned-model quality",
+  "record_counts": {
+    "train": 2000
+  },
+  "base_counts": {
+    "train": 1000
+  },
+  "TRAIN_teacher_actions": 130000,
+  "topology_overlap": false,
+  "max_numeric_positions": 1959,
+  "max_absolute_CCR_rounding_error": 0.00208879734862516,
+  "task_counts": {
+    "train:20": 500,
+    "train:40": 500,
+    "train:80": 500,
+    "train:120": 500
+  },
+  "pool_counts": {
+    "train:6": 718,
+    "train:4": 636,
+    "train:3": 646
+  },
+  "budget_counts": {
+    "train:eta0.1": 345,
+    "train:eta0.5": 345,
+    "train:eta0.25": 328,
+    "train:eta0.75": 328,
+    "train:eta1.0": 327,
+    "train:nonbinding": 327
+  },
+  "ccr_counts": {
+    "train:1": 516,
+    "train:5": 476,
+    "train:0.1": 506,
+    "train:0": 502
+  },
+  "neural_optimizer_steps": 0,
+  "model_TEST_evaluated": false,
+  "source_manifest_sha256": "0266745b077892b70bc89267007e71f0c48b082351b830e5fdd5b40d14d7be71",
+  "seconds": 2.61053925
+}

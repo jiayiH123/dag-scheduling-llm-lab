@@ -1,0 +1,14 @@
+{
+  "scope": "TRAIN data/teacher diagnostic, not a trained-model result",
+  "TRAIN_bases": 1000,
+  "TRAIN_records": 2000,
+  "TRAIN_teacher_actions": 130000,
+  "mean_teacher_C_over_HEFT": 0.8351016071543613,
+  "paired_mean_teacher_HEFT_gain_percent": 16.48983928456388,
+  "paired_mean_teacher_MSLBL_gain_percent": 9.702157772332317,
+  "teacher_better_HEFT": 1380,
+  "teacher_equal_HEFT": 620,
+  "performance_based_filtering": false,
+  "solver_calls": 0,
+  "neural_optimizer_steps": 0
+}

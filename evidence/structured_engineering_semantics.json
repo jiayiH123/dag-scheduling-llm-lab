@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "TRAIN_records": 40,
+  "TRAIN_actions": 2600,
+  "max_offset_error": 0.0,
+  "max_logprob_error": 0.0,
+  "independent_schedule_event_sweep": true,
+  "TEST_loaded": false,
+  "scope": "serialized TRAIN label physics and probability semantics; no neural optimization"
+}

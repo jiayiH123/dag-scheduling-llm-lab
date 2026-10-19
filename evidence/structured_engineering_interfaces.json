@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "data": "structured_engineering_module.jsonl.gz",
+      "id": "train_simv1_train_00005_b0",
+      "arm": "edge_gnn_ln",
+      "n": 40,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 0.0
+    },
+    {
+      "data": "structured_engineering_module.jsonl.gz",
+      "id": "train_simv1_train_00005_b0",
+      "arm": "edge_attention",
+      "n": 40,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 0.0
+    },
+    {
+      "data": "structured_engineering_module.jsonl.gz",
+      "id": "val_simv1_val_00000_b0",
+      "arm": "edge_gnn_ln",
+      "n": 20,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 0.0
+    },
+    {
+      "data": "structured_engineering_module.jsonl.gz",
+      "id": "val_simv1_val_00000_b0",
+      "arm": "edge_attention",
+      "n": 20,
+      "full_forward_calls": 1,
+      "physical_validation": true,
+      "zero_head_HEFT_identity": true,
+      "max_logprob_replay_error": 0.0
+    }
+  ],
+  "simulator_counts": [
+    {
+      "complete_decodes": 4,
+      "validated_schedules": 4,
+      "teacher_reference_calls": 0,
+      "forced_TRAIN_teacher_replays": 1,
+      "zero_head_HEFT_identity_checks": 2
+    }
+  ],
+  "max_absolute_logprob_replay_error": 0.0,
+  "neural_optimizer_steps": 0,
+  "TEST_evaluated": false,
+  "CUDA_tested": false,
+  "scope": "CPU engineering on selected TRAIN/VAL inputs, random models with zero output heads; no policy quality claim"
+}
