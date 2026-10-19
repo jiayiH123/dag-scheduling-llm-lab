@@ -8,7 +8,7 @@ import json
 import sys
 from pathlib import Path
 from daglab.io import read_records
-from daglab.reference import CachedBudgetDecoder, core, mslbl, portfolio, teacher
+from daglab.reference import CachedBudgetDecoder, core, mslbl, portfolio, teacher, random_policy_rollout
 from .features import enrich
 
 
@@ -66,6 +66,8 @@ def main():
                        'budget_mode': inst['budget_mode'], 'resource_mode': inst['resource_mode']}
                 for name in ['Greedy', 'HEFT', 'PEFT']:
                     row[name] = core.schedule(inst, name)['makespan']
+                row['RandomMean5'] = sum(random_policy_rollout(inst, [0.] * (d.n * d.k), 'joint', True,
+                                        inst['seed'] * 17 + j)['makespan'] for j in range(5)) / 5
                 row['MSLBL'] = mslbl(inst)['makespan']
                 schedules, _ = portfolio(inst)
                 row['Portfolio'] = min(s['makespan'] for s in schedules)

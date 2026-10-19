@@ -20,7 +20,7 @@ import torch.nn.functional as F
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from daglab.module_lab.models import ARMS, ModuleActor, conditionals, conditional_kl, tensors
+from daglab.module_lab.models import ARMS, ModuleActor, conditionals, conditional_kl, tensors, set_probability_dtype
 
 
 def write_json(path, value):
@@ -391,6 +391,7 @@ def main():
     ap.add_argument('--checks-only', action='store_true')
     args = ap.parse_args()
     cfg = json.loads(Path(args.config).read_text())
+    set_probability_dtype(cfg.get('probability_dtype', 'float32'))
     if cfg['candidates'] < 2 or cfg['retained'] < 2:
         raise ValueError('at least2 actual candidates and retained entries')
     out = Path(args.output).resolve()
@@ -433,7 +434,7 @@ def main():
             references.extend(simulation.call(command='references', ids=lab.fullval[start:start + 12]))
             print(f'controls {min(start + 12, len(lab.fullval))}/{len(lab.fullval)}', flush=True)
         controls = {name: {r['id']: r[name] for r in references}
-                    for name in ['Greedy', 'HEFT', 'PEFT', 'MSLBL', 'Portfolio', 'Teacher64']}
+                    for name in ['Greedy', 'RandomMean5', 'HEFT', 'PEFT', 'MSLBL', 'Portfolio', 'Teacher64']}
         prior_result = next((r for r in results if 'analytic_prior_only_values' in r), None)
         if prior_result is not None:
             controls['BoundedOCTPriorOnly'] = prior_result['analytic_prior_only_values']

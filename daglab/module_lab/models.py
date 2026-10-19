@@ -6,6 +6,15 @@ scheduling-attention idea, not ReSched's sequential policy or its exact network.
 import torch
 from torch import nn
 
+PROBABILITY_DTYPE = torch.float32
+
+
+def set_probability_dtype(name):
+    global PROBABILITY_DTYPE
+    if name not in ['float32', 'float64']:
+        raise ValueError('probability dtype must be float32 or float64')
+    PROBABILITY_DTYPE = getattr(torch, name)
+
 
 ARMS = {
     'legacy_gnn': dict(features='legacy', encoder='gnn', explicit=False, prior=False),
@@ -99,11 +108,12 @@ def distributions(logits, decisions):
     """Full feasible-pool log distributions at this trajectory's own prefixes."""
     width = max(len(d['available']) for d in decisions)
     device = logits.device
+    logits = logits.to(PROBABILITY_DTYPE)
     indices = torch.tensor([d['available'] + [0] * (width - len(d['available'])) for d in decisions], device=device)
     mask = torch.tensor([[True] * len(d['available']) + [False] * (width - len(d['available']))
                          for d in decisions], device=device)
-    offsets = torch.tensor([d['offsets'] + [0.] * (width - len(d['available'])) for d in decisions], device=device)
-    phi = torch.tensor([d['budget_local'] + [0.] * (width - len(d['available'])) for d in decisions], device=device)
+    offsets = torch.tensor([d['offsets'] + [0.] * (width - len(d['available'])) for d in decisions], device=device, dtype=logits.dtype)
+    phi = torch.tensor([d['budget_local'] + [0.] * (width - len(d['available'])) for d in decisions], device=device, dtype=logits.dtype)
     pairs = logits[indices]
     score = pairs[..., 0] + pairs[..., 1] * phi + offsets
     logs = torch.log_softmax(score.masked_fill(~mask, -torch.inf), -1)

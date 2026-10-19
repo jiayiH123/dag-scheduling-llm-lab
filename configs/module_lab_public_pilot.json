@@ -1,5 +1,6 @@
 {
   "classification": "EXPLORATORY first public WfInstances development pilot, no TEST",
+  "protocol_commit": "bdefd1e",
   "architectures": ["edge_gnn_ln", "edge_attention"],
   "objectives": ["ppo", "bopo", "ppo_kl1"],
   "seeds": [11],
