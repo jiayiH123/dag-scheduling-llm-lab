@@ -1,5 +1,6 @@
 {
   "classification": "EXPLORATORY additional development seeds after seed11 architecture selection",
+  "protocol_commit": "e383c45",
   "architectures": ["edge_attention"],
   "objectives": ["ppo", "sil", "pairwise", "bopo"],
   "seeds": [22, 33],
