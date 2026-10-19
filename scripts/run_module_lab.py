@@ -20,7 +20,7 @@ import torch.nn.functional as F
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from daglab.module_lab.models import ARMS, ModuleActor, conditionals, tensors
+from daglab.module_lab.models import ARMS, ModuleActor, conditionals, conditional_kl, tensors
 
 
 def write_json(path, value):
@@ -104,6 +104,7 @@ class Lab:
         self.fullval = sorted(k for k in self.lookup if k.startswith('val'))
         self.probability_error = 0.
         self.optimizer_steps = 0
+        self.reference_forwards = 0
         self.curves = (out / 'curves.jsonl').open('w')
         write_json(out / 'data_selection.json', {'TRAIN': self.train, 'screen_VAL': self.val,
                     'report_VAL': self.fullval, 'data_sha256': simulation.info['data_sha256'],
@@ -250,7 +251,7 @@ class Lab:
         return model, detail
 
     def loss(self, objective, logits, g, trajectories):
-        if objective == 'ppo':
+        if objective.startswith('ppo'):
             terms, kls = [], []
             for r in trajectories[1:]:  # deterministic greedy is not on-policy sampling
                 logs, entropy = conditionals(logits, r['decisions'])
@@ -300,6 +301,9 @@ class Lab:
             batch = self.get(rng.sample(self.train, self.cfg['batch']))
             with torch.no_grad():
                 xs = [model(g['tensor']) for g in batch]
+                reference_xs = [bc(g['tensor']) for g in batch] if objective.startswith('ppo_kl') else None
+                if reference_xs is not None:
+                    self.reference_forwards += len(batch)
             greedy_items = [{'id': g['id'], 'logits': x.cpu().tolist()} for g, x in zip(batch, xs)]
             greedy = self.sim.call(command='rollout', sample=False, items=greedy_items)
             sample_items = []
@@ -318,19 +322,23 @@ class Lab:
                                'best_candidate': min(r['makespan'] for r in rs),
                                'unique_mappings': len({tuple(d['action'] for d in r['decisions']) for r in rs}),
                                'candidates': len(rs)})
-            epochs = 4 if objective == 'ppo' else 1
+            epochs = 4 if objective.startswith('ppo') else 1
             scale_diagnostic = None
             for epoch in range(epochs):
-                losses, main_losses, anchors, kls = [], [], [], []
-                for g, rs in zip(batch, trajectories):
+                losses, main_losses, anchors, kls, bc_kls = [], [], [], [], []
+                for j, (g, rs) in enumerate(zip(batch, trajectories)):
                     x = model(g['tensor'])
                     primary, kl = self.loss(objective, x, g, rs)
+                    if reference_xs is not None:
+                        reference_kl = torch.stack([conditional_kl(x, reference_xs[j], r['decisions']) for r in rs]).mean()
+                        primary = primary + float(objective.split('kl')[1]) * reference_kl
+                        bc_kls.append(reference_kl.detach())
                     anchor = -conditionals(x, g['teacher_decisions'])[0].mean()
                     main_losses.append(primary)
                     anchors.append(anchor)
                     losses.append(primary + self.cfg['teacher_anchor'] * anchor)
                     kls.append(kl)
-                if objective == 'ppo' and sum(kls) / len(kls) > .03:
+                if objective.startswith('ppo') and sum(kls) / len(kls) > .03:
                     break
                 loss = torch.stack(losses).mean()
                 if update == 1 and epoch == 0:
@@ -347,6 +355,8 @@ class Lab:
                      'actual_complete_candidates_cumulative': sampled, 'optimizer_steps_cumulative': steps}
             if scale_diagnostic is not None:
                 entry['gradient_scale_diagnostic'] = scale_diagnostic
+            if bc_kls:
+                entry['mean_BC_KL_on_sampled_prefixes'] = float(torch.stack(bc_kls).mean())
             if update % self.cfg['rl_eval_every'] == 0 or update == self.cfg['rl_updates']:
                 value = self.ratio(self.evaluate(model, self.val))
                 entry['screen_VAL_C_over_HEFT'] = value
@@ -435,6 +445,7 @@ def main():
                    'simulator_counts': simulation.call(command='counts'),
                    'max_absolute_logprob_replay_error': lab.probability_error,
                    'total_optimizer_steps_including_overfit': lab.optimizer_steps,
+                   'frozen_BC_training_forwards': lab.reference_forwards,
                    'deploy_full_forwards': 1, 'deploy_decodes': 1, 'TEST_evaluated': False,
                    'caveat': 'one or development seeds, known VAL and adaptive architecture selection; not confirmation'}
         write_json(out / 'summary.json', summary)

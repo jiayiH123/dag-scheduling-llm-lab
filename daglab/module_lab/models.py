@@ -95,8 +95,8 @@ class ModuleActor(nn.Module):
         return 8 * torch.tanh(raw / 8)
 
 
-def conditionals(logits, decisions):
-    """Score every action with *that trajectory's* masks, EFT and budget prefix."""
+def distributions(logits, decisions):
+    """Full feasible-pool log distributions at this trajectory's own prefixes."""
     width = max(len(d['available']) for d in decisions)
     device = logits.device
     indices = torch.tensor([d['available'] + [0] * (width - len(d['available'])) for d in decisions], device=device)
@@ -107,7 +107,21 @@ def conditionals(logits, decisions):
     pairs = logits[indices]
     score = pairs[..., 0] + pairs[..., 1] * phi + offsets
     logs = torch.log_softmax(score.masked_fill(~mask, -torch.inf), -1)
+    return logs, mask
+
+
+def conditionals(logits, decisions):
+    """Score every action with *that trajectory's* masks, EFT and budget prefix."""
+    logs, mask = distributions(logits, decisions)
+    device = logits.device
     selected = torch.tensor([d['selected'] for d in decisions], device=device)
     # Avoid0*(-inf) in entropy of padding entries.
     entropy = -(logs.exp() * logs.masked_fill(~mask, 0.)).sum(-1)
     return logs.gather(1, selected[:, None]).squeeze(1), entropy
+
+
+def conditional_kl(logits, reference_logits, decisions):
+    logs, mask = distributions(logits, decisions)
+    baseline, _ = distributions(reference_logits.detach(), decisions)
+    delta = (logs - baseline).masked_fill(~mask, 0.)
+    return (logs.exp() * delta).sum(-1).mean()

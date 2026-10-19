@@ -1,5 +1,6 @@
 {
   "classification": "EXPLORATORY BC-KL tail-control study on known development folds",
+  "protocol_commit": "90e4781",
   "architectures": ["edge_attention"],
   "objectives": ["ppo", "ppo_kl1", "ppo_kl10"],
   "seeds": [11, 22, 33],
