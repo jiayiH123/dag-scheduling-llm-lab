@@ -1,5 +1,6 @@
 {
   "classification": "EXPLORATORY adaptive normalization and longer-BC follow-up",
+  "protocol_commit": "1b1010d",
   "architectures": ["edge_gnn", "edge_gnn_ln", "edge_attention"],
   "objectives": ["ppo", "sil", "pairwise", "bopo"],
   "seeds": [11],

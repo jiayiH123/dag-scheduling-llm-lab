@@ -27,6 +27,11 @@ def write_json(path, value):
     path.write_text(json.dumps(value, indent=2, allow_nan=False) + '\n')
 
 
+def gradient_norm(loss, model):
+    gradients = torch.autograd.grad(loss, tuple(model.parameters()), retain_graph=True, allow_unused=True)
+    return math.sqrt(sum(float(g.detach().square().sum()) for g in gradients if g is not None))
+
+
 class Simulation:
     def __init__(self, executable, data):
         self.process = subprocess.Popen([executable, '-m', 'daglab.module_lab.simulator'], cwd=ROOT,
@@ -314,6 +319,7 @@ class Lab:
                                'unique_mappings': len({tuple(d['action'] for d in r['decisions']) for r in rs}),
                                'candidates': len(rs)})
             epochs = 4 if objective == 'ppo' else 1
+            scale_diagnostic = None
             for epoch in range(epochs):
                 losses, main_losses, anchors, kls = [], [], [], []
                 for g, rs in zip(batch, trajectories):
@@ -327,12 +333,20 @@ class Lab:
                 if objective == 'ppo' and sum(kls) / len(kls) > .03:
                     break
                 loss = torch.stack(losses).mean()
+                if update == 1 and epoch == 0:
+                    scale_diagnostic = {
+                        'primary_gradient_norm': gradient_norm(torch.stack(main_losses).mean(), model),
+                        'weighted_anchor_gradient_norm': gradient_norm(
+                            self.cfg['teacher_anchor'] * torch.stack(anchors).mean(), model),
+                        'note': 'preclip norms, first update only; objectives use different normalization'}
                 grad = self.apply_gradient(loss, optimizer, model.parameters())
                 steps += 1
             entry = {'arm': arm, 'seed': seed, 'stage': objective, 'step': update,
                      'loss': float(loss.detach()), 'primary_loss': float(torch.stack(main_losses).mean().detach()),
                      'anchor_nll': float(torch.stack(anchors).mean().detach()), 'grad_norm': grad,
                      'actual_complete_candidates_cumulative': sampled, 'optimizer_steps_cumulative': steps}
+            if scale_diagnostic is not None:
+                entry['gradient_scale_diagnostic'] = scale_diagnostic
             if update % self.cfg['rl_eval_every'] == 0 or update == self.cfg['rl_updates']:
                 value = self.ratio(self.evaluate(model, self.val))
                 entry['screen_VAL_C_over_HEFT'] = value
@@ -378,7 +392,8 @@ def main():
         lab = Lab(args, cfg, out, simulation)
         metadata = {'config': cfg, 'argv': sys.argv, 'torch': torch.__version__, 'device': args.device,
                     'code_commit_at_start': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
-                    'protocol_commit': '836ab82', 'classification': 'EXPLORATORY known synthetic TRAIN/VAL only',
+                    'protocol_commit': cfg.get('protocol_commit', '836ab82'),
+                    'classification': cfg.get('classification', 'EXPLORATORY TRAIN/VAL development only'),
                     'TEST_evaluated': False, 'historical_warmstart_used': False}
         write_json(out / 'metadata.json', metadata)
         checks = lab.audits()

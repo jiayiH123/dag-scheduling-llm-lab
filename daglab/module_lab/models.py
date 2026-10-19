@@ -11,6 +11,7 @@ ARMS = {
     'legacy_gnn': dict(features='legacy', encoder='gnn', explicit=False, prior=False),
     'physical_gnn': dict(features='physical', encoder='gnn', explicit=False, prior=False),
     'edge_gnn': dict(features='physical', encoder='gnn', explicit=True, prior=False),
+    'edge_gnn_ln': dict(features='physical', encoder='gnn', explicit=True, prior=False, normalize=True),
     'edge_attention': dict(features='physical', encoder='attention', explicit=True, prior=False),
     'physical_mlp': dict(features='physical', encoder='mlp', explicit=False, prior=False),
     'edge_gnn_oct': dict(features='physical', encoder='gnn', explicit=True, prior=True),
@@ -47,8 +48,8 @@ class ModuleActor(nn.Module):
                                        for _ in range(layers)]) if self.spec['encoder'] == 'attention' else nn.ModuleList()
         self.pool_attn = nn.ModuleList([nn.MultiheadAttention(hidden, 4, dropout=0., batch_first=True)
                                        for _ in range(layers)]) if self.spec['encoder'] == 'attention' else nn.ModuleList()
-        self.norm = nn.ModuleList([nn.LayerNorm(hidden) for _ in range(2 * layers)]) \
-            if self.spec['encoder'] == 'attention' else nn.ModuleList()
+        norm_count = 2 * layers if self.spec['encoder'] == 'attention' else layers if self.spec.get('normalize') else 0
+        self.norm = nn.ModuleList([nn.LayerNorm(hidden) for _ in range(norm_count)])
         self.head = nn.Sequential(nn.Linear(2 * hidden, hidden), nn.Tanh(), nn.Linear(hidden, 2))
         nn.init.zeros_(self.head[-1].weight)
         nn.init.zeros_(self.head[-1].bias)
@@ -75,6 +76,8 @@ class ModuleActor(nn.Module):
                 f = torch.zeros_like(h).index_add(0, dst, fw(h[src]) * w) / nd
                 b = torch.zeros_like(h).index_add(0, src, bw(h[dst]) * w) / od
             h = torch.tanh(update(torch.cat([h, f, b], -1)))
+            if self.spec.get('normalize'):
+                h = self.norm[layer](h)
             if self.spec['encoder'] == 'attention':
                 z = h.reshape(g['n'], g['k'], -1).transpose(0, 1)
                 # Pool is the batch axis for task attention, then task is batch
