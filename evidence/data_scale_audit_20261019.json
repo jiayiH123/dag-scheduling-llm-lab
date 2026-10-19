@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-19",
+  "classification": "descriptive repository/data audit; no new training or confirmation test",
+  "checked_local_commit": "551f3613fef2a0e959f8af275615d4d0a97dda6b",
+  "synthetic_files": [
+    {
+      "path": "data/reference_dataset.jsonl.gz",
+      "tracked_by_git": true,
+      "sha256": "c0c37ad8aaf9778e2e4d8fca3a8932f8fa873bff836db336c4e6cddc6d77bba3",
+      "bytes": 21958573,
+      "records": {
+        "train": 800,
+        "val": 216,
+        "test": 432
+      },
+      "distinct_latent_ids": {
+        "train": 800,
+        "val": 24,
+        "test": 48
+      },
+      "teacher_action_labels": {
+        "train": 36540,
+        "val": 0,
+        "test": 0
+      }
+    },
+    {
+      "path": "data/known_cycle24_test.jsonl.gz",
+      "tracked_by_git": true,
+      "sha256": "e4076b1f41e7c1ee0c7325ecb43b8b684a57b34d28407e5acd6ab796c8b7b9f6",
+      "bytes": 1977847,
+      "records": {
+        "test": 432
+      },
+      "distinct_latent_ids": {
+        "test": 48
+      },
+      "teacher_action_labels": {
+        "test": 0
+      }
+    }
+  ],
+  "public_pilot": {
+    "tracked_source_manifest": "data/module_public_sources_20261019.json",
+    "pinned_source_commit": "d7bfead08a4dbf985ebbf427b3685a6512c259e2",
+    "source_entries_by_split": {
+      "train": 8,
+      "val": 4,
+      "test_reserved_not_downloaded": 3
+    },
+    "downloaded_development_trace_bytes": 2168426,
+    "prepared_configs": {
+      "train": 64,
+      "val": 32
+    },
+    "base_traces": {
+      "train": 8,
+      "val": 4
+    },
+    "TRAIN_teacher_actions": 4992,
+    "raw_public_JSON_tracked_in_git": false,
+    "prepared_public_dataset_tracked_in_git": false,
+    "tracked_instead": [
+      "source manifest",
+      "download/preparation script",
+      "result evidence and prepared-data manifest"
+    ],
+    "raw_local_location": "runs/module_public_raw_20261019/",
+    "prepared_local_location": "runs/module_public_development_20261019.jsonl.gz",
+    "default_preparation_downloads_TEST": false
+  },
+  "interpretation": "800 training latent IDs remain in Git. Public pilot has only8TRAIN/4VAL original traces and64/32 configurations. Counts of latent IDs are not counts of non-isomorphic topologies. Public expansion is required for main training; not completed by this audit."
+}
