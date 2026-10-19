@@ -33,10 +33,10 @@ def gradient_norm(loss, model):
 
 
 class Simulation:
-    def __init__(self, executable, data):
+    def __init__(self, executable, data, decoder='legacy'):
         self.process = subprocess.Popen([executable, '-m', 'daglab.module_lab.simulator'], cwd=ROOT,
                                         stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True, bufsize=1)
-        self.info = self.call(command='init', data=str(Path(data).resolve()))
+        self.info = self.call(command='init', data=str(Path(data).resolve()), decoder=decoder)
 
     def call(self, **query):
         self.process.stdin.write(json.dumps(query, allow_nan=False) + '\n')
@@ -145,6 +145,7 @@ class Lab:
     def save(self, path, model, **metadata):
         torch.save({'state_dict': {k: v.detach().cpu() for k, v in model.state_dict().items()},
                     'arm': model.arm, 'hidden': self.cfg['hidden'], 'layers': self.cfg['layers'],
+                    'decoder': self.cfg.get('decoder', 'legacy'),
                     **metadata}, path)
 
     def apply_gradient(self, loss, optimizer, parameters):
@@ -399,7 +400,7 @@ def main():
     torch.set_num_threads(1)
     simulation = None
     try:
-        simulation = Simulation(args.sim_python, args.data)
+        simulation = Simulation(args.sim_python, args.data, decoder=cfg.get('decoder', 'legacy'))
         lab = Lab(args, cfg, out, simulation)
         metadata = {'config': cfg, 'argv': sys.argv, 'torch': torch.__version__, 'device': args.device,
                     'code_commit_at_start': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),

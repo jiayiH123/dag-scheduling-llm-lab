@@ -10,19 +10,33 @@ from pathlib import Path
 from daglab.io import read_records
 from daglab.reference import CachedBudgetDecoder, core, mslbl, portfolio, teacher, random_policy_rollout
 from .features import enrich
+from .decoder import NormalizedEFTDecoder
 
 
 def main():
-    records, decoders, graphs = {}, {}, {}
-    counts = {'complete_decodes': 0, 'validated_schedules': 0, 'teacher_reference_calls': 0}
+    records, decoders, graphs, replayed = {}, {}, {}, {}
+    decoder_mode = 'legacy'
+    counts = {'complete_decodes': 0, 'validated_schedules': 0, 'teacher_reference_calls': 0,
+              'forced_TRAIN_teacher_replays': 0, 'zero_head_HEFT_identity_checks': 0}
     def decoder(key):
         if key not in decoders:
-            decoders[key] = CachedBudgetDecoder(records[key]['instance'])
+            cls = NormalizedEFTDecoder if decoder_mode == 'normalized_eft' else CachedBudgetDecoder
+            decoders[key] = cls(records[key]['instance'])
+            if decoder_mode == 'normalized_eft':
+                d = decoders[key]
+                zero = d.rollout([[0., 0.]] * (d.n * d.k), 'local', materialize=True)
+                original = core.schedule(records[key]['instance'], 'HEFT')
+                if zero['schedule']['tasks'] != original['tasks']:
+                    raise AssertionError('normalized zero-head HEFT task identity')
+                counts['zero_head_HEFT_identity_checks'] += 1
         return decoders[key]
     for line in sys.stdin:
         q = json.loads(line)
         command = q['command']
         if command == 'init':
+            decoder_mode = q.get('decoder', 'legacy')
+            if decoder_mode not in ['legacy', 'normalized_eft']:
+                raise ValueError('unknown decoder mode')
             rows = read_records(q['data'])
             records = {r['key']: r for r in rows if r['key'].startswith(('train', 'val'))}
             train = {r['instance']['latent_id'] for r in records.values() if r['key'].startswith('train')}
@@ -41,9 +55,22 @@ def main():
                 r = records[key]
                 if key not in graphs:
                     graphs[key] = enrich(r, decoder(key))
+                decisions = r.get('teacher_decisions') if key.startswith('train') else None
+                if decisions is not None and decoder_mode == 'normalized_eft':
+                    if key not in replayed:
+                        d = decoder(key)
+                        mapping = [-1] * d.n
+                        for decision in decisions:
+                            mapping[decision['action'] // d.k] = decision['action'] % d.k
+                        forced = d.rollout([[0., 0.]] * (d.n * d.k), 'local', forced_mapping=mapping, materialize=True)
+                        if forced['schedule']['tasks'] != r['teacher']['tasks']:
+                            raise AssertionError('physical teacher schedule changed')
+                        replayed[key] = forced['decisions']
+                        counts['forced_TRAIN_teacher_replays'] += 1
+                    decisions = replayed[key]
                 result.append({'id': key, 'graph': graphs[key], 'reference': r['reference'],
                                'latent_id': r['instance']['latent_id'],
-                               'teacher_decisions': r.get('teacher_decisions') if key.startswith('train') else None})
+                               'teacher_decisions': decisions})
         elif command == 'rollout':
             result = []
             for item in q['items']:

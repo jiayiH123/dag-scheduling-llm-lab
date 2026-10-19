@@ -35,7 +35,7 @@ def main():
     model = ModuleActor(saved['arm'], saved['hidden'], saved['layers']).to(args.device)
     model.load_state_dict(saved['state_dict'])
     model.eval()
-    sim = Simulation(args.sim_python, args.data)
+    sim = Simulation(args.sim_python, args.data, decoder=saved.get('decoder', 'legacy'))
     sync = lambda: torch.cuda.synchronize() if torch.device(args.device).type == 'cuda' else None
     try:
         warm_id = choose(sim.info['records'], 'train', 1, 17)[0]
