@@ -1,5 +1,6 @@
 {
   "classification": "EXPLORATORY selected normalized GNN development seed replication",
+  "protocol_commit": "96e67b8",
   "architectures": ["edge_gnn_ln"],
   "objectives": ["ppo", "sil", "pairwise", "bopo"],
   "seeds": [22, 33],
