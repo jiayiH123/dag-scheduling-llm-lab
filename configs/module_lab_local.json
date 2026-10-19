@@ -1,0 +1,22 @@
+{
+  "classification": "EXPLORATORY local screen, not public confirmation",
+  "architectures": ["legacy_gnn", "physical_gnn", "edge_gnn", "edge_attention", "physical_mlp", "edge_gnn_oct"],
+  "objectives": ["ppo", "sil", "pairwise", "bopo"],
+  "seeds": [11],
+  "hidden": 32,
+  "layers": 2,
+  "train_limit": 128,
+  "val_limit": 72,
+  "batch": 4,
+  "bc_updates": 80,
+  "bc_lr": 0.001,
+  "eval_every": 20,
+  "top_architectures": 2,
+  "rl_updates": 20,
+  "rl_eval_every": 5,
+  "rl_lr": 0.0003,
+  "candidates": 8,
+  "retained": 4,
+  "teacher_anchor": 0.02,
+  "entropy": 0.001
+}
