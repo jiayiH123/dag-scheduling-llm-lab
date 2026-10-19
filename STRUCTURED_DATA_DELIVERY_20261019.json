@@ -1,0 +1,164 @@
+{
+  "schema": "structured-data-delivery-v1",
+  "date": "2026-10-19",
+  "protocol_commit": "ee4b4a8b4e3010736898c4ab39c19d090cea7a61",
+  "scope": "complete structured data and TRAIN targets; no Qwen model or new trained policy result",
+  "data_manifest": "data/structured_scheduling_v1/MANIFEST.json",
+  "files": [
+    {
+      "path": "BUNDLE_MANIFEST.json",
+      "bytes": 17431,
+      "sha256": "528596120911736e84350e4190165d9f1489f1190cb53a4378140b5119958919"
+    },
+    {
+      "path": "MODULE_LAB_MANIFEST_20261019.json",
+      "bytes": 16843,
+      "sha256": "661775fc9706b58dec0a3c50643e172fd6cc238413f76038be8eabb0b4aa8020"
+    },
+    {
+      "path": "OFFLINE_DELIVERY_MANIFEST_20261019.json",
+      "bytes": 5797,
+      "sha256": "95d6c1cddeb6ee1a12106c829c178b03f5de7a58aa90dbacbeb5ef203f28f1e6"
+    },
+    {
+      "path": "STRUCTURED_DATA_README_20261019.md",
+      "bytes": 6985,
+      "sha256": "a3141497999721ebb3e8904b9bc4245f96970659c9198cb181465d323b1827fc"
+    },
+    {
+      "path": "configs/structured_scheduling_v1.json",
+      "bytes": 952,
+      "sha256": "f0adef15b726699e3c510b75edb02a124688247f11632e64222f7169230474aa"
+    },
+    {
+      "path": "daglab/structured_dataset.py",
+      "bytes": 8493,
+      "sha256": "829cd499228ff379972a00a49a4600ef7257ff6855242d1c469ce89ea22da910"
+    },
+    {
+      "path": "daglab/structured_synthetic.py",
+      "bytes": 13704,
+      "sha256": "2e5bd4887a8ee1d8fb6af2f92fd19714963bd93da9a36c1d5cbdd55cd7368d34"
+    },
+    {
+      "path": "daglab/structured_torch.py",
+      "bytes": 1546,
+      "sha256": "01c587fb84e12f696455eec5a872cf63945e7cb42dcc2ff573381ca899c22045"
+    },
+    {
+      "path": "data/structured_scheduling_v1/MANIFEST.json",
+      "bytes": 1371070,
+      "sha256": "8ef25bfef98975e8a79999c44df263f9650124abd4cac3773d4dce75a2b9a4ab"
+    },
+    {
+      "path": "docs/STRUCTURED_QWEN_HANDOFF_20261019.md",
+      "bytes": 2856,
+      "sha256": "1ee512a7f3b4874b641451ba4fbb55c6106a275c9d59914e0b79e27337755112"
+    },
+    {
+      "path": "evidence/structured_engineering_interfaces.json",
+      "bytes": 1696,
+      "sha256": "0172f3955fab640e9f3278ff7e0249828c8e4665fd39fa20a3a5261c277e207d"
+    },
+    {
+      "path": "evidence/structured_engineering_semantics.json",
+      "bytes": 289,
+      "sha256": "a487ea345b7c96aadebb3517441aba47a9ba3ec065cb321b4582de64ee0daff7"
+    },
+    {
+      "path": "evidence/structured_engineering_teacher_parity.json",
+      "bytes": 3200,
+      "sha256": "cd79724623df8452279443836a3205fd7f65f2e3449c8859ba1f5079fa48dee4"
+    },
+    {
+      "path": "evidence/structured_engineering_v1_audit.json",
+      "bytes": 2523,
+      "sha256": "f4b291b29768379bbd9d6bd98436ee3bf649d521dabef45e92c7c8f70a1cbb44"
+    },
+    {
+      "path": "evidence/structured_v1_build_environment.json",
+      "bytes": 434,
+      "sha256": "8aaf1de7879578f7547794b3d384ad59987e7308d3d321944733e1e21dcdde14"
+    },
+    {
+      "path": "evidence/structured_v1_determinism.json",
+      "bytes": 194,
+      "sha256": "aa28994426ce223f30d58cf1bd6ff5f61e7a0b7e54acbc3fc300cd4048b52b78"
+    },
+    {
+      "path": "evidence/structured_v1_full_integrity.json",
+      "bytes": 2680,
+      "sha256": "0838dba3686073425ed697f6bad06acd6ffa75c7b5a11cac3d082f795993ff31"
+    },
+    {
+      "path": "evidence/structured_v1_full_quality.json",
+      "bytes": 20032,
+      "sha256": "2a9f8cf6261ccb7d01bf430dc2b57a6c0876e1d748ec9ab8f05de451f5d44477"
+    },
+    {
+      "path": "evidence/structured_v1_full_semantics.json",
+      "bytes": 295,
+      "sha256": "cb654ae482c58381cef381cfa29163045e28415c558cfe933e654eaf133e658e"
+    },
+    {
+      "path": "evidence/structured_v1_module_interfaces.json",
+      "bytes": 1754,
+      "sha256": "4536a2519f32d26a9ef826aab6c8e1c5dee823bbf12d6181cd08ca8ddce57a1e"
+    },
+    {
+      "path": "evidence/structured_v1_pilot_integrity.json",
+      "bytes": 992,
+      "sha256": "bb022932949c443564ab3611934fbdcffb21278e807cc21ae7bd6a3ca863e9bf"
+    },
+    {
+      "path": "evidence/structured_v1_pilot_manifest.json",
+      "bytes": 138973,
+      "sha256": "0266745b077892b70bc89267007e71f0c48b082351b830e5fdd5b40d14d7be71"
+    },
+    {
+      "path": "evidence/structured_v1_pilot_quality.json",
+      "bytes": 485,
+      "sha256": "b11f3a0245b400194760835e42f9f5beb9d06628dc25050442bacb90b1bf6ffc"
+    },
+    {
+      "path": "evidence/structured_v1_pilot_semantics.json",
+      "bytes": 293,
+      "sha256": "e99bd18864b79847cc865beebb520ffaa8f594f9cb610e50055bb57dfe3af822"
+    },
+    {
+      "path": "evidence/structured_v1_torch_contract.json",
+      "bytes": 401,
+      "sha256": "6efcdb3f3b394709a452908b850082980b223aae91f574a689aa7a5e15eee9bb"
+    },
+    {
+      "path": "protocols/structured_scheduling_v1_20261019.md",
+      "bytes": 6200,
+      "sha256": "20ad9a4070d8489b906df560d1acdcd26fe083b43ace99520b5deb6db5168c8c"
+    },
+    {
+      "path": "scripts/build_structured_dataset.py",
+      "bytes": 8084,
+      "sha256": "561b7c5169583ea9c7c06d8ceec67c879636ea300600300055d1b41190378564"
+    },
+    {
+      "path": "scripts/check_structured_semantics.py",
+      "bytes": 4640,
+      "sha256": "264cf94b943ef996d302ab1568668969230a6c30dc2c9e16deb1173259bad4ce"
+    },
+    {
+      "path": "scripts/materialize_structured_training.py",
+      "bytes": 2654,
+      "sha256": "f9abe45b43b891c1881fc778ee38a26a4f7164969749d954beaf52b3797a86ae"
+    },
+    {
+      "path": "scripts/verify_structured_dataset.py",
+      "bytes": 5084,
+      "sha256": "bb61515df3657ec2cd613f3b14f88c4c293eaa3b7f82fb531943b25e2e7388d6"
+    },
+    {
+      "path": "scripts/verify_structured_delivery.py",
+      "bytes": 1145,
+      "sha256": "0cec33d19556658352120bfbc45ebda782019881513bbe0c3131d2ebe116d709"
+    }
+  ]
+}

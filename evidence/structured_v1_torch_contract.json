@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "TRAIN_records": 40,
+  "task_sizes": [
+    20,
+    40,
+    80,
+    120
+  ],
+  "pools": [
+    3,
+    4,
+    6
+  ],
+  "max_numeric_positions_checked": 1926,
+  "BC_zero_head_logprob_error": 8.881784197001252e-16,
+  "finite_action_head_gradients": true,
+  "numeric_batch_has_only_input_fields": true,
+  "Qwen_loaded": false,
+  "neural_optimizer_steps": 0,
+  "TEST_loaded": false
+}

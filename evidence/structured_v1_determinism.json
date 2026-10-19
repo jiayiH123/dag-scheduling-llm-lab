@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "exact_regenerated_TRAIN_records": 8,
+  "timing_excluded_from_sample": true,
+  "source": "same frozen generator/config, independent re-execution",
+  "TEST_used": false
+}

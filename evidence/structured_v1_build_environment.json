@@ -1,0 +1,12 @@
+{
+  "scope": "actual compiler/simulator interpreter, no Qwen training environment claim",
+  "python": "3.11.17 (main, Oct  1 2026, 20:09:52) [Clang 20.1.8 ]",
+  "platform": "macOS-26.3-arm64-arm-64bit",
+  "numpy": "2.4.6",
+  "ortools": "9.15.6755",
+  "workers": 4,
+  "protocol_commit": "ee4b4a8b4e3010736898c4ab39c19d090cea7a61",
+  "generator_implementation_commit": "46e1b7a",
+  "model_downloads": 0,
+  "neural_optimizer_steps": 0
+}
